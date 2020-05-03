@@ -6,9 +6,11 @@ import "./App.scss";
 const App = () => {
   return (
     <div className="app">
-      <Switch>
-        <Route exact path="/" component={Home} />
-      </Switch>
+      <div className="content">
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </div>
     </div>
   );
 };
