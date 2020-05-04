@@ -17,18 +17,22 @@ const Wrapper = styled.div`
   cursor: pointer;
   &:hover {
     background: ${colors.bg};
-    /* border-color: ${colors.blue}; */
   }
 `;
 
-const Tag = ({ children, style, className = "tag", onClick }) => {
+const Tag = ({ children, className = "tag", onClick, others }) => {
   const classes = classNames({});
 
   const handleClick = () => {
-    if (onClick) onClick();
+    if (onClick) onClick(children);
   };
+
   return (
-    <Wrapper className={`${classes} ${className}`} onClick={handleClick}>
+    <Wrapper
+      className={`${classes} ${className}`}
+      onClick={handleClick}
+      {...others}
+    >
       {children}
     </Wrapper>
   );

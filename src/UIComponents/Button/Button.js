@@ -52,19 +52,19 @@ const Button = ({
   type = "solid",
   color,
   className,
-  style,
   onClick,
   size = "md",
+  ...others
 }) => {
   return (
     <StyledButton
       theme={theme}
       type={type}
       className={className}
-      style={{ ...(style || {}) }}
       onClick={onClick}
       color={color}
       size={size}
+      {...others}
     >
       {children}
     </StyledButton>

@@ -21,13 +21,14 @@ const Card = ({
   children,
   style,
   className = "card",
-  curved = true,
+  curved = false,
   bottomLine = true,
 }) => {
   const classes = classNames({
     "curve-border": curved,
     "bottom-line": bottomLine,
   });
+
   return <Wrapper className={`${classes} ${className}`}>{children}</Wrapper>;
 };
 
