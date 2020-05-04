@@ -21,31 +21,36 @@ const Input = ({
   style = {},
   className = "input",
   curved = false,
-  autoFocus = true,
-  placeholder = "",
   onChange,
   onBlur,
+  name,
+  ...others
 }) => {
   const classes = classNames({
     "curve-border": curved,
   });
 
-  const handleChange = () => {
-    if (onChange) onChange();
+  const handleChange = (e) => {
+    const { value } = e.target;
+    if (onChange) {
+      if (name) onChange(e, { [name]: value });
+      else onChange(e, value);
+    }
   };
 
-  const handleBlur = () => {
-    if (onBlur) onBlur();
+  const handleBlur = (e) => {
+    const { value } = e.target;
+    if (onBlur) onBlur(e, value);
   };
 
   return (
     <Wrapper
-      autoFocus={autoFocus}
-      placeholder={placeholder}
+      name={name}
       style={{ ...style }}
       className={`${classes} ${className}`}
       onChange={handleChange}
       onBlur={handleBlur}
+      {...others}
     />
   );
 };
