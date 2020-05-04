@@ -6,7 +6,7 @@ import colors from "../../magicdust/colors";
 const Wrapper = styled.input`
   background: none;
   display: inline-block;
-  padding: 10px;
+  padding: 4px 8px;
   border-radius: 2px;
   border: 1px solid ${colors.bg};
   transition: 0.3s;
@@ -20,7 +20,7 @@ const Wrapper = styled.input`
 const Input = ({
   style = {},
   className = "input",
-  curved = true,
+  curved = false,
   autoFocus = true,
   placeholder = "",
   onChange,
