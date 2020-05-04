@@ -2,22 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import colors from "../../magicdust/colors";
 
-const getThemeColors = (property) => ({ theme, type }) => {
+const getThemeColors = (property) => ({ theme, type, color = "blue" }) => {
   let value = {};
+  const currentColor = colors[color];
   switch (theme) {
     case "default":
       if (type === "solid") {
         value = {
-          border_hover: colors.orchid,
-          border: colors.orchid,
-          background: colors.bg,
-          color: colors.orchid,
-          background_hover: colors.orchid,
+          border: currentColor,
+          background: currentColor,
+          color: colors.white,
+          background_hover: `${currentColor}DD`,
           color_hover: colors.bg,
         };
       } else if (type === "hollow") {
         value = {
-          border_hover: colors.orchid,
+          border_hover: currentColor,
           border: colors.bg,
           background: colors.bg,
         };
@@ -36,6 +36,8 @@ const StyledButton = styled.button`
   cursor: pointer;
   border-radius: 2px;
   transition: all 0.3s;
+  padding: ${({ size }) =>
+    size === "sm" ? "0px 2px" : size === "md" ? "2px 6px" : "4px 12px"};
   color: ${getThemeColors("color")};
   &:hover {
     border-color: ${getThemeColors("border_hover")};
@@ -48,9 +50,11 @@ const Button = ({
   children,
   theme = "default",
   type = "solid",
+  color,
   className,
   style,
   onClick,
+  size = "md",
 }) => {
   return (
     <StyledButton
@@ -59,6 +63,8 @@ const Button = ({
       className={className}
       style={{ ...(style || {}) }}
       onClick={onClick}
+      color={color}
+      size={size}
     >
       {children}
     </StyledButton>
