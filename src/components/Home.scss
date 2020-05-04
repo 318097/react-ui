@@ -1,11 +1,13 @@
 .ui-container {
   width: 80%;
-  margin: 0 auto;
-  background: white;
   display: grid;
   grid-template-columns: repeat(auto-fill, 220px);
   justify-content: center;
   gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   .item {
     padding: 10px;
     display: flex;

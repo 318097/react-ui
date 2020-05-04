@@ -3,16 +3,4 @@
 
 .app {
   background: url("./assets/backgrounds/dot-grid.png");
-  & > div.content {
-    & > section {
-      border-radius: 4px;
-      margin: 0px auto;
-      height: 98%;
-      box-sizing: border-box;
-      width: 96%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
-  }
 }
