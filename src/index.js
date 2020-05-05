@@ -4,6 +4,8 @@ import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
+import { Card, Icon, PageHeader, Button, Tag, Input } from "./UIComponents";
+import colors from "./magicdust/colors";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,3 +20,6 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+export { Card, Icon, PageHeader, Button, Tag, Input };
+export default colors;
