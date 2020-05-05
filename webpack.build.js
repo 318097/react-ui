@@ -1,10 +1,11 @@
 const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/UIComponents/index.js",
   mode: "production",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "dist"),
     filename: "index.js",
     libraryTarget: "commonjs2",
   },
@@ -34,4 +35,5 @@ module.exports = {
       },
     ],
   },
+  plugins: [new CopyPlugin([{ from: "./src/magicdust", to: "./styles/" }])],
 };
