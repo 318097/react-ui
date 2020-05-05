@@ -7,33 +7,33 @@ module.exports = {
   mode: "development",
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "script.js"
+    filename: "script.js",
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ["babel-loader"],
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(ttf|otf)$/,
-        use: ["file-loader"]
+        test: /\.(ttf|otf|png|jpg)$/,
+        use: ["file-loader"],
       },
       {
         test: /\.svg$/,
         exclude: /node_modules/,
-        use: ["@svgr/webpack"]
-      }
-    ]
+        use: ["@svgr/webpack"],
+      },
+    ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })]
+  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
 };

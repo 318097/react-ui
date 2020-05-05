@@ -1,0 +1,6 @@
+public/
+src/
+.npmignore
+webpack.dev.js
+webpack.build.js
+index.js
