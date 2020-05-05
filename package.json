@@ -1,7 +1,9 @@
 {
   "name": "@ml318097/react-ui",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": false,
+  "description": "React UI library",
+  "main": "./build/index.js",
   "dependencies": {
     "classnames": "^2.2.6",
     "node-sass": "^4.14.0",
@@ -44,8 +46,6 @@
       "last 1 safari version"
     ]
   },
-  "description": "React UI library",
-  "main": "./build/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/318097/react-ui.git"

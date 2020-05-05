@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./index.js",
+  entry: "./src/UIComponents/index.js",
   mode: "production",
   output: {
     path: path.resolve(__dirname, "build"),
@@ -11,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules)/,
         use: ["babel-loader"],
       },
       {
