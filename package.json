@@ -3,7 +3,7 @@
   "version": "0.12.0",
   "private": false,
   "description": "React UI library",
-  "main": "dist/index.js",
+  "main": "dist",
   "dependencies": {
     "classnames": "^2.2.6",
     "copy-webpack-plugin": "^5.1.1",
