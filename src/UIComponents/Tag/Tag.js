@@ -9,10 +9,10 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2px 6px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid ${colors.bg};
   font-size: 1.2rem;
-  transition: 0.3s;
+  transition: 0.4s;
   position: relative;
   cursor: pointer;
   &:hover {

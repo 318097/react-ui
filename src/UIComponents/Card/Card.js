@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import colors from "../../magicdust/colors";
+import { getRandomNoInRange } from "../util";
 
 const Wrapper = styled.div`
   background: ${colors.white};
@@ -9,12 +10,15 @@ const Wrapper = styled.div`
   min-width: 120px;
   display: inline-block;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 12px;
   border: 1px solid ${colors.bg};
   box-shadow: 3px 3px 3px ${colors.bg};
   transition: 0.3s;
   position: relative;
   overflow: auto;
+  &:hover {
+    background: ${colors.feather};
+  }
 `;
 
 const Card = ({
@@ -25,7 +29,7 @@ const Card = ({
   bottomLine = true,
 }) => {
   const classes = classNames({
-    "curve-border": curved,
+    [`curve-border-${getRandomNoInRange(3)}`]: curved,
     "bottom-line": bottomLine,
   });
 

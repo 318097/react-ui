@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import colors from "../../magicdust/colors";
 
-const getThemeColors = (property) => ({ theme, type, color = "blue" }) => {
+const getThemeColors = (property) => ({ theme, type, color = "strokeOne" }) => {
   let value = {};
   const currentColor = colors[color];
   switch (theme) {
@@ -11,9 +11,9 @@ const getThemeColors = (property) => ({ theme, type, color = "blue" }) => {
         value = {
           border: currentColor,
           background: currentColor,
-          color: colors.white,
-          background_hover: `${currentColor}DD`,
-          color_hover: colors.bg,
+          color: colors.bar,
+          background_hover: `${colors.orchid}`,
+          color_hover: colors.white,
         };
       } else if (type === "hollow") {
         value = {
@@ -34,8 +34,8 @@ const StyledButton = styled.button`
   border: 1px solid ${getThemeColors("border")};
   background: ${getThemeColors("background")};
   cursor: pointer;
-  border-radius: 2px;
-  transition: all 0.3s;
+  border-radius: 4px;
+  transition: all 0.4s;
   padding: ${({ size }) =>
     size === "sm" ? "0px 2px" : size === "md" ? "2px 6px" : "4px 12px"};
   color: ${getThemeColors("color")};

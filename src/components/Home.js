@@ -27,14 +27,16 @@ const uiList = ["BUTTON", "CARD", "TAG", "INPUT", "PAGEHEADER"];
 
 const Home = () => {
   return (
-    <div className="ui-container">
-      {uiList.map((type) => (
-        <div key={type} className="item">
-          <UIComponent type={type} />
-          <span className="name">{type}</span>
-        </div>
-      ))}
-    </div>
+    <section>
+      <div className="ui-container">
+        {uiList.map((type) => (
+          <div key={type} className="item">
+            <UIComponent type={type} />
+            <span className="name">{type}</span>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

@@ -7,13 +7,13 @@ const Wrapper = styled.input`
   background: none;
   display: inline-block;
   padding: 4px 8px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid ${colors.bg};
-  transition: 0.3s;
+  transition: 0.4s;
   outline: none;
   &:active,
   &:focus {
-    border-color: ${colors.blue};
+    border-color: ${colors.orchid};
   }
 `;
 

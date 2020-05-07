@@ -10,6 +10,7 @@ const StyledPageHeader = styled.div`
   padding: 8px;
   background: ${colors.bg};
   width: 100%;
+  border-radius: 4px;
   .title {
     display: flex;
     font-weight: bold;

@@ -1,29 +1,24 @@
+section {
+  padding: 20px;
+  hr {
+    margin: 20px;
+  }
+}
 .ui-container {
-  width: 80%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 220px);
+  grid-template-columns: repeat(auto-fill, 180px);
   justify-content: center;
-  gap: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  overflow: auto;
-  transform: translate(-50%, -50%);
+  gap: 16px;
   .item {
     box-shadow: 3px 3px 3px rgb(230, 229, 229);
-    height: 220px;
+    height: 180px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: #fafafa;
-    &:nth-child(3n) {
-      background: #f8f8f8;
-    }
-    &:nth-child(2n) {
-      background: #fbfbfb;
-    }
+    background: white;
+    border: 1px solid whitesmoke;
     .name {
       position: absolute;
       bottom: 0;

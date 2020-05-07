@@ -70,8 +70,16 @@
 
 /* CARD */
 
-.curve-border {
+.curve-border-1 {
   border-radius: 3% 97% 5% 95% / 95% 4% 96% 5%;
+}
+
+.curve-border-2 {
+  border-radius: 48% 46% 1% 53% / 2% 2% 42% 2%;
+}
+
+.curve-border-3 {
+  border-radius: 48% 6% 1% 4% / 2% 7% 18% 5%;
 }
 
 .bottom-line {
