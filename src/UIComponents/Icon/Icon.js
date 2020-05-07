@@ -26,18 +26,15 @@ const StyledIcon = styled.span`
   margin: 2px;
   height: 20px;
   width: 20px;
-  background: ${({ background }) => (background ? colors.grey : "none")};
+  background: ${({ background }) => (background ? colors.shade1 : "none")};
   transition: all 0.4s;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   svg {
     font-family: initial;
-    fill: ${({ color }) => color};
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+    fill: ${({ fill }) => fill};
   }
   /* &:hover {
-    background: ${colors.shade2};
+    background: ${colors.strokeOne};
   } */
 `;
 
@@ -71,19 +68,19 @@ const SVGIcon = ({ type, ...props }) => {
 };
 
 const Icon = ({
-  className,
+  className = "icon",
   onClick,
   background = false,
   type,
   size = 16,
-  color = "black",
+  fill = colors.bar,
 }) => (
   <StyledIcon
     className={className}
     background={background}
     size={size}
     onClick={onClick}
-    color={color}
+    fill={fill}
   >
     <SVGIcon
       type={type}

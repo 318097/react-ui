@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Button, Card, Tag, Input, PageHeader } from "../UIComponents";
+import { Button, Card, Tag, Input, PageHeader, Icon } from "../UIComponents";
 import "./Home.scss";
+import colors from "../magicdust/colors";
 
 const UIComponent = ({ type }) => {
   const [input, setInput] = useState();
 
   switch (type) {
+    case "ICON":
+      return <Icon type="check" fill={colors.orchid} />;
     case "BUTTON":
       return <Button>Test</Button>;
     case "CARD":
@@ -23,7 +26,7 @@ const UIComponent = ({ type }) => {
   }
 };
 
-const uiList = ["BUTTON", "CARD", "TAG", "INPUT", "PAGEHEADER"];
+const uiList = ["BUTTON", "CARD", "TAG", "INPUT", "PAGEHEADER", "ICON"];
 
 const Home = () => {
   return (
