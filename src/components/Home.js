@@ -27,10 +27,51 @@ const UIComponent = ({ type }) => {
 };
 
 const uiList = ["BUTTON", "CARD", "TAG", "INPUT", "PAGEHEADER", "ICON"];
+const icons = [
+  "caret-left",
+  "check",
+  "delete",
+  "plus",
+  "google",
+  "logout",
+  "login",
+  "minus",
+  "edit",
+  "drop",
+  "wallet",
+  "-",
+  "binary-code",
+  "binary-code-2",
+  "cancel",
+  "cancel-red",
+  "check-2",
+  "coding",
+  "bulb",
+  "football",
+  "football-2",
+  "football-3",
+  "heart",
+  "innovation",
+  "interface",
+  "like",
+  "menu",
+  "menu-2",
+  "rounded",
+  "shape-1",
+  "shape-2",
+  "shape-3",
+];
 
 const Home = () => {
   return (
     <section>
+      <div className="iconList">
+        {icons.map((icon) => (
+          <span title={icon}>
+            <Icon key={icon} type={icon} />
+          </span>
+        ))}
+      </div>
       <div className="ui-container">
         {uiList.map((type) => (
           <div key={type} className="item">

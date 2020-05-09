@@ -4,6 +4,21 @@ section {
     margin: 20px;
   }
 }
+
+.iconList {
+  padding: 20px 10px;
+  border: 1px solid lightgrey;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  span {
+    margin: 10px;
+  }
+}
+
 .ui-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 180px);
