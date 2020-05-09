@@ -18,6 +18,7 @@ export default {
   steel: "#797979",
   chrome: "#bcbcbc",
   grey: "#ccc",
+  strokeThree: "#d9d9d9",
   strokeTwo: "#d3d3d3",
   strokeOne: "#ebebeb",
   shade1: "#f3f3f3",

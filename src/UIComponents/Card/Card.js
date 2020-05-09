@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   padding: 10px;
   border-radius: 12px;
   border: 1px solid ${colors.bg};
+  box-sizing: border-box;
   box-shadow: 3px 3px 3px ${colors.bg};
   transition: 0.3s;
   position: relative;

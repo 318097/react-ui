@@ -4,20 +4,17 @@ import classNames from "classnames";
 import colors from "../../magicdust/colors";
 
 const Wrapper = styled.div`
-  background: ${colors.white};
+  background: ${colors.featherDark};
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 2px 6px;
   border-radius: 4px;
-  border: 1px solid ${colors.bg};
-  font-size: 1.2rem;
+  border: 1px solid ${colors.strokeThree};
+  font-size: 1rem;
   transition: 0.4s;
   position: relative;
   cursor: pointer;
-  &:hover {
-    background: ${colors.bg};
-  }
 `;
 
 const Tag = ({ children, className = "tag", onClick, others }) => {

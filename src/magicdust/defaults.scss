@@ -31,6 +31,8 @@ body,
   & > div.content {
     flex-grow: 1;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
   }
   & > .loader {
     @extend .center-container;
