@@ -1,7 +1,3 @@
-import "../magicdust/colors.scss";
-import "../magicdust/custom-styles.scss";
-import "../magicdust/defaults.scss";
-
 import color from "../magicdust/colors";
 
 import Card from "./Card";
