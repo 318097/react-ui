@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   border: 1px solid ${colors.strokeThree};
   font-size: 1rem;
   transition: 0.4s;
+  margin: 2px;
   position: relative;
   cursor: pointer;
 `;
