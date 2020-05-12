@@ -12,11 +12,13 @@ const UIComponent = ({ type }) => {
     case "BUTTON":
       return <Button>Test</Button>;
     case "CARD":
-      return <Card>Test file</Card>;
+      return <Card curved>Test file</Card>;
     case "TAG":
       return <Tag>Test file</Tag>;
     case "INPUT":
-      return <Input value={input} onChange={(e, value) => setInput(value)} />;
+      return (
+        <Input curved value={input} onChange={(e, value) => setInput(value)} />
+      );
     case "PAGEHEADER":
       return (
         <PageHeader title={<h3>Title</h3>} actions={<span>Actions</span>} />

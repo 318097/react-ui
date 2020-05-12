@@ -27,7 +27,7 @@ const Input = ({
   ...others
 }) => {
   const classes = classNames({
-    "curve-border": curved,
+    "curve-border-1": curved,
   });
 
   const handleChange = (e) => {
