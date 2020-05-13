@@ -7,6 +7,7 @@ import {
   PageHeader,
   Icon,
   Radio,
+  Dropdown,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -14,6 +15,7 @@ import colors from "../magicdust/colors";
 const UIComponent = ({ type }) => {
   const [input, setInput] = useState("");
   const [radio, setRadio] = useState("a");
+  const [dropdown, setDropdown] = useState("a");
 
   switch (type) {
     case "ICON":
@@ -43,6 +45,17 @@ const UIComponent = ({ type }) => {
           onChange={(value) => setRadio(value)}
         />
       );
+    case "DROPDOWN":
+      return (
+        <Dropdown
+          options={[
+            { label: "Option A", value: "a" },
+            { label: "Option B", value: "b" },
+          ]}
+          value={dropdown}
+          onChange={(value) => setDropdown(value)}
+        />
+      );
     default:
       return null;
   }
@@ -56,6 +69,7 @@ const uiList = [
   "PAGEHEADER",
   "ICON",
   "RADIO",
+  "DROPDOWN",
 ];
 const icons = [
   "caret-left",

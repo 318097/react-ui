@@ -10,6 +10,9 @@ const switchStyles = css`
     padding: 6px 12px;
     border-radius: 0;
     position: relative;
+    &:hover {
+      background: ${colors.strokeOne};
+    }
     &:nth-child(1) {
       border-right: 1px solid ${colors.strokeOne};
     }
