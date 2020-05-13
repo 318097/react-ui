@@ -1,10 +1,19 @@
 import React, { useState } from "react";
-import { Button, Card, Tag, Input, PageHeader, Icon } from "../UIComponents";
+import {
+  Button,
+  Card,
+  Tag,
+  Input,
+  PageHeader,
+  Icon,
+  Radio,
+} from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
 
 const UIComponent = ({ type }) => {
-  const [input, setInput] = useState();
+  const [input, setInput] = useState("");
+  const [radio, setRadio] = useState("a");
 
   switch (type) {
     case "ICON":
@@ -23,12 +32,31 @@ const UIComponent = ({ type }) => {
       return (
         <PageHeader title={<h3>Title</h3>} actions={<span>Actions</span>} />
       );
+    case "RADIO":
+      return (
+        <Radio
+          options={[
+            { label: "Option A", value: "a" },
+            { label: "Option B", value: "b" },
+          ]}
+          value={radio}
+          onChange={(value) => setRadio(value)}
+        />
+      );
     default:
       return null;
   }
 };
 
-const uiList = ["BUTTON", "CARD", "TAG", "INPUT", "PAGEHEADER", "ICON"];
+const uiList = [
+  "BUTTON",
+  "CARD",
+  "TAG",
+  "INPUT",
+  "PAGEHEADER",
+  "ICON",
+  "RADIO",
+];
 const icons = [
   "caret-left",
   "check",
@@ -69,7 +97,7 @@ const Home = () => {
     <section>
       <div className="iconList">
         {icons.map((icon) => (
-          <span title={icon}>
+          <span title={icon} key={icon}>
             <Icon key={icon} type={icon} />
           </span>
         ))}

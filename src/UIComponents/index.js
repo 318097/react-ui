@@ -6,6 +6,7 @@ import PageHeader from "./PageHeader";
 import Button from "./Button";
 import Tag from "./Tag";
 import Input from "./Input";
+import Radio from "./Radio";
 
-export { Card, Icon, PageHeader, Button, Tag, Input };
+export { Card, Icon, PageHeader, Button, Tag, Input, Radio };
 export default color;
