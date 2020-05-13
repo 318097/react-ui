@@ -4,17 +4,16 @@ import classNames from "classnames";
 import colors from "../../magicdust/colors";
 
 const Wrapper = styled.div`
-  transition: all 0.4s;
   display: inline-flex;
-  min-width: 20px;
-  padding: 6px 12px;
   align-items: center;
   position: relative;
-  border: 1px solid ${colors.bg};
-  border-radius: 4px;
-  cursor: pointer;
-  background: ${colors.bg};
   .dropdown-text {
+    border: 1px solid ${colors.bg};
+    border-radius: 4px;
+    cursor: pointer;
+    background: ${colors.bg};
+    min-width: 20px;
+    padding: 6px 12px;
     font-size: 1.2rem;
   }
   .dropdown {
@@ -27,6 +26,8 @@ const Wrapper = styled.div`
     border: 1px solid ${colors.bg};
     border-radius: 4px;
     .dropdown-item {
+      transition: all 0.4s;
+      cursor: pointer;
       font-size: 1.2rem;
       display: inline-block;
       width: max-content;
