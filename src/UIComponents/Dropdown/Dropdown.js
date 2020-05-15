@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     background: ${colors.bg};
     min-width: 20px;
-    padding: 6px 12px;
+    padding: 4px 12px;
     font-size: 1.2rem;
   }
   .dropdown {
@@ -56,14 +56,14 @@ const Wrapper = styled.div`
 `;
 
 const Dropdown = ({
-  options,
+  options = [],
   value,
-  style,
-  className,
+  style = {},
+  className = "dropdown-container",
   onChange,
   name,
-  placeholder,
-  dropPosition,
+  placeholder = "Select",
+  dropPosition = "bottom",
   ...others
 }) => {
   const [visible, setVisibility] = useState(false);
@@ -109,12 +109,12 @@ const Dropdown = ({
   );
 };
 
-Dropdown.defaultProps = {
-  placeholder: "Select",
-  options: [],
-  style: {},
-  className: "dropdown-container",
-  dropPosition: "top",
-};
+// Dropdown.defaultProps = {
+//   placeholder: "Select",
+//   options: [],
+//   style: {},
+//   className: "dropdown-container",
+//   dropPosition: "top",
+// };
 
 export default Dropdown;

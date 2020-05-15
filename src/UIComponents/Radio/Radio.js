@@ -6,7 +6,7 @@ import colors from "../../magicdust/colors";
 const switchStyles = css`
   background: ${colors.bg};
   border-radius: 4px;
-  .radio {
+  .radio-item {
     padding: 6px 12px;
     border-radius: 0;
     position: relative;
@@ -19,7 +19,7 @@ const switchStyles = css`
     &:nth-child(2) {
       border-left: 1px solid ${colors.strokeOne};
     }
-    &.radio-selected {
+    &.radio-item-selected {
       &:after {
         content: "";
         display: inline-block;
@@ -28,7 +28,7 @@ const switchStyles = css`
         height: 4px;
         background: ${colors.orchid};
         position: absolute;
-        bottom: 4px;
+        bottom: 3px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -38,19 +38,16 @@ const switchStyles = css`
 
 const Wrapper = styled.div`
   transition: all 0.4s;
-  &:active,
-  &:focus {
-    border-color: ${colors.orchid};
-  }
+  width: max-content;
   display: flex;
   align-items: center;
-  .radio {
+  .radio-item {
     font-size: 1.2rem;
     display: inline-block;
     border-radius: 4px;
     padding: 2px 4px;
     cursor: pointer;
-    &.radio-selected {
+    &.radio-item-selected {
     }
   }
   ${switchStyles};
@@ -60,7 +57,7 @@ const Radio = ({
   options = [],
   value,
   style = {},
-  className = "radio-group",
+  className = "radio",
   onChange,
   onBlur,
   name,
@@ -86,8 +83,8 @@ const Radio = ({
           <div
             key={option.value}
             onClick={(e) => handleClick(option, e)}
-            className={`radio${
-              value === option.value ? " radio-selected" : ""
+            className={`radio-item${
+              value === option.value ? " radio-item-selected" : ""
             }`}
           >
             {option.label}
