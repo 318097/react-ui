@@ -1,15 +1,13 @@
 {
   "name": "@ml318097/react-ui",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "private": false,
   "description": "React UI library",
   "main": "dist",
   "dependencies": {
     "classnames": "^2.2.6",
     "node-sass": "^4.14.0",
-    "styled-components": "4.4.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "styled-components": "4.4.1"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^5.1.1",
@@ -29,8 +27,9 @@
     "webpack-dev-server": "^3.10.3"
   },
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "classnames": "^2.2.6",
+    "node-sass": "^4.14.0",
+    "styled-components": "4.4.1"
   },
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
