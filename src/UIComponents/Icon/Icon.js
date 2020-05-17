@@ -91,35 +91,35 @@ const SVGIcon = ({ type, ...props }) => {
       return <BinaryCode2 {...props} />;
     case "check-2":
       return <Check2 {...props} />;
-    case "coding":
+    case "tag":
       return <Coding {...props} />;
     case "bulb":
       return <Electricity {...props} />;
     case "football":
       return <Football {...props} />;
-    case "heart":
+    case "heart-2":
       return <Heart {...props} />;
-    case "innovation":
+    case "bulb-2":
       return <Innovation {...props} />;
-    case "interface":
+    case "triangle-2":
       return <Interface {...props} />;
-    case "like":
+    case "heart":
       return <Like {...props} />;
     // case "menu":
     //   return <Menu {...props} />;
     case "menu-2":
       return <Menu2 {...props} />;
-    case "rounded":
+    case "circle":
       return <Rounded {...props} />;
-    case "shape-1":
+    case "circle-3":
       return <Shape1 {...props} />;
-    case "shape-2":
+    case "circle-2":
       return <Shape2 {...props} />;
-    case "shape-3":
+    case "triangle":
       return <Shape3 {...props} />;
     case "cancel":
       return <Cancel {...props} />;
-    case "cancel-red":
+    case "cancel-2":
       return <CancelRed {...props} />;
     case "facebook":
       return <Facebook {...props} />;
