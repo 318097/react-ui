@@ -2,14 +2,15 @@ import React from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
 import colors from "../../magicdust/colors";
+import { baseCSS, dotCSS } from "../styled";
 
 const switchStyles = css`
   background: ${colors.bg};
+  border: 1px solid ${colors.bg};
   border-radius: 4px;
   .radio-item {
-    padding: 6px 12px;
-    border-radius: 0;
     position: relative;
+    border-radius: 0;
     &:hover {
       background: ${colors.strokeOne};
     }
@@ -21,14 +22,8 @@ const switchStyles = css`
     }
     &.radio-item-selected {
       &:after {
-        content: "";
-        display: inline-block;
-        border-radius: 50%;
-        width: 4px;
-        height: 4px;
-        background: ${colors.orchid};
-        position: absolute;
-        bottom: 3px;
+        ${dotCSS};
+        bottom: 2px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -36,28 +31,22 @@ const switchStyles = css`
   }
 `;
 
-const Wrapper = styled.div`
-  transition: all 0.4s;
+const StyledRadio = styled.div`
   width: max-content;
   display: flex;
   align-items: center;
   .radio-item {
-    font-size: 1.2rem;
     display: inline-block;
-    border-radius: 4px;
-    padding: 2px 4px;
-    cursor: pointer;
-    &.radio-item-selected {
-    }
+    ${baseCSS};
   }
   ${switchStyles};
 `;
 
 const Radio = ({
-  options = [],
+  options,
   value,
-  style = {},
-  className = "radio",
+  style,
+  className,
   onChange,
   onBlur,
   name,
@@ -72,7 +61,7 @@ const Radio = ({
   };
 
   return (
-    <Wrapper
+    <StyledRadio
       name={name}
       style={{ ...style }}
       className={`${classes} ${className}`}
@@ -91,8 +80,15 @@ const Radio = ({
           </div>
         );
       })}
-    </Wrapper>
+    </StyledRadio>
   );
+};
+
+Radio.defaultProps = {
+  options: [],
+  style: {},
+  className: "radio",
+  size: "md",
 };
 
 export default Radio;

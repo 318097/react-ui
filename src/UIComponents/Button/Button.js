@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../../magicdust/colors";
+import { baseCSS } from "../styled";
 
 const getThemeColors = (property) => ({ theme, type, color = "strokeOne" }) => {
   let value = {};
@@ -30,15 +31,10 @@ const getThemeColors = (property) => ({ theme, type, color = "strokeOne" }) => {
 };
 
 const StyledButton = styled.button`
-  outline: none;
   border: 1px solid ${getThemeColors("border")};
   background: ${getThemeColors("background")};
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.4s;
-  padding: ${({ size }) =>
-    size === "sm" ? "0px 2px" : size === "md" ? "2px 6px" : "4px 12px"};
   color: ${getThemeColors("color")};
+  ${baseCSS};
   &:hover {
     border-color: ${getThemeColors("border_hover")};
     background: ${getThemeColors("background_hover")};
@@ -48,12 +44,12 @@ const StyledButton = styled.button`
 
 const Button = ({
   children,
-  theme = "default",
-  type = "solid",
+  theme,
+  type,
   color,
   className,
   onClick,
-  size = "md",
+  size,
   ...others
 }) => {
   return (
@@ -69,6 +65,12 @@ const Button = ({
       {children}
     </StyledButton>
   );
+};
+
+Button.defaultProps = {
+  theme: "default",
+  type: "solid",
+  size: "md",
 };
 
 export default Button;

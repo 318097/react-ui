@@ -2,15 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import colors from "../../magicdust/colors";
+import { baseCSS } from "../styled";
 
-const Wrapper = styled.input`
-  background: none;
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 4px;
+const StyledInput = styled.input`
+  background: ${colors.white};
   border: 1px solid ${colors.bg};
-  transition: 0.4s;
-  outline: none;
+  display: inline-block;
+  ${baseCSS};
+  margin: 0;
   &:active,
   &:focus {
     border-color: ${colors.orchid};
@@ -44,7 +43,7 @@ const Input = ({
   };
 
   return (
-    <Wrapper
+    <StyledInput
       name={name}
       style={{ ...style }}
       className={`${classes} ${className}`}
@@ -53,6 +52,13 @@ const Input = ({
       {...others}
     />
   );
+};
+
+Input.defaultProps = {
+  style: {},
+  className: "input",
+  curved: false,
+  size: "md",
 };
 
 export default Input;

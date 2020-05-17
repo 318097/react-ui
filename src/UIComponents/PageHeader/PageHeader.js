@@ -22,11 +22,15 @@ const StyledPageHeader = styled.div`
   }
 `;
 
-const PageHeader = ({ title, actions, className = "page-header" }) => (
+const PageHeader = ({ title, actions, className }) => (
   <StyledPageHeader className={className}>
     <div className="title">{title}</div>
     <div className="actions">{actions}</div>
   </StyledPageHeader>
 );
+
+PageHeader.defaultProps = {
+  className: "page-header",
+};
 
 export default PageHeader;

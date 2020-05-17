@@ -51,7 +51,11 @@ const UIComponent = ({ type }) => {
           options={[
             { label: "Option A", value: "a" },
             { label: "Option B", value: "b" },
-            { label: "Option jdslkf dsflk jB", value: "b" },
+            { label: "Option jdslkf dsflk dsfdsf d jB", value: "b" },
+            { label: "Option B", value: "b" },
+            { label: "Option B", value: "b" },
+            { label: "Option B", value: "b" },
+            { label: "Option B", value: "b" },
             { label: "Option B", value: "b" },
             { label: "Option B", value: "b" },
             { label: "Option B", value: "b" },
@@ -70,13 +74,12 @@ const UIComponent = ({ type }) => {
 
 const uiList = [
   "BUTTON",
-  "CARD",
-  "TAG",
-  "INPUT",
-  "PAGEHEADER",
-  "ICON",
   "RADIO",
   "SELECT",
+  "INPUT",
+  "PAGEHEADER",
+  "CARD",
+  "TAG",
 ];
 const icons = [
   "caret-left",

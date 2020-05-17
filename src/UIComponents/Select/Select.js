@@ -2,20 +2,14 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
 import colors from "../../magicdust/colors";
+import { baseCSS, dotCSS } from "../styled";
 
 const StyledSelect = styled.div`
-  display: inline-flex;
-  align-items: center;
   position: relative;
-  font-size: 1rem;
   .select-text {
     border: 1px solid ${colors.bg};
-    border-radius: 4px;
-    cursor: pointer;
     background: ${colors.bg};
-    min-width: 20px;
-    padding: 4px 12px;
-    font-size: inherit;
+    ${baseCSS};
   }
   .dropdown {
     position: absolute;
@@ -26,20 +20,22 @@ const StyledSelect = styled.div`
     top: ${({ dropPosition }) =>
       dropPosition === "bottom" ? "calc(100% + 2px)" : "unset"};
     left: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
     border: 1px solid ${colors.bg};
     border-radius: 4px;
     background: ${colors.bg};
-    max-height: 200px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
     .dropdown-item {
       box-sizing: border-box;
       width: 100%;
-      transition: all 0.4s;
-      cursor: pointer;
-      font-size: inherit;
-      padding: 4px 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      ${baseCSS};
+      border-radius: 0;
+      border: 1px solid transparent;
       border-bottom: 1px solid ${colors.bg};
       &:hover {
         background: ${colors.strokeOne};
@@ -47,16 +43,10 @@ const StyledSelect = styled.div`
       &.dropdown-selected {
         position: relative;
         &:after {
-          content: "";
-          display: inline-block;
-          border-radius: 50%;
-          width: 4px;
-          height: 4px;
-          background: ${colors.orchid};
-          position: absolute;
-          left: 4px;
+          ${dotCSS};
+          left: 1px;
           top: 50%;
-          transform: translateY(-50%);
+          /* transform: translateY(-50%); */
         }
       }
     }
@@ -123,6 +113,7 @@ Select.defaultProps = {
   style: {},
   className: "select",
   dropPosition: "top",
+  size: "md",
 };
 
 export default Select;
