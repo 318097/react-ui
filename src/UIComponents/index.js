@@ -7,7 +7,7 @@ import Button from "./Button";
 import Tag from "./Tag";
 import Input from "./Input";
 import Radio from "./Radio";
-import Dropdown from "./Dropdown";
+import Select from "./Select";
 
-export { Card, Icon, PageHeader, Button, Tag, Input, Radio, Dropdown };
+export { Card, Icon, PageHeader, Button, Tag, Input, Radio, Select };
 export default color;
