@@ -29,6 +29,9 @@ import Rounded from "./Rounded";
 import Shape1 from "./Shape1";
 import Shape2 from "./Shape2";
 import Shape3 from "./Shape3";
+import Facebook from "./Facebook";
+import Twitter from "./Twitter";
+import Instagram from "./Instagram";
 
 export {
   Plus,
@@ -61,4 +64,7 @@ export {
   Football2,
   Cancel,
   CancelRed,
+  Facebook,
+  Twitter,
+  Instagram,
 };

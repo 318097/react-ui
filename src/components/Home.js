@@ -114,6 +114,9 @@ const icons = [
   "shape-1",
   "shape-2",
   "shape-3",
+  "facebook",
+  "twitter",
+  "instagram",
 ];
 
 const Home = () => {

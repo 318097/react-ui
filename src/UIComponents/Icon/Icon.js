@@ -33,6 +33,9 @@ import {
   Football2,
   Cancel,
   CancelRed,
+  Facebook,
+  Twitter,
+  Instagram,
 } from "./icon-svgs";
 
 const StyledIcon = styled.span`
@@ -118,6 +121,12 @@ const SVGIcon = ({ type, ...props }) => {
       return <Cancel {...props} />;
     case "cancel-red":
       return <CancelRed {...props} />;
+    case "facebook":
+      return <Facebook {...props} />;
+    case "twitter":
+      return <Twitter {...props} />;
+    case "instagram":
+      return <Instagram {...props} />;
     // case "football-2":
     //   return <Football2 {...props} />;
     // case "football-3":
