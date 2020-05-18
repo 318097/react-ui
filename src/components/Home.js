@@ -51,17 +51,10 @@ const UIComponent = ({ type }) => {
           options={[
             { label: "Option A", value: "a" },
             { label: "Option B", value: "b" },
-            { label: "Option jdslkf dsflk dsfdsf d jB", value: "b" },
-            { label: "Option B", value: "b" },
-            { label: "Option B", value: "b" },
-            { label: "Option B", value: "b" },
-            { label: "Option B", value: "b" },
-            { label: "Option B", value: "b" },
-            { label: "Option B", value: "b" },
-            { label: "Option B", value: "b" },
-            { label: "Option B", value: "b" },
-            { label: "Option B", value: "b" },
-            { label: "C", value: "b" },
+            { label: "Long option abcedddfdadf", value: "c" },
+            { label: "Option d", value: "d" },
+            { label: "Option e", value: "e" },
+            { label: "Option f", value: "f" },
           ]}
           value={select}
           onChange={(value) => setSelect(value)}

@@ -14,6 +14,7 @@ const StyledSelect = styled.div`
   .dropdown {
     position: absolute;
     width: max-content;
+    min-width: 100%;
     max-width: 200%;
     bottom: ${({ dropPosition }) =>
       dropPosition === "top" ? "calc(100% + 2px)" : "unset"};
