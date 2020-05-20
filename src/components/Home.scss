@@ -1,31 +1,18 @@
 section {
-  padding: 20px;
+  padding: 5px;
+  width: 80%;
+  margin: 0 auto;
   hr {
     margin: 20px;
   }
 }
 
-.iconList {
-  padding: 20px 10px;
-  border: 1px solid lightgrey;
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  span {
-    margin: 10px;
-  }
-}
-
 .ui-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 180px);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   justify-content: center;
-  gap: 16px;
+  gap: 2px;
   .item {
-    box-shadow: 3px 3px 3px rgb(230, 229, 229);
     height: 180px;
     padding: 10px;
     display: flex;
@@ -33,13 +20,33 @@ section {
     justify-content: center;
     position: relative;
     background: white;
-    border: 1px solid whitesmoke;
+    transition: 0.3s;
     .name {
       position: absolute;
-      font-size: 1.4rem;
-      bottom: 0;
+      font-size: 1rem;
+      bottom: 2px;
       right: 4px;
-      color: lightsalmon;
+      color: lightgray;
     }
+    .card {
+      height: 80%;
+    }
+  }
+}
+
+.iconList {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background: white;
+    margin: 1px;
   }
 }

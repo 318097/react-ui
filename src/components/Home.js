@@ -23,7 +23,16 @@ const UIComponent = ({ type }) => {
     case "BUTTON":
       return <Button>Test</Button>;
     case "CARD":
-      return <Card curved>Test file</Card>;
+      return (
+        <Card>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dicta
+          incidunt vero? Vitae, atque culpa, aperiam optio quam dignissimos
+          temporibus omnis reiciendis neque sed nihil expedita aliquam eum!
+          Aliquam, iste tempore esse voluptate facere ratione voluptatem nihil
+          accusantium illo laborum incidunt fuga ullam veritatis temporibus hic
+          nostrum reprehenderit? Reprehenderit, unde?
+        </Card>
+      );
     case "TAG":
       return <Tag>Test file</Tag>;
     case "INPUT":
@@ -115,19 +124,20 @@ const icons = [
 const Home = () => {
   return (
     <section>
-      <div className="iconList">
-        {icons.map((icon) => (
-          <span title={icon} key={icon}>
-            <Icon key={icon} type={icon} />
-          </span>
-        ))}
-      </div>
       <div className="ui-container">
         {uiList.map((type) => (
           <div key={type} className="item">
             <UIComponent type={type} />
             <span className="name">{type}</span>
           </div>
+        ))}
+      </div>
+
+      <div className="iconList">
+        {icons.map((icon) => (
+          <span title={icon} key={icon}>
+            <Icon key={icon} type={icon} />
+          </span>
         ))}
       </div>
     </section>
