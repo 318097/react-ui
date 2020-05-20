@@ -26,7 +26,7 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(ttf|otf)$/,
+        test: /\.(ttf|otf|woff)$/,
         use: ["file-loader"],
       },
       {
