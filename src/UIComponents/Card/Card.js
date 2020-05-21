@@ -3,38 +3,42 @@ import styled from "styled-components";
 import classNames from "classnames";
 import colors from "../../magicdust/colors";
 import { getRandomNoInRange } from "../util";
+import { defaultCSS } from "../styled";
 
-const Wrapper = styled.div`
+const StyledCard = styled.div`
   background: ${colors.white};
   min-height: 100px;
-  min-width: 120px;
+  max-width: 100%;
   display: inline-block;
   padding: 10px;
-  border-radius: 12px;
   border: 1px solid ${colors.bg};
-  box-sizing: border-box;
   box-shadow: 3px 3px 3px ${colors.bg};
-  transition: 0.3s;
   position: relative;
   overflow: auto;
+  ${defaultCSS};
   &:hover {
-    background: ${colors.feather};
+    background: ${({ hover }) => hover && colors.feather};
   }
 `;
 
-const Card = ({
-  children,
-  style,
-  className = "card",
-  curved = false,
-  bottomLine = true,
-}) => {
+const Card = ({ children, className, curved, bottomLine, ...others }) => {
   const classes = classNames({
     [`curve-border-${getRandomNoInRange(3)}`]: curved,
     "bottom-line": bottomLine,
   });
 
-  return <Wrapper className={`${classes} ${className}`}>{children}</Wrapper>;
+  return (
+    <StyledCard className={`${classes} ${className}`} {...others}>
+      {children}
+    </StyledCard>
+  );
+};
+
+Card.defaultProps = {
+  className: "card",
+  curved: false,
+  bottomLine: false,
+  hover: false,
 };
 
 export default Card;

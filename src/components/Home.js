@@ -36,13 +36,12 @@ const UIComponent = ({ type }) => {
     case "TAG":
       return <Tag>Test file</Tag>;
     case "INPUT":
-      return (
-        <Input curved value={input} onChange={(e, value) => setInput(value)} />
-      );
+      return <Input value={input} onChange={(e, value) => setInput(value)} />;
     case "PAGEHEADER":
       return (
         <PageHeader title={<h3>Title</h3>} actions={<span>Actions</span>} />
       );
+      age;
     case "RADIO":
       return (
         <Radio

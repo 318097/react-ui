@@ -29,6 +29,7 @@ const StyledSelect = styled.div`
     border: 1px solid ${colors.bg};
     border-radius: 4px;
     background: ${colors.bg};
+    z-index: 1;
     .dropdown-item {
       box-sizing: border-box;
       width: 100%;
@@ -113,7 +114,7 @@ Select.defaultProps = {
   options: [],
   style: {},
   className: "select",
-  dropPosition: "top",
+  dropPosition: "bottom",
   size: "md",
 };
 
