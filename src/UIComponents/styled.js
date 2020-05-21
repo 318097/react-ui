@@ -8,9 +8,13 @@ const defaultFontSize = css`
   font-size: ${fontSize};
 `;
 
+const defaultBorderRadius = css`
+  border-radius: ${borderRadius};
+`;
+
 const defaultCSS = css`
   ${defaultFontSize};
-  border-radius: ${borderRadius};
+  ${defaultBorderRadius};
   transition: all 0.4s;
   box-sizing: border-box;
 `;
@@ -19,7 +23,7 @@ const baseCSS = css`
   cursor: pointer;
   outline: none;
   padding: ${({ size }) =>
-    size === "sm" ? "2px 4px" : size === "md" ? "4px 8px" : "8px 16px"};
+    size === "sm" ? "2px 4px" : size === "md" ? "6px 12px" : "10px 20px"};
   ${defaultCSS};
 `;
 
@@ -33,7 +37,7 @@ const dotCSS = css`
   position: absolute;
 `;
 
-const getThemeColors = (property) => ({ theme, color = "strokeOne" }) => {
+const getThemeColors = (property) => ({ theme, color = "bg" }) => {
   const currentColor = colors[color];
 
   let value = {
@@ -43,10 +47,22 @@ const getThemeColors = (property) => ({ theme, color = "strokeOne" }) => {
     hover_color: colors.white,
   };
   switch (color) {
-    case "default":
+    case "strokeOne":
       value = {
         ...value,
-        hover_background: `${colors.strokeTwo}`,
+        hover_background: colors.strokeTwo,
+        hover_border_color: colors.strokeTwo,
+        color: colors.bar,
+        hover_color: colors.bar,
+      };
+      break;
+    case "bg":
+      value = {
+        ...value,
+        hover_background: colors.strokeOne,
+        hover_border_color: colors.strokeOne,
+        color: colors.bar,
+        hover_color: colors.bar,
       };
       break;
     default:
@@ -60,4 +76,11 @@ const getThemeColors = (property) => ({ theme, color = "strokeOne" }) => {
   return value[property];
 };
 
-export { baseCSS, dotCSS, getThemeColors, defaultFontSize, defaultCSS };
+export {
+  baseCSS,
+  dotCSS,
+  getThemeColors,
+  defaultFontSize,
+  defaultBorderRadius,
+  defaultCSS,
+};

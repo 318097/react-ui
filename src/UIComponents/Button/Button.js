@@ -36,7 +36,6 @@ const Button = ({ children, className, onClick, size, curved, ...others }) => {
 
 Button.defaultProps = {
   size: "md",
-  color: "orchid",
   className: "button",
   curved: false,
 };

@@ -2,23 +2,23 @@ import React from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
 import colors from "../../magicdust/colors";
-import { baseCSS, dotCSS } from "../styled";
+import { baseCSS, dotCSS, getThemeColors } from "../styled";
 
 const switchStyles = css`
-  background: ${colors.bg};
-  border: 1px solid ${colors.bg};
+  background: ${getThemeColors("background")};
+  border: 1px solid ${getThemeColors("border_color")};
   border-radius: 4px;
   .radio-item {
     position: relative;
     border-radius: 0;
     &:hover {
-      background: ${colors.strokeOne};
+      background: ${getThemeColors("hover_background")};
     }
-    &:nth-child(1) {
-      border-right: 1px solid ${colors.strokeOne};
+    &:first-child {
+      border-right: 1px solid ${colors.strokeTwo};
     }
-    &:nth-child(2) {
-      border-left: 1px solid ${colors.strokeOne};
+    &:last-child {
+      border-left: 1px solid ${colors.strokeTwo};
     }
     &.radio-item-selected {
       &:after {

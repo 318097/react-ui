@@ -2,33 +2,36 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
 import colors from "../../magicdust/colors";
-import { baseCSS, dotCSS } from "../styled";
+import { baseCSS, dotCSS, getThemeColors } from "../styled";
 
 const StyledSelect = styled.div`
   position: relative;
   .select-text {
-    border: 1px solid ${colors.bg};
-    background: ${colors.bg};
+    background: ${getThemeColors("background")};
+    border: 1px solid ${getThemeColors("border_color")};
     ${baseCSS};
+    &:hover {
+      background: ${getThemeColors("hover_background")};
+    }
   }
   .dropdown {
-    position: absolute;
-    width: max-content;
-    min-width: 100%;
-    max-width: 200%;
     bottom: ${({ dropPosition }) =>
       dropPosition === "top" ? "calc(100% + 2px)" : "unset"};
     top: ${({ dropPosition }) =>
       dropPosition === "bottom" ? "calc(100% + 2px)" : "unset"};
+    max-width: 200%;
+    position: absolute;
+    width: max-content;
+    min-width: 100%;
     left: 0;
     display: flex;
     flex-direction: column;
     max-height: 200px;
     overflow-y: auto;
     overflow-x: hidden;
-    border: 1px solid ${colors.bg};
     border-radius: 4px;
-    background: ${colors.bg};
+    background: ${getThemeColors("background")};
+    border: 1px solid ${getThemeColors("border_color")};
     z-index: 1;
     .dropdown-item {
       box-sizing: border-box;
@@ -40,15 +43,15 @@ const StyledSelect = styled.div`
       border: 1px solid transparent;
       border-bottom: 1px solid ${colors.bg};
       &:hover {
-        background: ${colors.strokeOne};
+        background: ${getThemeColors("hover_background")};
       }
       &.dropdown-selected {
         position: relative;
         &:after {
           ${dotCSS};
-          left: 1px;
+          left: 3px;
           top: 50%;
-          /* transform: translateY(-50%); */
+          transform: translateY(-50%);
         }
       }
     }

@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import colors from "../../magicdust/colors";
-import { baseCSS } from "../styled";
+import { baseCSS, getThemeColors } from "../styled";
 
 const StyledInput = styled.input`
   background: ${colors.white};
-  border: 1px solid ${colors.bg};
+  border: 1px solid ${getThemeColors("border_color")};
   display: inline-block;
   ${baseCSS};
   margin: 0;

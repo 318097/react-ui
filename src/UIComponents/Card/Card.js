@@ -3,7 +3,7 @@ import styled from "styled-components";
 import classNames from "classnames";
 import colors from "../../magicdust/colors";
 import { getRandomNoInRange } from "../util";
-import { defaultCSS } from "../styled";
+import { defaultCSS, getThemeColors } from "../styled";
 
 const StyledCard = styled.div`
   background: ${colors.white};
@@ -11,8 +11,8 @@ const StyledCard = styled.div`
   max-width: 100%;
   display: inline-block;
   padding: 10px;
-  border: 1px solid ${colors.bg};
-  box-shadow: 3px 3px 3px ${colors.bg};
+  border: 1px solid ${getThemeColors("border_color")};
+  box-shadow: 3px 3px 3px ${getThemeColors("border_color")};
   position: relative;
   overflow: auto;
   ${defaultCSS};

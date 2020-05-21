@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../../magicdust/colors";
+import { getThemeColors } from "../styled";
 
 const StyledPageHeader = styled.div`
   display: flex;
@@ -8,7 +9,8 @@ const StyledPageHeader = styled.div`
   justify-content: space-between;
   margin: 4px 0;
   padding: 12px 8px;
-  background: ${({ background }) => (background ? colors.bg : "transparent")};
+  background: ${(props) =>
+    props.background ? getThemeColors("background")(props) : "transparent"};
   width: 100%;
   border-radius: 4px;
   .title {
