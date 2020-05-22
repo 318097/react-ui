@@ -36,21 +36,10 @@ module.exports = {
       },
     ],
   },
-  externals: [
-    {
-      react: {
-        root: "React",
-        commonjs2: "react",
-        commonjs: "react",
-        amd: "react",
-      },
-      "react-dom": {
-        root: "ReactDOM",
-        commonjs2: "react-dom",
-        commonjs: "react-dom",
-        amd: "react-dom",
-      },
-    },
-  ],
+  externals: {
+    react: "react",
+    "react-dom": "react-dom",
+    "styled-components": "styled-components",
+  },
   plugins: [new CopyPlugin([{ from: "./src/magicdust", to: "./styles/" }])],
 };
