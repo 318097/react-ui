@@ -3,3 +3,5 @@ src/
 .npmignore
 webpack.dev.js
 webpack.build.js
+build/
+.babelrc
