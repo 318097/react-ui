@@ -32,6 +32,10 @@ import Shape3 from "./Shape3";
 import Facebook from "./Facebook";
 import Twitter from "./Twitter";
 import Instagram from "./Instagram";
+import Settings from "./Settings";
+import Upload from "./Upload";
+import Home from "./Home";
+import Copy from "./Copy";
 
 export {
   Plus,
@@ -67,4 +71,8 @@ export {
   Facebook,
   Twitter,
   Instagram,
+  Settings,
+  Upload,
+  Home,
+  Copy,
 };

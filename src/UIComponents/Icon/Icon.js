@@ -36,6 +36,10 @@ import {
   Facebook,
   Twitter,
   Instagram,
+  Settings,
+  Upload,
+  Home,
+  Copy,
 } from "./icon-svgs";
 
 const StyledIcon = styled.span`
@@ -127,6 +131,14 @@ const SVGIcon = ({ type, ...props }) => {
       return <Twitter {...props} />;
     case "instagram":
       return <Instagram {...props} />;
+    case "settings":
+      return <Settings {...props} />;
+    case "upload":
+      return <Upload {...props} />;
+    case "home":
+      return <Home {...props} />;
+    case "copy":
+      return <Copy {...props} />;
     // case "football-2":
     //   return <Football2 {...props} />;
     // case "football-3":

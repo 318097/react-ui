@@ -118,6 +118,10 @@ const icons = [
   "facebook",
   "twitter",
   "instagram",
+  "settings",
+  "upload",
+  "home",
+  "copy",
 ];
 
 const Home = () => {
