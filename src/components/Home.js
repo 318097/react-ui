@@ -34,7 +34,7 @@ const UIComponent = ({ type }) => {
         </Card>
       );
     case "TAG":
-      return <Tag>Test file</Tag>;
+      return <Tag color={colors.yellow}>Tag</Tag>;
     case "INPUT":
       return <Input value={input} onChange={(e, value) => setInput(value)} />;
     case "PAGEHEADER":

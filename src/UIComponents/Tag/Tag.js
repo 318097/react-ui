@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 6px;
+  padding: 2px 4px;
   border-radius: 4px;
   border: 1px solid ${getThemeColors("border_color")};
   font-size: 1rem;
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   cursor: pointer;
 `;
 
-const Tag = ({ children, className = "tag", onClick, others }) => {
+const Tag = ({ children, className, onClick, style, color, ...others }) => {
   const classes = classNames({});
 
   const handleClick = () => {
@@ -30,11 +30,22 @@ const Tag = ({ children, className = "tag", onClick, others }) => {
     <Wrapper
       className={`${classes} ${className}`}
       onClick={handleClick}
+      style={{
+        ...style,
+        ...(color
+          ? { background: color, borderColor: color, color: "white" }
+          : {}),
+      }}
       {...others}
     >
       {children}
     </Wrapper>
   );
+};
+
+Tag.defaultProps = {
+  style: {},
+  className: "tag",
 };
 
 export default Tag;
