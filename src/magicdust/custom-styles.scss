@@ -9,93 +9,92 @@
   box-sizing: border-box;
 }
 
-.mt {
-  margin-top: 8px;
-}
-
-.ml {
-  margin-left: 8px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.center-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.underline {
-  position: relative;
-  &:after {
-    content: "";
-    width: 105%;
-    height: 4px;
-    background: $red;
-    position: absolute;
-    bottom: 1px;
-    left: 0;
+#react-ui,
+react-ui {
+  .mt {
+    margin-top: 8px;
   }
-}
 
-.field {
-  margin: 4px 4px 0 0;
-}
-
-.field-width {
-  width: 100%;
-  max-width: 150px;
-}
-
-.max-width {
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  @media screen and (max-width: 400px) {
-    max-width: 98%;
+  .ml {
+    margin-left: 8px;
   }
-}
 
-.flex {
-  display: flex;
-}
+  .text-center {
+    text-align: center;
+  }
 
-.flex.center {
-  align-items: center;
-}
-
-.flexx {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* CARD */
-
-.curve-border-1 {
-  border-radius: 3% 97% 5% 95% / 95% 4% 96% 5%;
-}
-
-.curve-border-2 {
-  border-radius: 48% 46% 1% 53% / 2% 2% 42% 2%;
-}
-
-.curve-border-3 {
-  border-radius: 48% 6% 1% 4% / 2% 7% 18% 5%;
-}
-
-.bottom-line {
-  &:after {
-    content: "";
+  .center-container {
     position: absolute;
-    bottom: 0px;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .underline {
+    position: relative;
+    &:after {
+      content: "";
+      width: 105%;
+      height: 4px;
+      background: $red;
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex.center {
+    align-items: center;
+  }
+
+  .flexx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* CARD */
+
+  .curve-border-1 {
+    border-radius: 3% 97% 5% 95% / 95% 4% 96% 5%;
+  }
+
+  .curve-border-2 {
+    border-radius: 48% 46% 1% 53% / 2% 2% 42% 2%;
+  }
+
+  .curve-border-3 {
+    border-radius: 48% 6% 1% 4% / 2% 7% 18% 5%;
+  }
+
+  .bottom-line {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: $strokeTwo;
+    }
+  }
+
+  .divider {
     width: 100%;
-    height: 4px;
-    background: $strokeTwo;
+    height: 1px;
+    background: $white;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: $yellow;
+    border-radius: 50%;
+    display: inline-block;
   }
 }
 
@@ -104,18 +103,4 @@
   flex-direction: $direction;
   align-items: $align;
   align-items: $justify;
-}
-
-.divider {
-  width: 100%;
-  height: 1px;
-  background: $white;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background: $yellow;
-  border-radius: 50%;
-  display: inline-block;
 }
