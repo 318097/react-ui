@@ -40,6 +40,7 @@ const StyledSelect = styled.div`
       white-space: nowrap;
       ${baseCSS};
       border-radius: 0;
+      overflow: hidden;
       border: 1px solid transparent;
       border-bottom: 1px solid ${colors.bg};
       &:hover {

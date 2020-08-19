@@ -7,7 +7,6 @@ import { defaultCSS, getThemeColors } from "../styled";
 
 const StyledCard = styled.div`
   background: ${colors.white};
-  min-height: 100px;
   max-width: 100%;
   display: inline-block;
   padding: 10px;

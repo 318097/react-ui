@@ -15,10 +15,10 @@ const switchStyles = css`
       background: ${getThemeColors("hover_background")};
     }
     &:first-child {
-      border-right: 1px solid ${colors.strokeTwo};
+      border-right: 0.5px solid ${colors.strokeTwo};
     }
     &:last-child {
-      border-left: 1px solid ${colors.strokeTwo};
+      border-left: 0.5px solid ${colors.strokeTwo};
     }
     &.radio-item-selected {
       &:after {

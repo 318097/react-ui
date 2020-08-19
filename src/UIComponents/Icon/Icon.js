@@ -55,7 +55,6 @@ const StyledIcon = styled.span`
   width: ${({ size, background }) => (background ? `${size + 10}px` : "auto")};
   background: ${({ background }) => (background ? colors.shade1 : "none")};
   transition: all 0.4s;
-  text-rendering: optimizeLegibility;
   svg {
     font-family: initial;
     fill: ${({ fill }) => fill};
@@ -148,14 +147,7 @@ const SVGIcon = ({ type, ...props }) => {
   }
 };
 
-const Icon = ({
-  className = "icon",
-  onClick,
-  background = false,
-  type,
-  size = 16,
-  fill = colors.bar,
-}) => (
+const Icon = ({ className, onClick, background, type, size, fill }) => (
   <StyledIcon
     className={className}
     background={background}
@@ -166,5 +158,12 @@ const Icon = ({
     <SVGIcon type={type} height={size} width={size} />
   </StyledIcon>
 );
+
+Icon.defaultProps = {
+  className: "icon",
+  background: false,
+  size: 16,
+  fill: colors.bar,
+};
 
 export default Icon;
