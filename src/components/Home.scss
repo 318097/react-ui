@@ -13,7 +13,8 @@ section {
   justify-content: center;
   gap: 2px;
   .item {
-    height: 180px;
+    height: auto;
+    min-height: 180px;
     padding: 10px;
     display: flex;
     align-items: center;

@@ -9,7 +9,19 @@ import Input from "./Input";
 import Radio from "./Radio";
 import Select from "./Select";
 import Spinner from "./Spinner";
+import Timeline from "./Timeline";
 
-export { Card, Icon, PageHeader, Button, Tag, Input, Radio, Select, Spinner };
+export {
+  Card,
+  Icon,
+  PageHeader,
+  Button,
+  Tag,
+  Input,
+  Radio,
+  Select,
+  Spinner,
+  Timeline,
+};
 
 export default color;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import {
   Button,
   Card,
@@ -9,6 +9,7 @@ import {
   Radio,
   Select,
   Spinner,
+  Timeline,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -71,6 +72,22 @@ const UIComponent = ({ type }) => {
       );
     case "SPINNER":
       return <Spinner />;
+    case "TIMELINE":
+      return (
+        <Timeline
+          items={[{ name: "abccc" }, { name: "abcccfsd" }]}
+          renderItem={(item) => (
+            <Fragment>
+              <div className="left">
+                <div className="card">{item.name}</div>
+              </div>
+              {/* <div className="right">
+                <div className="card">{item.name}</div>
+              </div> */}
+            </Fragment>
+          )}
+        />
+      );
     default:
       return null;
   }
@@ -85,6 +102,7 @@ const uiList = [
   "CARD",
   "TAG",
   "SPINNER",
+  "TIMELINE",
 ];
 const icons = [
   "caret-left",
