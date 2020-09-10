@@ -8,6 +8,8 @@ import Tag from "./Tag";
 import Input from "./Input";
 import Radio from "./Radio";
 import Select from "./Select";
+import Spinner from "./Spinner";
 
-export { Card, Icon, PageHeader, Button, Tag, Input, Radio, Select };
+export { Card, Icon, PageHeader, Button, Tag, Input, Radio, Select, Spinner };
+
 export default color;

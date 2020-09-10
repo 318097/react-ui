@@ -8,6 +8,7 @@ import {
   Icon,
   Radio,
   Select,
+  Spinner,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -68,6 +69,8 @@ const UIComponent = ({ type }) => {
           onChange={(value) => setSelect(value)}
         />
       );
+    case "SPINNER":
+      return <Spinner />;
     default:
       return null;
   }
@@ -81,6 +84,7 @@ const uiList = [
   "PAGEHEADER",
   "CARD",
   "TAG",
+  "SPINNER",
 ];
 const icons = [
   "caret-left",
