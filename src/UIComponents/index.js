@@ -10,6 +10,7 @@ import Radio from "./Radio";
 import Select from "./Select";
 import Spinner from "./Spinner";
 import Timeline from "./Timeline";
+import ConfirmBox from "./ConfirmBox";
 
 export {
   Card,
@@ -22,6 +23,7 @@ export {
   Select,
   Spinner,
   Timeline,
+  ConfirmBox,
 };
 
 export default color;

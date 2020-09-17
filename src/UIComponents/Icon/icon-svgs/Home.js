@@ -7,7 +7,7 @@ const Home = (props) => {
       width={props.width}
       fill={props.fill}
       id="Layer_1"
-      enable-background="new 0 0 512 512"
+      enableBackground="new 0 0 512 512"
       viewBox="0 0 512 512"
       xmlns="http://www.w3.org/2000/svg"
     >
