@@ -19,6 +19,10 @@
     margin-left: 8px;
   }
 
+  .mb {
+    margin-bottom: 8px;
+  }
+
   .text-center {
     text-align: center;
   }
@@ -99,7 +103,7 @@
   }
 }
 
-@mixin flex($align: center, $justify: center, $direction: row) {
+@mixin flex($direction: row, $align: center, $justify: center) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;
