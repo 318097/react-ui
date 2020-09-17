@@ -10,6 +10,7 @@ import {
   Select,
   Spinner,
   Timeline,
+  ConfirmBox,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -75,7 +76,13 @@ const UIComponent = ({ type }) => {
     case "TIMELINE":
       return (
         <Timeline
-          items={[{ name: "abccc" }, { name: "abcccfsd" }]}
+          items={[
+            {
+              name: "Item 1",
+              id: 1,
+            },
+            { name: "Item 2", id: 2 },
+          ]}
           renderItem={(item) => (
             <Fragment>
               <div className="left">
@@ -87,6 +94,12 @@ const UIComponent = ({ type }) => {
             </Fragment>
           )}
         />
+      );
+    case "CONFIRMBOX":
+      return (
+        <ConfirmBox>
+          <Button>Delete</Button>
+        </ConfirmBox>
       );
     default:
       return null;
@@ -103,6 +116,7 @@ const uiList = [
   "TAG",
   "SPINNER",
   "TIMELINE",
+  "CONFIRMBOX",
 ];
 const icons = [
   "caret-left",
