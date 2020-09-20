@@ -81,6 +81,16 @@ const Select = ({
 
   const classes = classNames({});
   const selectedOption = options.find((option) => option.value === value);
+
+  const selectedText = selectedOption ? (
+    <span>
+      {placeholder && <strong>{`${placeholder}: `}</strong>}
+      {selectedOption.label}
+    </span>
+  ) : (
+    placeholder
+  );
+
   return (
     <StyledSelect
       name={name}
@@ -90,7 +100,7 @@ const Select = ({
       {...others}
     >
       <div className="select-text" onClick={toggleVisibility}>
-        {selectedOption ? selectedOption.label : placeholder}
+        {selectedText}
       </div>
       {visible && (
         <div className="dropdown">
