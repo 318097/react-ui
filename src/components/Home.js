@@ -85,8 +85,8 @@ const UIComponent = ({ type }) => {
           ]}
           renderItem={(item) => (
             <Fragment>
-              <div className="left">
-                <div className="card">{item.name}</div>
+              <div className="timeline-left-container">
+                <div className="timeline-card">{item.name}</div>
               </div>
               {/* <div className="right">
                 <div className="card">{item.name}</div>

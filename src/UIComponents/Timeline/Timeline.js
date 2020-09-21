@@ -10,7 +10,7 @@ const Timeline = ({ items, renderItem, view }) => {
   return (
     <div className={classList}>
       {items.map((item) => (
-        <div key={item.id} className="block">
+        <div key={item.id} className="timeline-block">
           {renderItem(item)}
         </div>
       ))}
