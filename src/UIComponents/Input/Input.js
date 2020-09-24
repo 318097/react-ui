@@ -12,7 +12,7 @@ const StyledInput = styled.input`
   margin: 0;
   &:active,
   &:focus {
-    border-color: ${colors.orchid};
+    border-color: ${colors.strokeTwo};
   }
 `;
 

@@ -30,8 +30,8 @@ const StyledSelect = styled.div`
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 4px;
-    background: ${getThemeColors("background")};
-    border: 1px solid ${getThemeColors("border_color")};
+    background: ${colors.featherDark};
+    border: 1px solid ${colors.featherDark};
     z-index: 1;
     .dropdown-item {
       box-sizing: border-box;
