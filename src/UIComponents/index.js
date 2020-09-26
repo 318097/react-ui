@@ -11,6 +11,7 @@ import Select from "./Select";
 import Spinner from "./Spinner";
 import Timeline from "./Timeline";
 import ConfirmBox from "./ConfirmBox";
+import Checkbox from "./Checkbox";
 
 export {
   Card,
@@ -24,6 +25,7 @@ export {
   Spinner,
   Timeline,
   ConfirmBox,
+  Checkbox,
 };
 
 export default color;

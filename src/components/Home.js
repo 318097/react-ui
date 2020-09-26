@@ -11,6 +11,7 @@ import {
   Spinner,
   Timeline,
   ConfirmBox,
+  Checkbox,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -101,6 +102,8 @@ const UIComponent = ({ type }) => {
           <Button>Delete</Button>
         </ConfirmBox>
       );
+    case "CHECKBOX":
+      return <Checkbox label={"Check"} value={true} />;
     default:
       return null;
   }
@@ -117,6 +120,7 @@ const uiList = [
   "SPINNER",
   "TIMELINE",
   "CONFIRMBOX",
+  "CHECKBOX",
 ];
 const icons = [
   "caret-left",
