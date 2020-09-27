@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
+import PropTypes from "prop-types";
+
 import colors from "../../magicdust/colors";
 import { baseCSS, dotCSS, getThemeColors } from "../styled";
 
@@ -79,7 +81,10 @@ const Select = ({
 
   const toggleVisibility = () => setVisibility((prev) => !prev);
 
-  const classes = classNames({});
+  const classes = classNames({
+    [className]: true,
+  });
+
   const selectedOption = options.find((option) => option.value === value);
 
   const selectedText = selectedOption ? (
@@ -95,7 +100,7 @@ const Select = ({
     <StyledSelect
       name={name}
       style={{ ...style }}
-      className={`${classes} ${className}`}
+      className={classes}
       dropPosition={dropPosition}
       {...others}
     >
@@ -124,12 +129,21 @@ const Select = ({
 };
 
 Select.defaultProps = {
+  className: "select",
+  style: {},
   placeholder: "Select",
   options: [],
-  style: {},
-  className: "select",
   dropPosition: "bottom",
   size: "md",
 };
 
-export default Select;
+Select.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  placeholder: PropTypes.string,
+  options: PropTypes.array.isRequired,
+  dropPosition: PropTypes.string,
+  size: PropTypes.string,
+};
+
+export default memo(Select);

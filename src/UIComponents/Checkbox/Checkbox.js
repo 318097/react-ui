@@ -75,6 +75,11 @@ Checkbox.defaultProps = {
 
 Checkbox.propTypes = {
   label: PropTypes.string.isRequired,
+  value: PropTypes.bool,
+  style: PropTypes.object,
+  className: PropTypes.string,
+  size: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default memo(Checkbox);

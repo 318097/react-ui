@@ -1,19 +1,21 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import classNames from "classnames";
+import PropTypes from "prop-types";
+
 import colors from "../../magicdust/colors";
 import { getRandomNoInRange } from "../util";
 import { defaultCSS, getThemeColors } from "../styled";
 
 const StyledCard = styled.div`
-  background: ${colors.white};
-  max-width: 100%;
   display: inline-block;
+  max-width: 100%;
   padding: 10px;
-  border: 1px solid ${getThemeColors("border_color")};
-  box-shadow: 3px 3px 3px ${getThemeColors("border_color")};
   position: relative;
   overflow: auto;
+  background: ${colors.white};
+  border: 1px solid ${getThemeColors("border_color")};
+  box-shadow: 3px 3px 3px ${getThemeColors("border_color")};
   ${defaultCSS};
   &:hover {
     background: ${({ hover }) => hover && colors.feather};
@@ -22,12 +24,13 @@ const StyledCard = styled.div`
 
 const Card = ({ children, className, curved, bottomLine, ...others }) => {
   const classes = classNames({
+    [className]: true,
     [`curve-border-${getRandomNoInRange(3)}`]: curved,
     "bottom-line": bottomLine,
   });
 
   return (
-    <StyledCard className={`${classes} ${className}`} {...others}>
+    <StyledCard className={classes} {...others}>
       {children}
     </StyledCard>
   );
@@ -40,4 +43,11 @@ Card.defaultProps = {
   hover: false,
 };
 
-export default Card;
+Card.propTypes = {
+  className: PropTypes.string,
+  curved: PropTypes.bool,
+  bottomLine: PropTypes.bool,
+  hover: PropTypes.bool,
+};
+
+export default memo(Card);

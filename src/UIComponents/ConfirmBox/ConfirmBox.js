@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
+
 import "./ConfirmBox.scss";
 
 const ConfirmBox = ({ children, title, onConfirm, onCancel, position }) => {
@@ -39,9 +41,14 @@ const ConfirmBox = ({ children, title, onConfirm, onCancel, position }) => {
   );
 };
 
-export default ConfirmBox;
-
 ConfirmBox.defaultProps = {
   title: "Delete?",
   position: "center",
 };
+
+ConfirmBox.propTypes = {
+  title: PropTypes.string,
+  position: PropTypes.string,
+};
+
+export default ConfirmBox;

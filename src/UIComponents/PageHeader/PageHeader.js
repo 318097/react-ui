@@ -1,5 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
+import classNames from "classnames";
+import PropTypes from "prop-types";
+
 import colors from "../../magicdust/colors";
 import { getThemeColors } from "../styled";
 
@@ -24,16 +27,29 @@ const StyledPageHeader = styled.div`
   }
 `;
 
-const PageHeader = ({ title, actions, className, ...others }) => (
-  <StyledPageHeader className={className} {...others}>
-    <div className="title">{title}</div>
-    <div className="actions">{actions}</div>
-  </StyledPageHeader>
-);
+const PageHeader = ({ title, actions, className, ...others }) => {
+  const classes = classNames({
+    [className]: true,
+  });
+
+  return (
+    <StyledPageHeader className={classes} {...others}>
+      <div className="title">{title}</div>
+      <div className="actions">{actions}</div>
+    </StyledPageHeader>
+  );
+};
 
 PageHeader.defaultProps = {
   className: "page-header",
   background: true,
 };
 
-export default PageHeader;
+PageHeader.propTypes = {
+  className: PropTypes.string,
+  // title: PropTypes.string.isRequired,
+  // actions: PropTypes.array,
+  background: PropTypes.bool,
+};
+
+export default memo(PageHeader);

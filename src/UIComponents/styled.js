@@ -1,24 +1,24 @@
 import { css } from "styled-components";
 import colors from "../magicdust/colors";
+import constants from "../magicdust/constants";
 
-const borderRadius = "4px";
-const fontSize = "1.2rem";
-
-const defaultFontSize = css`
-  font-size: ${fontSize};
+const fontSize = css`
+  font-size: ${constants.FONT_SIZE};
 `;
 
-const defaultBorderRadius = css`
-  border-radius: ${borderRadius};
+const borderRadius = css`
+  border-radius: ${constants.BORDER_RADIUS};
 `;
 
+// Card
 const defaultCSS = css`
-  ${defaultFontSize};
-  ${defaultBorderRadius};
+  ${fontSize};
+  ${borderRadius};
   transition: all 0.4s;
   box-sizing: border-box;
 `;
 
+// Input fields
 const baseCSS = css`
   cursor: pointer;
   outline: none;
@@ -33,7 +33,7 @@ const dotCSS = css`
   border-radius: 50%;
   width: 4px;
   height: 4px;
-  background: ${colors.orchid};
+  background: ${constants.PRIMARY};
   position: absolute;
 `;
 
@@ -76,11 +76,4 @@ const getThemeColors = (property) => ({ theme, color = "bg" }) => {
   return value[property];
 };
 
-export {
-  baseCSS,
-  dotCSS,
-  getThemeColors,
-  defaultFontSize,
-  defaultBorderRadius,
-  defaultCSS,
-};
+export { baseCSS, dotCSS, getThemeColors, defaultCSS };

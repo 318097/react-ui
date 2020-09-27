@@ -1,9 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
-import colors from "../../magicdust/colors";
+import classNames from "classnames";
+import PropTypes from "prop-types";
+
 import { baseCSS, getThemeColors } from "../styled";
 import { getRandomNoInRange } from "../util";
-import classNames from "classnames";
 
 const StyledButton = styled.button`
   border: 1px solid ${getThemeColors("border_color")};
@@ -19,25 +20,28 @@ const StyledButton = styled.button`
 
 const Button = ({ children, className, onClick, size, curved, ...others }) => {
   const classes = classNames({
+    [className]: true,
     [`curve-border-${getRandomNoInRange(3)}`]: curved,
   });
 
   return (
-    <StyledButton
-      className={`${classes} ${className}`}
-      onClick={onClick}
-      size={size}
-      {...others}
-    >
+    <StyledButton className={classes} onClick={onClick} size={size} {...others}>
       {children}
     </StyledButton>
   );
 };
 
 Button.defaultProps = {
-  size: "md",
   className: "button",
+  size: "md",
   curved: false,
 };
 
-export default Button;
+Button.propTypes = {
+  className: PropTypes.string,
+  size: PropTypes.string,
+  curved: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+};
+
+export default memo(Button);

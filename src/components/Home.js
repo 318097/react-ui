@@ -45,7 +45,6 @@ const UIComponent = ({ type }) => {
       return (
         <PageHeader title={<h3>Title</h3>} actions={<span>Actions</span>} />
       );
-      age;
     case "RADIO":
       return (
         <Radio

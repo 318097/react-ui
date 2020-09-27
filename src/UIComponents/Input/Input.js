@@ -1,6 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import classNames from "classnames";
+import PropTypes from "prop-types";
+
 import colors from "../../magicdust/colors";
 import { baseCSS, getThemeColors } from "../styled";
 
@@ -17,15 +19,16 @@ const StyledInput = styled.input`
 `;
 
 const Input = ({
-  style = {},
-  className = "input",
-  curved = false,
+  style,
+  className,
+  curved,
   onChange,
   onBlur,
   name,
   ...others
 }) => {
   const classes = classNames({
+    [className]: true,
     "curve-border-1": curved,
   });
 
@@ -55,10 +58,19 @@ const Input = ({
 };
 
 Input.defaultProps = {
-  style: {},
   className: "input",
-  curved: false,
+  style: {},
   size: "md",
+  curved: false,
 };
 
-export default Input;
+Input.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  size: PropTypes.string,
+  curved: PropTypes.bool,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+};
+
+export default memo(Input);
