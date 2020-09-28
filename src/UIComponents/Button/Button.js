@@ -3,19 +3,12 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import { baseCSS, getThemeColors } from "../styled";
+import { baseCSS, getStyles } from "../styled";
 import { getRandomNoInRange } from "../util";
 
 const StyledButton = styled.button`
-  border: 1px solid ${getThemeColors("border_color")};
-  background: ${getThemeColors("background")};
-  color: ${getThemeColors("color")};
+  ${(props) => getStyles({ ...props, type: "BUTTON" })};
   ${baseCSS};
-  &:hover {
-    border-color: ${getThemeColors("hover_border_color")};
-    background: ${getThemeColors("hover_background")};
-    color: ${getThemeColors("hover_color")};
-  }
 `;
 
 const Button = ({ children, className, onClick, size, curved, ...others }) => {

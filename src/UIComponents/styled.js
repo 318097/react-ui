@@ -37,43 +37,38 @@ const dotCSS = css`
   position: absolute;
 `;
 
-const getThemeColors = (property) => ({ theme, color = "bg" }) => {
-  const currentColor = colors[color];
+const getStyles = ({ color, type }) => {
+  const bg = color ? colors[color] : constants.BG;
+  const primary = constants.PRIMARY;
+  const secondary = constants.SECONDARY;
 
-  let value = {
-    border_color: currentColor,
-    background: currentColor,
-    color: colors.white,
-    hover_color: colors.white,
-  };
-  switch (color) {
-    case "strokeOne":
-      value = {
-        ...value,
-        hover_background: colors.strokeTwo,
-        hover_border_color: colors.strokeTwo,
-        color: colors.bar,
-        hover_color: colors.bar,
-      };
+  let styles = `
+    background: ${bg};
+    border: 1px solid ${bg};
+  `;
+
+  switch (type) {
+    case "CARD":
+      styles = `
+        background: ${colors.white};
+        border: 1px solid ${secondary};
+         &:hover{
+          background: ${colors.featherDark};
+        }
+      `;
       break;
-    case "bg":
-      value = {
-        ...value,
-        hover_background: colors.strokeOne,
-        hover_border_color: colors.strokeOne,
-        color: colors.bar,
-        hover_color: colors.bar,
-      };
-      break;
-    default:
-      value = {
-        ...value,
-        hover_background: `${currentColor}BB`,
-        border_color: `${currentColor}BB`,
-      };
+    case "BUTTON":
+    case "CHECKBOX":
+      styles += `
+         &:hover{
+          background: ${secondary};
+          border-color: ${secondary};
+        }
+      `;
       break;
   }
-  return value[property];
+
+  return styles;
 };
 
-export { baseCSS, dotCSS, getThemeColors, defaultCSS };
+export { baseCSS, dotCSS, getStyles, defaultCSS, borderRadius };

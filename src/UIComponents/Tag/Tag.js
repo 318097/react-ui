@@ -1,22 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
-import colors from "../../magicdust/colors";
-import { getThemeColors } from "../styled";
+import { borderRadius, getStyles } from "../styled";
 
 const Wrapper = styled.div`
-  background: ${colors.featherDark};
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 2px 4px;
-  border-radius: 4px;
-  border: 1px solid ${getThemeColors("border_color")};
+  ${borderRadius};
   font-size: 1rem;
   transition: 0.4s;
   margin: 2px;
   position: relative;
   cursor: pointer;
+  ${(props) => getStyles({ ...props, type: "TAG" })};
 `;
 
 const Tag = ({ children, className, onClick, style, color, ...others }) => {

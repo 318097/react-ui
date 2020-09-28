@@ -3,27 +3,28 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import colors from "../../magicdust/colors";
-import { getThemeColors } from "../styled";
+import constants from "../../magicdust/constants";
+import { borderRadius } from "../styled";
 
 const StyledPageHeader = styled.div`
+  width: 100%;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   margin: 4px 0;
   padding: 12px 8px;
-  background: ${(props) =>
-    props.background ? getThemeColors("background")(props) : "transparent"};
-  width: 100%;
-  border-radius: 4px;
+  background: ${({ background }) =>
+    background ? constants.BG : "transparent"};
+  ${borderRadius};
   .title {
     display: flex;
     font-weight: bold;
   }
   .actions {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: flex-end;
+    margin-left: 12px;
   }
 `;
 

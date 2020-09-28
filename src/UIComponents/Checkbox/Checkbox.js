@@ -3,23 +3,16 @@ import styled, { css } from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import colors from "../../magicdust/colors";
-import { baseCSS, dotCSS, getThemeColors } from "../styled";
+import { baseCSS, dotCSS, getStyles } from "../styled";
 
 const StyledCheckbox = styled.div`
   width: max-content;
-  display: flex;
-  align-items: center;
   display: inline-block;
-  ${baseCSS};
-  background: ${getThemeColors("background")};
-  border: 1px solid ${getThemeColors("border_color")};
-  border-radius: 4px;
   position: relative;
   margin-right: 4px;
-  &:hover {
-    background: ${getThemeColors("hover_background")};
-  }
+  margin-bottom: 4px;
+  ${baseCSS};
+  ${(props) => getStyles({ ...props, type: "CHECKBOX" })};
   &.checkbox-selected {
     &:after {
       ${dotCSS};

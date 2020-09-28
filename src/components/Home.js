@@ -53,7 +53,7 @@ const UIComponent = ({ type }) => {
             { label: "Option B", value: "b" },
           ]}
           value={radio}
-          onChange={(value) => setRadio(value)}
+          onChange={(_, value) => setRadio(value)}
         />
       );
     case "SELECT":

@@ -4,17 +4,18 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 import colors from "../../magicdust/colors";
-import { baseCSS, getThemeColors } from "../styled";
+import constants from "../../magicdust/constants";
+import { baseCSS } from "../styled";
 
 const StyledInput = styled.input`
   background: ${colors.white};
-  border: 1px solid ${getThemeColors("border_color")};
+  border: 1px solid ${constants.BG};
   display: inline-block;
   ${baseCSS};
   margin: 0;
   &:active,
   &:focus {
-    border-color: ${colors.strokeTwo};
+    border-color: ${constants.PRIMARY};
   }
 `;
 

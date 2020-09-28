@@ -3,23 +3,19 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import colors from "../../magicdust/colors";
+import constants from "../../magicdust/constants";
 import { getRandomNoInRange } from "../util";
-import { defaultCSS, getThemeColors } from "../styled";
+import { defaultCSS, getStyles } from "../styled";
 
 const StyledCard = styled.div`
   display: inline-block;
   max-width: 100%;
-  padding: 10px;
+  padding: 16px 12px;
   position: relative;
-  overflow: auto;
-  background: ${colors.white};
-  border: 1px solid ${getThemeColors("border_color")};
-  box-shadow: 3px 3px 3px ${getThemeColors("border_color")};
+  overflow-y: auto;
+  box-shadow: 3px 3px 3px ${constants.SECONDARY};
+  ${(props) => getStyles({ ...props, type: "CARD" })};
   ${defaultCSS};
-  &:hover {
-    background: ${({ hover }) => hover && colors.feather};
-  }
 `;
 
 const Card = ({ children, className, curved, bottomLine, ...others }) => {

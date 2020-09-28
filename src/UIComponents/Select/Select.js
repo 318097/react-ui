@@ -3,50 +3,48 @@ import styled, { css } from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import colors from "../../magicdust/colors";
-import { baseCSS, dotCSS, getThemeColors } from "../styled";
+import constants from "../../magicdust/constants";
+import { baseCSS, dotCSS, getStyles } from "../styled";
 
 const StyledSelect = styled.div`
   position: relative;
   .select-text {
-    background: ${getThemeColors("background")};
-    border: 1px solid ${getThemeColors("border_color")};
     ${baseCSS};
-    &:hover {
-      background: ${getThemeColors("hover_background")};
-    }
+    ${(props) => getStyles({ ...props, type: "SELECT" })};
   }
   .dropdown {
+    position: absolute;
+    left: 0;
     bottom: ${({ dropPosition }) =>
       dropPosition === "top" ? "calc(100% + 2px)" : "unset"};
     top: ${({ dropPosition }) =>
       dropPosition === "bottom" ? "calc(100% + 2px)" : "unset"};
-    max-width: 200%;
-    position: absolute;
-    width: max-content;
+
+    max-height: 200px;
     min-width: 100%;
-    left: 0;
+    max-width: 200%;
+    width: max-content;
     display: flex;
     flex-direction: column;
-    max-height: 200px;
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 4px;
-    background: ${colors.featherDark};
-    border: 1px solid ${colors.featherDark};
+    background: ${constants.BG};
+    border: 1px solid ${constants.BG};
     z-index: 1;
     .dropdown-item {
-      box-sizing: border-box;
       width: 100%;
       text-overflow: ellipsis;
       white-space: nowrap;
       ${baseCSS};
       border-radius: 0;
-      overflow: hidden;
-      border: 1px solid transparent;
-      border-bottom: 1px solid ${colors.bg};
+      /* overflow: hidden; */
+      border-bottom: 1px solid ${constants.SECONDARY};
+      &:last-child {
+        border-bottom: none;
+      }
       &:hover {
-        background: ${getThemeColors("hover_background")};
+        background: ${constants.SECONDARY};
       }
       &.dropdown-selected {
         position: relative;
