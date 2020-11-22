@@ -45,5 +45,4 @@ Tag.defaultProps = {
   style: {},
   className: "tag",
 };
-
 export default Tag;
