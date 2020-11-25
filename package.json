@@ -34,7 +34,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "rm -rf './dist' && webpack --config webpack.build.js",
+    "build": "rimraf './dist' && webpack --config webpack.build.js",
     "predeploy": "npm run build",
     "deploy": "npm publish --access=public"
   },
@@ -47,5 +47,8 @@
   "bugs": {
     "url": "https://github.com/318097/react-ui/issues"
   },
-  "homepage": "https://github.com/318097/react-ui#readme"
+  "homepage": "https://github.com/318097/react-ui#readme",
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
 }
