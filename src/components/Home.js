@@ -33,7 +33,7 @@ const UIComponent = ({ type }) => {
       return <Button>Test</Button>;
     case "CARD":
       return (
-        <Card curved>
+        <Card curved hover>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dicta
           incidunt vero? Vitae, atque culpa, aperiam optio quam dignissimos
           temporibus omnis reiciendis neque sed nihil expedita aliquam eum!

@@ -37,7 +37,7 @@ const dotCSS = css`
   position: absolute;
 `;
 
-const getStyles = ({ color, type }) => {
+const getStyles = ({ color, type, hover }) => {
   const bg = color ? colors[color] : constants.BG;
   const primary = constants.PRIMARY;
   const secondary = constants.SECONDARY;
@@ -53,7 +53,7 @@ const getStyles = ({ color, type }) => {
         background: ${colors.white};
         border: 1px solid ${secondary};
          &:hover{
-          background: ${colors.featherDark};
+          background: ${hover ? colors.featherDark : "inherit"};
         }
       `;
       break;
