@@ -16,7 +16,7 @@ const StyledCheckbox = styled.div`
   &.checkbox-selected {
     &:after {
       ${dotCSS};
-      bottom: 2px;
+      bottom: 1.5px;
       left: 50%;
       transform: translateX(-50%);
     }

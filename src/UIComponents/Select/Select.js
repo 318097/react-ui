@@ -73,7 +73,8 @@ const Select = ({
   const [visible, setVisibility] = useState(false);
 
   const handleChange = (option, e) => {
-    onChange(option.value, e);
+    if (name) onChange(e, { [name]: option.value });
+    else onChange(e, option.value);
     setVisibility(false);
   };
 

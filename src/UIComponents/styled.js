@@ -23,7 +23,7 @@ const baseCSS = css`
   cursor: pointer;
   outline: none;
   padding: ${({ size }) =>
-    size === "sm" ? "2px 4px" : size === "md" ? "6px 12px" : "10px 20px"};
+    size === "sm" ? "3px 6px" : size === "md" ? "6px 12px" : "10px 20px"};
   ${defaultCSS};
 `;
 

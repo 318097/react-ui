@@ -17,9 +17,14 @@ import "./Home.scss";
 import colors from "../magicdust/colors";
 
 const UIComponent = ({ type }) => {
-  const [input, setInput] = useState("");
-  const [radio, setRadio] = useState("a");
-  const [select, setSelect] = useState("a");
+  const [data, setData] = useState({
+    input: "",
+    radio: "a",
+    select: "a",
+    checkbox: true,
+  });
+
+  const setInputField = (update) => setData((prev) => ({ ...prev, ...update }));
 
   switch (type) {
     case "ICON":
@@ -40,7 +45,12 @@ const UIComponent = ({ type }) => {
     case "TAG":
       return <Tag color={colors.yellow}>Tag</Tag>;
     case "INPUT":
-      return <Input value={input} onChange={(e, value) => setInput(value)} />;
+      return (
+        <Input
+          value={data.input}
+          onChange={(e, value) => setInputField({ input: value })}
+        />
+      );
     case "PAGEHEADER":
       return (
         <PageHeader title={<h3>Title</h3>} actions={<span>Actions</span>} />
@@ -52,8 +62,8 @@ const UIComponent = ({ type }) => {
             { label: "Option A", value: "a" },
             { label: "Option B", value: "b" },
           ]}
-          value={radio}
-          onChange={(_, value) => setRadio(value)}
+          value={data.radio}
+          onChange={(e, value) => setInputField({ radio: value })}
         />
       );
     case "SELECT":
@@ -62,13 +72,13 @@ const UIComponent = ({ type }) => {
           options={[
             { label: "Option A", value: "a" },
             { label: "Option B", value: "b" },
-            { label: "Long option abcedddfdadf", value: "c" },
+            { label: "Looooooooooooooooooooong option", value: "c" },
             { label: "Option d", value: "d" },
             { label: "Option e", value: "e" },
             { label: "Option f", value: "f" },
           ]}
-          value={select}
-          onChange={(value) => setSelect(value)}
+          value={data.select}
+          onChange={(e, value) => setInputField({ select: value })}
         />
       );
     case "SPINNER":
@@ -102,7 +112,14 @@ const UIComponent = ({ type }) => {
         </ConfirmBox>
       );
     case "CHECKBOX":
-      return <Checkbox label={"Check"} value={true} />;
+      return (
+        <Checkbox
+          // size="sm"
+          label={"Check"}
+          value={data.checkbox}
+          onChange={(e, value) => setInputField({ checkbox: value })}
+        />
+      );
     default:
       return null;
   }
@@ -165,7 +182,7 @@ const icons = [
 
 const Home = () => {
   return (
-    <section>
+    <section id="react-ui">
       <div className="ui-container">
         {uiList.map((type) => (
           <div key={type} className="item">

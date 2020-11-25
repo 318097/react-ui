@@ -1,6 +1,10 @@
 @import "./colors.scss";
 @import "./custom-styles.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   @extend .defaults;
   height: 100vh;
