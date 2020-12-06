@@ -149,7 +149,8 @@ $marginValue: 8px;
   .divider {
     width: 100%;
     height: 1px;
-    background: $feather;
+    background: $chrome;
+    margin: 8px 0;
   }
 
   .dot {
