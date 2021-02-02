@@ -18,7 +18,6 @@ import Coding from "./Coding";
 import Electricity from "./Electricity";
 import Football from "./Football";
 import Football2 from "./Football2";
-import Football3 from "./Football3";
 import Heart from "./Heart";
 import Innovation from "./Innovation";
 import Interface from "./Interface";

@@ -29,6 +29,7 @@ const uiList = [
   "CONFIRMBOX",
   "CHECKBOX",
 ];
+
 const icons = [
   "caret-left",
   "check",
@@ -50,7 +51,6 @@ const icons = [
   "bulb",
   "football",
   "football-2",
-  "football-3",
   "heart-2",
   "bulb-2",
   "triangle-2",

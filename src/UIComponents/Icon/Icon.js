@@ -138,10 +138,8 @@ const SVGIcon = ({ type, ...props }) => {
       return <Home {...props} />;
     case "copy":
       return <Copy {...props} />;
-    // case "football-2":
-    //   return <Football2 {...props} />;
-    // case "football-3":
-    //   return <Football3 {...props} />;
+    case "football-2":
+      return <Football2 {...props} />;
     default:
       return <span>{type === "-" ? "x" : "-"}</span>;
   }
