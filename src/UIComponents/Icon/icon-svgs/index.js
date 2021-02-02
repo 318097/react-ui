@@ -35,6 +35,8 @@ import Settings from "./Settings";
 import Upload from "./Upload";
 import Home from "./Home";
 import Copy from "./Copy";
+import LeftArrow from "./LeftArrow";
+import Close from "./Close";
 
 export {
   Plus,
@@ -74,4 +76,6 @@ export {
   Upload,
   Home,
   Copy,
+  LeftArrow,
+  Close,
 };

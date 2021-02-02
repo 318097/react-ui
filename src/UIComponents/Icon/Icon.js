@@ -40,6 +40,8 @@ import {
   Upload,
   Home,
   Copy,
+  LeftArrow,
+  Close,
 } from "./icon-svgs";
 
 const StyledIcon = styled.span`
@@ -140,6 +142,10 @@ const SVGIcon = ({ type, ...props }) => {
       return <Copy {...props} />;
     case "football-2":
       return <Football2 {...props} />;
+    case "left-arrow":
+      return <LeftArrow {...props} />;
+    case "close":
+      return <Close {...props} />;
     default:
       return <span>{type === "-" ? "x" : "-"}</span>;
   }

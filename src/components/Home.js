@@ -33,6 +33,7 @@ const uiList = [
 const icons = [
   "caret-left",
   "check",
+  "check-2",
   "delete",
   "plus",
   "google",
@@ -46,7 +47,6 @@ const icons = [
   "binary-code-2",
   "cancel",
   "cancel-2",
-  "check-2",
   "tag",
   "bulb",
   "football",
@@ -68,6 +68,8 @@ const icons = [
   "upload",
   "home",
   "copy",
+  "left-arrow",
+  "close",
 ];
 
 const Home = () => {
