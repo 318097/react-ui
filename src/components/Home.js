@@ -167,6 +167,7 @@ const icons = [
   "heart",
   "menu",
   "menu-2",
+  "menu-3",
   "circle",
   "circle-3",
   "circle-2",
