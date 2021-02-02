@@ -31,45 +31,55 @@ const uiList = [
 ];
 
 const icons = [
-  "caret-left",
-  "check",
-  "check-2",
-  "delete",
-  "plus",
-  "google",
-  "logout",
-  "login",
-  "minus",
-  "edit",
-  "drop",
-  "wallet",
-  "binary-code",
-  "binary-code-2",
-  "cancel",
-  "cancel-2",
-  "tag",
-  "bulb",
-  "football",
-  "football-2",
-  "heart-2",
-  "bulb-2",
-  "triangle-2",
-  "heart",
-  "menu",
-  "menu-2",
-  "circle",
-  "circle-3",
-  "circle-2",
-  "triangle",
-  "facebook",
-  "twitter",
-  "instagram",
-  "settings",
-  "upload",
-  "home",
-  "copy",
-  "left-arrow",
-  "close",
+  {
+    title: "Basic",
+    icons: [
+      "caret-left",
+      "left-arrow",
+      "close",
+      "plus",
+      "minus",
+      "edit",
+      "delete",
+      "check",
+      "home",
+      "settings",
+      "menu",
+      "menu-2",
+      "login",
+      "logout",
+      "copy",
+    ],
+  },
+  {
+    title: "Social",
+    icons: ["facebook", "twitter", "instagram", "google"],
+  },
+  {
+    title: "Others",
+    icons: [
+      "check-2",
+      "cancel",
+      "cancel-2",
+      "upload",
+      "binary-code",
+      "binary-code-2",
+      "tag",
+      "football",
+      "football-2",
+      "bulb",
+      "bulb-2",
+      "heart",
+      "heart-2",
+      "circle",
+      "circle-2",
+      "circle-3",
+      "triangle",
+      "triangle-2",
+      "wallet",
+      "drop",
+    ],
+  },
 ];
 
 const Home = () => {
@@ -84,14 +94,19 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="iconList">
-        {icons.map((icon) => (
-          <span className="icon-container" title={icon} key={icon}>
-            <Icon key={icon} type={icon} size={28} />
-            <span className="name">{icon}</span>
-          </span>
-        ))}
-      </div>
+      {icons.map(({ title, icons }) => (
+        <Fragment>
+          <h3 className="icon-title">{title}</h3>
+          <div className="icon-list">
+            {icons.map((icon) => (
+              <span className="icon-container" title={icon} key={icon}>
+                <Icon key={icon} type={icon} size={28} />
+                <span className="name">{icon}</span>
+              </span>
+            ))}
+          </div>
+        </Fragment>
+      ))}
     </section>
   );
 };

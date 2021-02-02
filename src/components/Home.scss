@@ -12,6 +12,8 @@ section {
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   justify-content: center;
   gap: 2px;
+  margin-bottom: 40px;
+
   .item {
     height: auto;
     min-height: 180px;
@@ -35,12 +37,16 @@ section {
   }
 }
 
-.iconList {
-  margin-top: 10px;
+.icon-title {
+  margin: 10px 0;
+  font-size: 16px;
+  color: lightgrey;
+}
+
+.icon-list {
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   span.icon-container {
     display: inline-flex;
     flex-direction: column;
