@@ -16,6 +16,84 @@ import {
 import "./Home.scss";
 import colors from "../magicdust/colors";
 
+const uiList = [
+  "BUTTON",
+  "RADIO",
+  "SELECT",
+  "INPUT",
+  "PAGEHEADER",
+  "CARD",
+  "TAG",
+  "SPINNER",
+  "TIMELINE",
+  "CONFIRMBOX",
+  "CHECKBOX",
+];
+const icons = [
+  "caret-left",
+  "check",
+  "delete",
+  "plus",
+  "google",
+  "logout",
+  "login",
+  "minus",
+  "edit",
+  "drop",
+  "wallet",
+  "binary-code",
+  "binary-code-2",
+  "cancel",
+  "cancel-2",
+  "check-2",
+  "tag",
+  "bulb",
+  "football",
+  "football-2",
+  "football-3",
+  "heart-2",
+  "bulb-2",
+  "triangle-2",
+  "heart",
+  "menu",
+  "menu-2",
+  "circle",
+  "circle-3",
+  "circle-2",
+  "triangle",
+  "facebook",
+  "twitter",
+  "instagram",
+  "settings",
+  "upload",
+  "home",
+  "copy",
+];
+
+const Home = () => {
+  return (
+    <section id="react-ui">
+      <div className="ui-container">
+        {uiList.map((type) => (
+          <div key={type} className="item">
+            <UIComponent type={type} />
+            <span className="name">{type}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="iconList">
+        {icons.map((icon) => (
+          <span className="icon-container" title={icon} key={icon}>
+            <Icon key={icon} type={icon} size={28} />
+            <span className="name">{icon}</span>
+          </span>
+        ))}
+      </div>
+    </section>
+  );
+};
+
 const UIComponent = ({ type }) => {
   const [data, setData] = useState({
     input: "",
@@ -123,85 +201,6 @@ const UIComponent = ({ type }) => {
     default:
       return null;
   }
-};
-
-const uiList = [
-  "BUTTON",
-  "RADIO",
-  "SELECT",
-  "INPUT",
-  "PAGEHEADER",
-  "CARD",
-  "TAG",
-  "SPINNER",
-  "TIMELINE",
-  "CONFIRMBOX",
-  "CHECKBOX",
-];
-const icons = [
-  "caret-left",
-  "check",
-  "delete",
-  "plus",
-  "google",
-  "logout",
-  "login",
-  "minus",
-  "edit",
-  "drop",
-  "wallet",
-  "-",
-  "binary-code",
-  "binary-code-2",
-  "cancel",
-  "cancel-2",
-  "check-2",
-  "tag",
-  "bulb",
-  "football",
-  "football-2",
-  "football-3",
-  "heart-2",
-  "bulb-2",
-  "triangle-2",
-  "heart",
-  "menu",
-  "menu-2",
-  "menu-3",
-  "circle",
-  "circle-3",
-  "circle-2",
-  "triangle",
-  "facebook",
-  "twitter",
-  "instagram",
-  "settings",
-  "upload",
-  "home",
-  "copy",
-];
-
-const Home = () => {
-  return (
-    <section id="react-ui">
-      <div className="ui-container">
-        {uiList.map((type) => (
-          <div key={type} className="item">
-            <UIComponent type={type} />
-            <span className="name">{type}</span>
-          </div>
-        ))}
-      </div>
-
-      <div className="iconList">
-        {icons.map((icon) => (
-          <span title={icon} key={icon}>
-            <Icon key={icon} type={icon} />
-          </span>
-        ))}
-      </div>
-    </section>
-  );
 };
 
 export default Home;

@@ -25,7 +25,6 @@ import Interface from "./Interface";
 import Like from "./Like";
 import Menu from "./Menu";
 import Menu2 from "./Menu2";
-import Menu3 from "./Menu3";
 import Rounded from "./Rounded";
 import Shape1 from "./Shape1";
 import Shape2 from "./Shape2";
@@ -62,7 +61,6 @@ export {
   Like,
   Menu,
   Menu2,
-  Menu3,
   Rounded,
   Shape1,
   Shape2,

@@ -41,13 +41,20 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  span {
+  span.icon-container {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
+    padding: 24px;
     justify-content: center;
-    height: 50px;
-    width: 50px;
     background: white;
-    margin: 1px;
+    margin: 4px;
+    position: relative;
+    .name {
+      position: absolute;
+      bottom: 4px;
+      width: 100%;
+      text-align: center;
+    }
   }
 }

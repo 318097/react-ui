@@ -26,7 +26,6 @@ import {
   Like,
   Menu,
   Menu2,
-  Menu3,
   Rounded,
   Shape1,
   Shape2,
@@ -109,12 +108,10 @@ const SVGIcon = ({ type, ...props }) => {
       return <Interface {...props} />;
     case "heart":
       return <Like {...props} />;
-    // case "menu":
-    //   return <Menu {...props} />;
+    case "menu":
+      return <Menu {...props} />;
     case "menu-2":
       return <Menu2 {...props} />;
-    case "menu-3":
-      return <Menu3 {...props} />;
     case "circle":
       return <Rounded {...props} />;
     case "circle-3":
