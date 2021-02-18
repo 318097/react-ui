@@ -18,7 +18,6 @@ import Coding from "./Coding";
 import Electricity from "./Electricity";
 import Football from "./Football";
 import Football2 from "./Football2";
-import Football3 from "./Football3";
 import Heart from "./Heart";
 import Innovation from "./Innovation";
 import Interface from "./Interface";
@@ -32,6 +31,12 @@ import Shape3 from "./Shape3";
 import Facebook from "./Facebook";
 import Twitter from "./Twitter";
 import Instagram from "./Instagram";
+import Settings from "./Settings";
+import Upload from "./Upload";
+import Home from "./Home";
+import Copy from "./Copy";
+import LeftArrow from "./LeftArrow";
+import Close from "./Close";
 
 export {
   Plus,
@@ -67,4 +72,10 @@ export {
   Facebook,
   Twitter,
   Instagram,
+  Settings,
+  Upload,
+  Home,
+  Copy,
+  LeftArrow,
+  Close,
 };

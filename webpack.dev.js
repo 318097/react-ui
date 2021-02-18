@@ -10,7 +10,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, "build"),
-    port: 9000,
+    port: 8000,
     clientLogLevel: "silent",
     open: true,
   },
@@ -30,7 +30,7 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(ttf|otf|png|jpg)$/,
+        test: /\.(ttf|otf|png|jpg|woff)$/,
         use: ["file-loader"],
       },
       {

@@ -1,76 +1,40 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
-import colors from "../../magicdust/colors";
-import { baseCSS } from "../styled";
+import classNames from "classnames";
+import PropTypes from "prop-types";
 
-const getThemeColors = (property) => ({ theme, type, color = "strokeOne" }) => {
-  let value = {};
-  const currentColor = colors[color];
-  switch (theme) {
-    case "default":
-      if (type === "solid") {
-        value = {
-          border: currentColor,
-          background: currentColor,
-          color: colors.bar,
-          background_hover: `${colors.orchid}`,
-          color_hover: colors.white,
-        };
-      } else if (type === "hollow") {
-        value = {
-          border_hover: currentColor,
-          border: colors.bg,
-          background: colors.bg,
-        };
-      }
-      break;
-    default:
-      return;
-  }
-  return value[property];
-};
+import { baseCSS, getStyles } from "../styled";
+import { getRandomNoInRange } from "../util";
 
 const StyledButton = styled.button`
-  border: 1px solid ${getThemeColors("border")};
-  background: ${getThemeColors("background")};
-  color: ${getThemeColors("color")};
+  ${(props) => getStyles({ ...props, type: "BUTTON" })};
   ${baseCSS};
-  &:hover {
-    border-color: ${getThemeColors("border_hover")};
-    background: ${getThemeColors("background_hover")};
-    color: ${getThemeColors("color_hover")};
-  }
 `;
 
-const Button = ({
-  children,
-  theme,
-  type,
-  color,
-  className,
-  onClick,
-  size,
-  ...others
-}) => {
+const Button = ({ children, className, onClick, size, curved, ...others }) => {
+  const classes = classNames({
+    [className]: true,
+    [`curve-border-${getRandomNoInRange(3)}`]: curved,
+  });
+
   return (
-    <StyledButton
-      theme={theme}
-      type={type}
-      className={className}
-      onClick={onClick}
-      color={color}
-      size={size}
-      {...others}
-    >
+    <StyledButton className={classes} onClick={onClick} size={size} {...others}>
       {children}
     </StyledButton>
   );
 };
 
 Button.defaultProps = {
-  theme: "default",
-  type: "solid",
+  className: "button",
   size: "md",
+  curved: false,
 };
 
-export default Button;
+Button.propTypes = {
+  className: PropTypes.string,
+  size: PropTypes.string,
+  curved: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+};
+
+export default memo(Button);

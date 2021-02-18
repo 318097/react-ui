@@ -1,19 +1,22 @@
 import React from "react";
 
-const CaretLeft = (props) => (
+const LeftArrow = (props) => (
   <svg
     version="1.1"
     id="Capa_1"
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    viewBox="0 0 256 256"
+    viewBox="0 0 341.333 341.333"
     height={props.height}
     width={props.width}
   >
     <g>
       <g>
-        <polygon points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128 		" />
+        <polygon
+          points="341.333,149.333 81.707,149.333 200.853,30.187 170.667,0 0,170.667 170.667,341.333 200.853,311.147 81.707,192 
+			341.333,192 		"
+        />
       </g>
     </g>
     <g></g>
@@ -34,9 +37,6 @@ const CaretLeft = (props) => (
   </svg>
 );
 
-CaretLeft.defaultProps = {
-  height: 16,
-  width: 16,
-};
+LeftArrow.defaultProps = {};
 
-export default CaretLeft;
+export default LeftArrow;

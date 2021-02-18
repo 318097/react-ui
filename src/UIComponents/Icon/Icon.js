@@ -36,6 +36,12 @@ import {
   Facebook,
   Twitter,
   Instagram,
+  Settings,
+  Upload,
+  Home,
+  Copy,
+  LeftArrow,
+  Close,
 } from "./icon-svgs";
 
 const StyledIcon = styled.span`
@@ -51,7 +57,6 @@ const StyledIcon = styled.span`
   width: ${({ size, background }) => (background ? `${size + 10}px` : "auto")};
   background: ${({ background }) => (background ? colors.shade1 : "none")};
   transition: all 0.4s;
-  text-rendering: optimizeLegibility;
   svg {
     font-family: initial;
     fill: ${({ fill }) => fill};
@@ -105,8 +110,8 @@ const SVGIcon = ({ type, ...props }) => {
       return <Interface {...props} />;
     case "heart":
       return <Like {...props} />;
-    // case "menu":
-    //   return <Menu {...props} />;
+    case "menu":
+      return <Menu {...props} />;
     case "menu-2":
       return <Menu2 {...props} />;
     case "circle":
@@ -127,23 +132,26 @@ const SVGIcon = ({ type, ...props }) => {
       return <Twitter {...props} />;
     case "instagram":
       return <Instagram {...props} />;
-    // case "football-2":
-    //   return <Football2 {...props} />;
-    // case "football-3":
-    //   return <Football3 {...props} />;
+    case "settings":
+      return <Settings {...props} />;
+    case "upload":
+      return <Upload {...props} />;
+    case "home":
+      return <Home {...props} />;
+    case "copy":
+      return <Copy {...props} />;
+    case "football-2":
+      return <Football2 {...props} />;
+    case "left-arrow":
+      return <LeftArrow {...props} />;
+    case "close":
+      return <Close {...props} />;
     default:
       return <span>{type === "-" ? "x" : "-"}</span>;
   }
 };
 
-const Icon = ({
-  className = "icon",
-  onClick,
-  background = false,
-  type,
-  size = 16,
-  fill = colors.bar,
-}) => (
+const Icon = ({ className, onClick, background, type, size, fill }) => (
   <StyledIcon
     className={className}
     background={background}
@@ -154,5 +162,12 @@ const Icon = ({
     <SVGIcon type={type} height={size} width={size} />
   </StyledIcon>
 );
+
+Icon.defaultProps = {
+  className: "icon",
+  background: false,
+  size: 16,
+  fill: colors.bar,
+};
 
 export default Icon;

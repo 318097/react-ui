@@ -5,7 +5,7 @@ import "./App.scss";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="app react-ui">
       <div className="content">
         <Switch>
           <Route exact path="/" component={Home} />

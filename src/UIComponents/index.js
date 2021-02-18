@@ -8,6 +8,24 @@ import Tag from "./Tag";
 import Input from "./Input";
 import Radio from "./Radio";
 import Select from "./Select";
+import Spinner from "./Spinner";
+import Timeline from "./Timeline";
+import ConfirmBox from "./ConfirmBox";
+import Checkbox from "./Checkbox";
 
-export { Card, Icon, PageHeader, Button, Tag, Input, Radio, Select };
+export {
+  Card,
+  Icon,
+  PageHeader,
+  Button,
+  Tag,
+  Input,
+  Radio,
+  Select,
+  Spinner,
+  Timeline,
+  ConfirmBox,
+  Checkbox,
+};
+
 export default color;

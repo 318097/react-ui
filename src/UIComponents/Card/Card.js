@@ -1,40 +1,49 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import classNames from "classnames";
-import colors from "../../magicdust/colors";
-import { getRandomNoInRange } from "../util";
+import PropTypes from "prop-types";
 
-const Wrapper = styled.div`
-  background: ${colors.white};
-  min-height: 100px;
-  min-width: 120px;
+import constants from "../../magicdust/constants";
+import { getRandomNoInRange } from "../util";
+import { defaultCSS, getStyles } from "../styled";
+
+const StyledCard = styled.div`
   display: inline-block;
-  padding: 10px;
-  border-radius: 12px;
-  border: 1px solid ${colors.bg};
-  box-sizing: border-box;
-  box-shadow: 3px 3px 3px ${colors.bg};
-  transition: 0.3s;
+  max-width: 100%;
+  padding: 16px 12px;
   position: relative;
-  overflow: auto;
-  &:hover {
-    background: ${colors.feather};
-  }
+  overflow-y: auto;
+  box-shadow: 3px 3px 3px ${constants.SECONDARY};
+  ${(props) => getStyles({ ...props, type: "CARD" })};
+  ${defaultCSS};
 `;
 
-const Card = ({
-  children,
-  style,
-  className = "card",
-  curved = false,
-  bottomLine = true,
-}) => {
+const Card = ({ children, className, curved, bottomLine, ...others }) => {
   const classes = classNames({
+    [className]: true,
     [`curve-border-${getRandomNoInRange(3)}`]: curved,
     "bottom-line": bottomLine,
   });
 
-  return <Wrapper className={`${classes} ${className}`}>{children}</Wrapper>;
+  return (
+    <StyledCard className={classes} {...others}>
+      {children}
+    </StyledCard>
+  );
 };
 
-export default Card;
+Card.defaultProps = {
+  className: "card",
+  curved: false,
+  bottomLine: false,
+  hover: false,
+};
+
+Card.propTypes = {
+  className: PropTypes.string,
+  curved: PropTypes.bool,
+  bottomLine: PropTypes.bool,
+  hover: PropTypes.bool,
+};
+
+export default memo(Card);

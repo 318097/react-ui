@@ -1,6 +1,10 @@
 @import "./colors.scss";
 @import "./custom-styles.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   @extend .defaults;
   height: 100vh;
@@ -21,7 +25,7 @@ body {
 
 body,
 #root,
-#root .app {
+.app {
   @extend .defaults;
 }
 
@@ -53,11 +57,13 @@ body,
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $black2;
+  background: $slate;
+  opacity: 0.7;
   border-radius: 15px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $bar;
+  background: $iron;
+  opacity: 0.4;
 }

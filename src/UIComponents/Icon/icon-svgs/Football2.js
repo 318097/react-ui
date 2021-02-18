@@ -11,15 +11,9 @@ const Football2 = (props) => {
       x="0px"
       y="0px"
       viewBox="0 0 512 512"
-      style="enable-background:new 0 0 512 512;"
     >
-      <circle style="fill:#FFFFFF;" cx="256" cy="256" r="248.5" />
-      <circle
-        style="opacity:0.1;enable-background:new    ;"
-        cx="256"
-        cy="256"
-        r="248.5"
-      />
+      <circle style={{ fill: "#FFFFFF" }} cx="256" cy="256" r="248.5" />
+      <circle style={{ opacity: 0.1 }} cx="256" cy="256" r="248.5" />
       <g>
         <path
           style={{ fill: "#394049" }}
@@ -54,7 +48,7 @@ const Football2 = (props) => {
         />
       </g>
       <path
-        style="opacity:0.1;enable-background:new    ;"
+        style={{ opacity: 0.1 }}
         d="M399.385,53.022c32.553,42.025,51.94,94.763,51.94,152.036
 	c0,137.243-111.257,248.5-248.5,248.5c-53.406,0-102.873-16.852-143.385-45.522C104.895,466.716,176.03,504.5,256,504.5
 	c137.243,0,248.5-111.257,248.5-248.5C504.5,172.163,462.98,98.028,399.385,53.022z"

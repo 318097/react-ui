@@ -1,29 +1,27 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
-import colors from "../../magicdust/colors";
-import { baseCSS, dotCSS } from "../styled";
+import PropTypes from "prop-types";
+
+import constants from "../../magicdust/constants";
+import { defaultCSS, baseCSS, dotCSS, getStyles } from "../styled";
 
 const switchStyles = css`
-  background: ${colors.bg};
-  border: 1px solid ${colors.bg};
-  border-radius: 4px;
   .radio-item {
-    position: relative;
     border-radius: 0;
     &:hover {
-      background: ${colors.strokeOne};
+      background: ${constants.SECONDARY};
     }
-    &:nth-child(1) {
-      border-right: 1px solid ${colors.strokeOne};
+    &:first-child {
+      border-right: 0.5px solid ${constants.PRIMARY};
     }
-    &:nth-child(2) {
-      border-left: 1px solid ${colors.strokeOne};
+    &:last-child {
+      border-left: 0.5px solid ${constants.PRIMARY};
     }
     &.radio-item-selected {
       &:after {
         ${dotCSS};
-        bottom: 2px;
+        bottom: 1.5px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -35,8 +33,10 @@ const StyledRadio = styled.div`
   width: max-content;
   display: flex;
   align-items: center;
+  ${defaultCSS};
+  ${(props) => getStyles({ ...props, type: "RADIO" })};
   .radio-item {
-    display: inline-block;
+    position: relative;
     ${baseCSS};
   }
   ${switchStyles};
@@ -52,26 +52,27 @@ const Radio = ({
   name,
   ...others
 }) => {
-  const classes = classNames({});
-  const handleClick = (option) => {
-    if (onChange) {
-      if (name) onChange({ [name]: option.value });
-      else onChange(option.value);
-    }
+  const handleClick = (e, option) => {
+    if (name) onChange(e, { [name]: option.value });
+    else onChange(e, option.value);
   };
+
+  const classes = classNames({
+    [className]: true,
+  });
 
   return (
     <StyledRadio
       name={name}
       style={{ ...style }}
-      className={`${classes} ${className}`}
+      className={classes}
       {...others}
     >
       {options.map((option) => {
         return (
           <div
             key={option.value}
-            onClick={(e) => handleClick(option, e)}
+            onClick={(e) => handleClick(e, option)}
             className={`radio-item${
               value === option.value ? " radio-item-selected" : ""
             }`}
@@ -85,10 +86,18 @@ const Radio = ({
 };
 
 Radio.defaultProps = {
-  options: [],
-  style: {},
   className: "radio",
+  style: {},
+  options: [],
   size: "md",
+};
+
+Radio.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  options: PropTypes.array,
+  size: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default Radio;

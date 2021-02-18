@@ -1,5 +1,7 @@
 @import "./colors.scss";
 
+$marginValue: 8px;
+
 .defaults {
   width: 100%;
   height: 100%;
@@ -9,107 +11,160 @@
   box-sizing: border-box;
 }
 
-.mt {
-  margin-top: 8px;
-}
-
-.ml {
-  margin-left: 8px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.center-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.underline {
-  position: relative;
-  &:after {
-    content: "";
-    width: 105%;
-    height: 4px;
-    background: $red;
+#react-ui,
+.react-ui {
+  .absolute {
     position: absolute;
-    bottom: 1px;
-    left: 0;
   }
-}
 
-.field {
-  margin: 4px 4px 0 0;
-}
-
-.field-width {
-  width: 100%;
-  max-width: 150px;
-}
-
-.max-width {
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  @media screen and (max-width: 400px) {
-    max-width: 98%;
+  .relative {
+    position: relative;
   }
-}
 
-.flex {
-  display: flex;
-}
+  .mt {
+    margin-top: $marginValue;
+  }
 
-.flex.center {
-  align-items: center;
-}
+  .mr {
+    margin-right: $marginValue;
+  }
 
-/* CARD */
+  .mb {
+    margin-bottom: $marginValue;
+  }
 
-.curve-border-1 {
-  border-radius: 3% 97% 5% 95% / 95% 4% 96% 5%;
-}
+  .ml {
+    margin-left: $marginValue;
+  }
 
-.curve-border-2 {
-  border-radius: 48% 46% 1% 53% / 2% 2% 42% 2%;
-}
+  .m-2 {
+    margin: 2px;
+  }
 
-.curve-border-3 {
-  border-radius: 48% 6% 1% 4% / 2% 7% 18% 5%;
-}
+  .mt-2 {
+    margin-top: 2px;
+  }
 
-.bottom-line {
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0;
+  .mr-2 {
+    margin-right: 2px;
+  }
+
+  .mb-2 {
+    margin-bottom: 2px;
+  }
+
+  .ml-2 {
+    margin-left: 2px;
+  }
+
+  .w-100 {
     width: 100%;
-    height: 4px;
-    background: $strokeTwo;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .underline {
+    position: relative;
+    &:after {
+      content: "";
+      width: 105%;
+      height: 4px;
+      background: $red;
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex.wrap {
+    flex-wrap: wrap;
+  }
+
+  .flex.center {
+    align-items: center;
+  }
+
+  .flex.column {
+    flex-direction: column;
+  }
+
+  .flex.column.center {
+    justify-content: center;
+  }
+
+  .flex.space-between {
+    justify-content: space-between;
+  }
+
+  .flex.space-around {
+    justify-content: space-around;
+  }
+
+  .fcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* CARD */
+
+  .curve-border-1 {
+    // border-radius: 3% 97% 5% 95% / 95% 4% 96% 5%;
+    border-radius: 1% 98% 2% 98% / 94% 7% 94% 3%;
+  }
+
+  .curve-border-2 {
+    border-radius: 48% 46% 1% 53% / 2% 2% 42% 2%;
+  }
+
+  .curve-border-3 {
+    border-radius: 48% 6% 1% 4% / 2% 7% 18% 5%;
+  }
+
+  .bottom-line {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: $strokeTwo;
+    }
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: $chrome;
+    margin: 8px 0;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: $yellow;
+    border-radius: 50%;
+    display: inline-block;
   }
 }
 
-@mixin flex($align: center, $justify: center, $direction: row) {
+@mixin flex($direction: row, $align: center, $justify: center) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;
   align-items: $justify;
-}
-
-.divider {
-  width: 100%;
-  height: 1px;
-  background: $white;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background: $yellow;
-  border-radius: 50%;
-  display: inline-block;
 }

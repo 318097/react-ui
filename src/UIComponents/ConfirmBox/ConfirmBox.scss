@@ -1,0 +1,32 @@
+@import "../../magicdust/colors.scss";
+
+.confirm-box-container {
+  background: $strokeOne;
+  padding: 6px 12px;
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 4px);
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  width: max-content;
+  font-size: 1rem;
+  .confirm-box-title {
+    margin-right: 4px;
+  }
+  .confirm-box-actions {
+    display: grid;
+    column-gap: 4px;
+    grid-auto-flow: column;
+    align-items: center;
+    button {
+      cursor: pointer;
+      border: 1px solid $bg;
+      background: $bg;
+      padding: 2px 4px;
+      font-size: 1rem;
+      outline: none;
+    }
+  }
+}
