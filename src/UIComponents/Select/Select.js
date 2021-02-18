@@ -59,6 +59,10 @@ const StyledSelect = styled.div`
         }
       }
     }
+    .empty-container {
+      padding: 8px 0;
+      text-align: center;
+    }
   }
 `;
 
@@ -111,19 +115,23 @@ const Select = ({
       </div>
       {visible && (
         <div className="dropdown">
-          {options.map((option) => {
-            return (
-              <div
-                key={option.value}
-                onClick={(e) => handleChange(option, e)}
-                className={`dropdown-item${
-                  value === option.value ? " dropdown-selected" : ""
-                }`}
-              >
-                {option.label}
-              </div>
-            );
-          })}
+          {options.length ? (
+            options.map((option) => {
+              return (
+                <div
+                  key={option.value}
+                  onClick={(e) => handleChange(option, e)}
+                  className={`dropdown-item${
+                    value === option.value ? " dropdown-selected" : ""
+                  }`}
+                >
+                  {option.label}
+                </div>
+              );
+            })
+          ) : (
+            <span className="empty-container">Empty</span>
+          )}
         </div>
       )}
     </StyledSelect>

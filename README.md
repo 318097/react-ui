@@ -7,8 +7,8 @@
 - Page Header
 - Input
 - Card
+- Textarea
 
 ### Todo
-- [x] Textarea
 ### Bugs
-- [ ] Empty state for `Select`
+- [x] Empty state for `Select`
