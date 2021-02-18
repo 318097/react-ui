@@ -30,6 +30,7 @@ const uiList = [
   "TIMELINE",
   "CONFIRMBOX",
   "CHECKBOX",
+  "ICON",
 ];
 
 const icons = [
@@ -126,7 +127,7 @@ const UIComponent = ({ type }) => {
 
   switch (type) {
     case "ICON":
-      return <Icon type="check" fill={colors.orchid} />;
+      return <Icon type="caret" direction="right" fill={colors.orchid} />;
     case "BUTTON":
       return <Button>Test</Button>;
     case "CARD":

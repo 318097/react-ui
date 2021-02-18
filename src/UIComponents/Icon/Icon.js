@@ -87,6 +87,7 @@ const SVGIcon = ({ type, ...props }) => {
     case "drop":
       return <Drop {...props} />;
     case "caret-left":
+    case "caret":
       return <CaretLeft {...props} />;
     case "wallet":
       return <Wallet {...props} />;
@@ -143,6 +144,7 @@ const SVGIcon = ({ type, ...props }) => {
     case "football-2":
       return <Football2 {...props} />;
     case "left-arrow":
+    case "arrow":
       return <LeftArrow {...props} />;
     case "close":
       return <Close {...props} />;
@@ -151,17 +153,44 @@ const SVGIcon = ({ type, ...props }) => {
   }
 };
 
-const Icon = ({ className, onClick, background, type, size, fill }) => (
-  <StyledIcon
-    className={className}
-    background={background}
-    size={size}
-    onClick={onClick}
-    fill={fill}
-  >
-    <SVGIcon type={type} height={size} width={size} />
-  </StyledIcon>
-);
+const Icon = ({
+  className,
+  onClick,
+  background,
+  type,
+  size,
+  fill,
+  direction,
+  style,
+  ...others
+}) => {
+  const combinedStyles = { ...style };
+
+  if (direction) {
+    combinedStyles["transform"] =
+      direction === "up"
+        ? "rotate(90deg)"
+        : direction === "right"
+        ? "rotate(180deg)"
+        : direction === "down"
+        ? "rotate(270deg)"
+        : "rotate(0deg)";
+  }
+
+  return (
+    <StyledIcon
+      className={className}
+      background={background}
+      size={size}
+      onClick={onClick}
+      fill={fill}
+      style={combinedStyles}
+      {...others}
+    >
+      <SVGIcon type={type} height={size} width={size} />
+    </StyledIcon>
+  );
+};
 
 Icon.defaultProps = {
   className: "icon",

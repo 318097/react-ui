@@ -12,3 +12,4 @@
 ### Todo
 ### Bugs
 - [x] Empty state for `Select`
+- [x] Add directions for icons
