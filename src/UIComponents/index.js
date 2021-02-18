@@ -12,6 +12,7 @@ import Spinner from "./Spinner";
 import Timeline from "./Timeline";
 import ConfirmBox from "./ConfirmBox";
 import Checkbox from "./Checkbox";
+import TextArea from "./TextArea";
 
 export {
   Card,
@@ -26,6 +27,7 @@ export {
   Timeline,
   ConfirmBox,
   Checkbox,
+  TextArea,
 };
 
 export default color;

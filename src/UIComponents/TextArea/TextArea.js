@@ -7,7 +7,7 @@ import colors from "../../magicdust/colors";
 import constants from "../../magicdust/constants";
 import { baseCSS } from "../styled";
 
-const StyledInput = styled.input`
+const StyledTextArea = styled.textarea`
   background: ${colors.white};
   border: 1px solid ${constants.BG};
   display: inline-block;
@@ -19,7 +19,7 @@ const StyledInput = styled.input`
   }
 `;
 
-const Input = ({
+const TextArea = ({
   style,
   className,
   curved,
@@ -28,6 +28,7 @@ const Input = ({
   name,
   ...others
 }) => {
+  console.log(others);
   const classes = classNames({
     [className]: true,
     "curve-border-1": curved,
@@ -47,7 +48,7 @@ const Input = ({
   };
 
   return (
-    <StyledInput
+    <StyledTextArea
       name={name}
       style={{ ...style }}
       className={classes}
@@ -58,14 +59,15 @@ const Input = ({
   );
 };
 
-Input.defaultProps = {
-  className: "input",
+TextArea.defaultProps = {
+  className: "textarea",
   style: {},
   size: "md",
   curved: false,
+  rows: 2,
 };
 
-Input.propTypes = {
+TextArea.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   size: PropTypes.string,
@@ -74,4 +76,4 @@ Input.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default memo(Input);
+export default memo(TextArea);

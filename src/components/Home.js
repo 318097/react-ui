@@ -12,6 +12,7 @@ import {
   Timeline,
   ConfirmBox,
   Checkbox,
+  TextArea,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -21,6 +22,7 @@ const uiList = [
   "RADIO",
   "SELECT",
   "INPUT",
+  "TEXTAREA",
   "PAGEHEADER",
   "CARD",
   "TAG",
@@ -114,6 +116,7 @@ const Home = () => {
 const UIComponent = ({ type }) => {
   const [data, setData] = useState({
     input: "",
+    textarea: "",
     radio: "a",
     select: "a",
     checkbox: true,
@@ -144,6 +147,13 @@ const UIComponent = ({ type }) => {
         <Input
           value={data.input}
           onChange={(e, value) => setInputField({ input: value })}
+        />
+      );
+    case "TEXTAREA":
+      return (
+        <TextArea
+          value={data.textarea}
+          onChange={(e, value) => setInputField({ textarea: value })}
         />
       );
     case "PAGEHEADER":

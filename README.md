@@ -9,4 +9,6 @@
 - Card
 
 ### Todo
+- [x] Textarea
+### Bugs
 - [ ] Empty state for `Select`
