@@ -13,6 +13,7 @@ const StyledSelect = styled.div`
   }
   .dropdown {
     position: absolute;
+    min-width: 100%;
     width: max-content;
     max-width: 200%;
     bottom: ${({ dropPosition }) =>
@@ -71,10 +72,10 @@ const Select = ({
     setVisibility(false);
   };
 
-  const toggleVisibility = () => setVisibility((prev) => !prev);
+  const toggleVisibility = () => setVisibility(prev => !prev);
 
   const classes = classNames({});
-  const selectedOption = options.find((option) => option.value === value);
+  const selectedOption = options.find(option => option.value === value);
   return (
     <StyledSelect
       name={name}
@@ -88,11 +89,11 @@ const Select = ({
       </div>
       {visible && (
         <div className="dropdown">
-          {options.map((option) => {
+          {options.map(option => {
             return (
               <div
                 key={option.value}
-                onClick={(e) => handleChange(option, e)}
+                onClick={e => handleChange(option, e)}
                 className={`dropdown-item${
                   value === option.value ? " dropdown-selected" : ""
                 }`}
@@ -113,7 +114,7 @@ Select.defaultProps = {
   style: {},
   className: "select",
   dropPosition: "top",
-  size: "md",
+  size: "md"
 };
 
 export default Select;
