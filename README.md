@@ -10,5 +10,7 @@
 - Textarea
 
 ### Todo
+
 ### Bugs
 - [x] Empty state for `Select`
+- [ ] Icon hover effect
