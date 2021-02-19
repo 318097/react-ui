@@ -1,4 +1,7 @@
 ## React UI - UI library
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d5ec7096-2e27-46ef-b409-12f116e0bb2f/deploy-status)](https://app.netlify.com/sites/codedrops-react-ui/deploys)
+
+[Netlify](https://codedrops-react-ui.netlify.app)
 
 ### Components
 - Button
