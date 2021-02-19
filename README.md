@@ -10,7 +10,7 @@
 - Textarea
 
 ### Todo
-- [ ] Deploy static on github pages
+- [x] Deploy app on Netlify
 
 ### Bugs
 - [x] Empty state for `Select`

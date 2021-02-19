@@ -1,7 +1,7 @@
 public/
 src/
 .npmignore
-webpack.dev.js
-webpack.build.js
+webpack.app.js
+webpack.lib.js
 build/
 .babelrc
