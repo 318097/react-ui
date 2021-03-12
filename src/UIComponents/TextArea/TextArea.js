@@ -28,7 +28,6 @@ const TextArea = ({
   name,
   ...others
 }) => {
-  console.log(others);
   const classes = classNames({
     [className]: true,
     "curve-border-1": curved,
