@@ -36,7 +36,7 @@ Card.defaultProps = {
   className: "card",
   curved: false,
   bottomLine: false,
-  hover: false,
+  hover: true,
 };
 
 Card.propTypes = {

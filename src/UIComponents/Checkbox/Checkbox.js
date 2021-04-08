@@ -32,14 +32,18 @@ const Checkbox = ({
   onBlur,
   name,
   label,
+  disabled,
   ...others
 }) => {
   const classes = classNames({
     [className]: true,
     ["checkbox-selected"]: value,
+    disabled: disabled,
   });
 
   const handleClick = (e) => {
+    if (disabled) return;
+
     if (name) onChange(e, { [name]: !value });
     else onChange(e, !value);
   };

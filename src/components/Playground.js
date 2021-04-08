@@ -39,6 +39,16 @@ const Playground = () => {
       <Button className="" disabled>
         Test
       </Button>
+      <br />
+      <br />
+      <Card curved>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dicta
+        incidunt vero? Vitae, atque culpa, aperiam optio quam dignissimos
+        temporibus omnis reiciendis neque sed nihil expedita aliquam eum!
+        Aliquam, iste tempore esse voluptate facere ratione voluptatem nihil
+        accusantium illo laborum incidunt fuga ullam veritatis temporibus hic
+        nostrum reprehenderit? Reprehenderit, unde?
+      </Card>
     </section>
   );
 };

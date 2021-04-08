@@ -25,16 +25,16 @@
 
 - [x] Empty state for `Select`
 - [x] Add directions for icons
+- [x] Disable state for button and other components
 - [ ] Icon hover effect
+- [ ] Select should be max-width by default
 - [ ] Set theme from prop
 - [ ] Tag should be closable
 - [ ] Checkbox group - HOC & group view (seperated)
 - [ ] Radio - group view (seperated)
 - [ ] Dropdown for Select
-- [ ] Select should be max-width by default
 - [ ] Information/success/error divs (like in bootstrap)
 - [ ] Add wrapper for external svg
-- [ ] Disable state for button and other components
 - [ ] Remove logs at `build`
 - [ ] Information component
 - [ ] Toast component

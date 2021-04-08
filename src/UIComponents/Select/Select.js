@@ -75,6 +75,7 @@ const Select = ({
   name,
   placeholder,
   dropPosition,
+  disabled,
   ...others
 }) => {
   const [visible, setVisibility] = useState(false);
@@ -85,19 +86,27 @@ const Select = ({
     setVisibility(false);
   };
 
-  const toggleVisibility = () => setVisibility((prev) => !prev);
+  const toggleVisibility = () => {
+    if (disabled) return;
+    setVisibility((prev) => !prev);
+  };
 
-  const classes = classNames({
+  const containerClasses = classNames({
     [className]: true,
+  });
+
+  const selectedTextClasses = classNames({
+    "select-text": true,
+    disabled: disabled,
   });
 
   const selectedOption = options.find((option) => option.value === value);
 
   const selectedText = selectedOption ? (
-    <span>
+    <>
       {placeholder && <strong>{`${placeholder}: `}</strong>}
       {selectedOption.label}
-    </span>
+    </>
   ) : (
     placeholder
   );
@@ -106,11 +115,11 @@ const Select = ({
     <StyledSelect
       name={name}
       style={{ ...style }}
-      className={classes}
+      className={containerClasses}
       dropPosition={dropPosition}
       {...others}
     >
-      <div className="select-text" onClick={toggleVisibility}>
+      <div className={selectedTextClasses} onClick={toggleVisibility}>
         {selectedText}
       </div>
       {visible && (

@@ -147,12 +147,14 @@ const UIComponent = ({ type }) => {
       return (
         <Input
           value={data.input}
+          disabled
           onChange={(e, value) => setInputField({ input: value })}
         />
       );
     case "TEXTAREA":
       return (
         <TextArea
+          // disabled
           value={data.textarea}
           onChange={(e, value) => setInputField({ textarea: value })}
         />
@@ -164,6 +166,7 @@ const UIComponent = ({ type }) => {
     case "RADIO":
       return (
         <Radio
+          disabled
           options={[
             { label: "Option A", value: "a" },
             { label: "Option B", value: "b" },
@@ -175,6 +178,7 @@ const UIComponent = ({ type }) => {
     case "SELECT":
       return (
         <Select
+          // disabled
           options={[
             { label: "Option A", value: "a" },
             { label: "Option B", value: "b" },
@@ -221,6 +225,7 @@ const UIComponent = ({ type }) => {
       return (
         <Checkbox
           // size="sm"
+          disabled
           label={"Check"}
           value={data.checkbox}
           onChange={(e, value) => setInputField({ checkbox: value })}

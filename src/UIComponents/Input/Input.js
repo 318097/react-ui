@@ -13,9 +13,12 @@ const StyledInput = styled.input`
   display: inline-block;
   ${baseCSS};
   margin: 0;
-  &:active,
-  &:focus {
+  &:active:not(.disabled),
+  &:focus:not(.disabled) {
     border-color: ${constants.PRIMARY};
+  }
+  &.disabled {
+    background: ${colors.feather};
   }
 `;
 
@@ -26,10 +29,12 @@ const Input = ({
   onChange,
   onBlur,
   name,
+  disabled,
   ...others
 }) => {
   const classes = classNames({
     [className]: true,
+    disabled: disabled,
     "curve-border-1": curved,
   });
 
@@ -53,6 +58,7 @@ const Input = ({
       className={classes}
       onChange={handleChange}
       onBlur={handleBlur}
+      disabled={disabled}
       {...others}
     />
   );

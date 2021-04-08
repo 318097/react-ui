@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
+import Button from "../Button";
 import "./ConfirmBox.scss";
 
 const ConfirmBox = ({ children, title, onConfirm, onCancel, position }) => {
@@ -19,7 +19,7 @@ const ConfirmBox = ({ children, title, onConfirm, onCancel, position }) => {
   const popoverPosition = position === "center" ? "0px" : "calc(100% + 4px)";
 
   return (
-    <span style={{ position: "relative" }}>
+    <span className="relative">
       <span onClick={() => setShowConfirmBox(true)}>{children}</span>
       {showConfirmBox && (
         <div
@@ -28,12 +28,12 @@ const ConfirmBox = ({ children, title, onConfirm, onCancel, position }) => {
         >
           <span className="confirm-box-title">{title}</span>
           <span className="confirm-box-actions">
-            <button onClick={handleOk} className="btn">
+            <Button size="sm" onClick={handleOk}>
               Yes
-            </button>
-            <button onClick={handleCancel} className="btn">
+            </Button>
+            <Button size="sm" onClick={handleCancel}>
               No
-            </button>
+            </Button>
           </span>
         </div>
       )}

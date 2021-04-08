@@ -9,7 +9,7 @@ import { defaultCSS, baseCSS, dotCSS, getStyles } from "../styled";
 const switchStyles = css`
   .radio-item {
     border-radius: 0;
-    &:hover {
+    &:hover:not(.disabled) {
       background: ${constants.SECONDARY};
     }
     &:first-child {
@@ -50,14 +50,17 @@ const Radio = ({
   onChange,
   onBlur,
   name,
+  disabled,
   ...others
 }) => {
   const handleClick = (e, option) => {
+    if (disabled) return;
+
     if (name) onChange(e, { [name]: option.value });
     else onChange(e, option.value);
   };
 
-  const classes = classNames({
+  const containerClasses = classNames({
     [className]: true,
   });
 
@@ -65,17 +68,20 @@ const Radio = ({
     <StyledRadio
       name={name}
       style={{ ...style }}
-      className={classes}
+      className={containerClasses}
       {...others}
     >
       {options.map((option) => {
+        const itemClasses = classNames({
+          ["radio-item"]: true,
+          "radio-item-selected": value === option.value,
+          disabled: disabled,
+        });
         return (
           <div
             key={option.value}
             onClick={(e) => handleClick(e, option)}
-            className={`radio-item${
-              value === option.value ? " radio-item-selected" : ""
-            }`}
+            className={itemClasses}
           >
             {option.label}
           </div>

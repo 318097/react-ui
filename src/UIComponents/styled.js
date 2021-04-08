@@ -52,15 +52,20 @@ const getStyles = ({ color, type, hover }) => {
       styles = `
         background: ${colors.white};
         border: 1px solid ${secondary};
-         &:hover{
-          background: ${hover ? colors.featherDark : "inherit"};
-        }
       `;
+
+      if (hover) {
+        styles += `
+        &:hover{
+          background: ${colors.featherDark};
+        }
+        `;
+      }
       break;
     case "BUTTON":
     case "CHECKBOX":
       styles += `
-         &:hover{
+         &:hover:not(.disabled){
           background: ${secondary};
           border-color: ${secondary};
         }

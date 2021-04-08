@@ -11,11 +11,15 @@ const StyledTextArea = styled.textarea`
   background: ${colors.white};
   border: 1px solid ${constants.BG};
   display: inline-block;
+  resize: none;
   ${baseCSS};
   margin: 0;
-  &:active,
-  &:focus {
+  &:active:not(.disabled),
+  &:focus:not(.disabled) {
     border-color: ${constants.PRIMARY};
+  }
+  &.disabled {
+    background: ${colors.feather};
   }
 `;
 
@@ -26,10 +30,12 @@ const TextArea = ({
   onChange,
   onBlur,
   name,
+  disabled,
   ...others
 }) => {
   const classes = classNames({
     [className]: true,
+    disabled: disabled,
     "curve-border-1": curved,
   });
 
@@ -53,6 +59,7 @@ const TextArea = ({
       className={classes}
       onChange={handleChange}
       onBlur={handleBlur}
+      disabled={disabled}
       {...others}
     />
   );
