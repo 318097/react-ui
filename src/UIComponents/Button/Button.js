@@ -11,14 +11,29 @@ const StyledButton = styled.button`
   ${baseCSS};
 `;
 
-const Button = ({ children, className, onClick, size, curved, ...others }) => {
+const Button = ({
+  children,
+  className,
+  onClick,
+  size,
+  curved,
+  disabled,
+  ...others
+}) => {
   const classes = classNames({
     [className]: true,
+    disabled: disabled,
     [`curve-border-${getRandomNoInRange(3)}`]: curved,
   });
 
   return (
-    <StyledButton className={classes} onClick={onClick} size={size} {...others}>
+    <StyledButton
+      className={classes}
+      onClick={onClick}
+      size={size}
+      disabled={disabled}
+      {...others}
+    >
       {children}
     </StyledButton>
   );

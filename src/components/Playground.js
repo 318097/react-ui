@@ -20,7 +20,7 @@ import colors from "../magicdust/colors";
 const Playground = () => {
   return (
     <section id="playground">
-      <Timeline
+      {/* <Timeline
         items={[
           {
             name:
@@ -35,7 +35,10 @@ const Playground = () => {
             {item.name}
           </div>
         )}
-      />
+      /> */}
+      <Button className="" disabled>
+        Test
+      </Button>
     </section>
   );
 };

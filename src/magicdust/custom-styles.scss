@@ -1,6 +1,7 @@
 @import "./colors.scss";
 
-$marginValue: 8px;
+$value: 8px;
+$valueList: 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
 
 .defaults {
   width: 100%;
@@ -22,39 +23,76 @@ $marginValue: 8px;
   }
 
   .mt {
-    margin-top: $marginValue;
+    margin-top: $value;
   }
 
   .mr {
-    margin-right: $marginValue;
+    margin-right: $value;
   }
 
   .mb {
-    margin-bottom: $marginValue;
+    margin-bottom: $value;
   }
 
   .ml {
-    margin-left: $marginValue;
+    margin-left: $value;
   }
 
-  .m-2 {
-    margin: 2px;
+  .pt {
+    padding-top: $value;
   }
 
-  .mt-2 {
-    margin-top: 2px;
+  .pr {
+    padding-right: $value;
   }
 
-  .mr-2 {
-    margin-right: 2px;
+  .pb {
+    padding-bottom: $value;
   }
 
-  .mb-2 {
-    margin-bottom: 2px;
+  .pl {
+    padding-left: $value;
   }
 
-  .ml-2 {
-    margin-left: 2px;
+  @each $item, $value in $valueList {
+    .m-#{$item} {
+      margin: $value;
+    }
+
+    .mt-#{$item} {
+      margin-top: $value;
+    }
+
+    .mr-#{$item} {
+      margin-right: $value;
+    }
+
+    .mb-#{$item} {
+      margin-bottom: $value;
+    }
+
+    .ml-#{$item} {
+      margin-left: $value;
+    }
+    .p-#{$item} {
+      padding: $value;
+    }
+
+    .pt-#{$item} {
+      padding-top: $value;
+    }
+
+    .pr-#{$item} {
+      padding-right: $value;
+    }
+
+    .pb-#{$item} {
+      padding-bottom: $value;
+    }
+
+    .pl-#{$item} {
+      padding-left: $value;
+    }
   }
 
   .w-100 {
@@ -63,6 +101,10 @@ $marginValue: 8px;
 
   .text-center {
     text-align: center;
+  }
+
+  .disabled {
+    cursor: not-allowed;
   }
 
   .center-container {
@@ -93,7 +135,8 @@ $marginValue: 8px;
     flex-wrap: wrap;
   }
 
-  .flex.center {
+  .flex.center,
+  .flex.row.center {
     align-items: center;
   }
 
@@ -115,7 +158,12 @@ $marginValue: 8px;
 
   .fcc {
     display: flex;
+    align-items: center;
     justify-content: center;
+  }
+
+  .fc {
+    display: flex;
     align-items: center;
   }
 
