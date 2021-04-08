@@ -23,20 +23,17 @@ const Playground = () => {
       <Timeline
         items={[
           {
-            name: "Item 1",
+            name:
+              "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus            exercitationem eveniet ab vero atque. Modi reprehenderit libero            officiis amet repellendus explicabo pariatur saepe, quos, enim            doloremque recusandae maiores sed unde!",
             id: 1,
           },
           { name: "Item 2", id: 2 },
         ]}
         renderItem={(item) => (
-          <Fragment>
-            <div className="timeline-left-container">
-              <div className="timeline-card">{item.name}</div>
-            </div>
-            {/* <div className="right">
-                <div className="card">{item.name}</div>
-              </div> */}
-          </Fragment>
+          <div className="timeline-card">
+            <div>Test string</div>
+            {item.name}
+          </div>
         )}
       />
     </section>
