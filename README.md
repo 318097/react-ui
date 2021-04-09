@@ -26,6 +26,7 @@
 - [x] Empty state for `Select`
 - [x] Add directions for icons
 - [x] Disable state for button and other components
+- [x] Add notebox & fileops colors
 - [ ] Icon hover effect
 - [ ] Select should be max-width by default
 - [ ] Set theme from prop
@@ -38,3 +39,6 @@
 - [ ] Remove logs at `build`
 - [ ] Information component
 - [ ] Toast component
+- [ ] dev.to class
+- [ ] Inherit font size from app
+- [ ] Add prefix for classes
