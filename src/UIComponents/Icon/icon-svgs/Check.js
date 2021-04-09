@@ -4,7 +4,7 @@ const Check = (props) => {
   return (
     <svg
       id="Capa_1"
-      enable-background="new 0 0 515.556 515.556"
+      enableBackground="new 0 0 515.556 515.556"
       height={props.height}
       width={props.width}
       viewBox="0 0 515.556 515.556"
