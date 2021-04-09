@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import classNames from "classnames";
 import colors from "../../magicdust/colors";
 import {
   Plus,
@@ -162,8 +163,14 @@ const Icon = ({
   fill,
   direction,
   style,
+  hover,
   ...others
 }) => {
+  const classes = classNames({
+    [className]: true,
+    "icon-bg": hover,
+  });
+
   const combinedStyles = { ...style };
 
   if (direction) {
@@ -179,7 +186,7 @@ const Icon = ({
 
   return (
     <StyledIcon
-      className={className}
+      className={classes}
       background={background}
       size={size}
       onClick={onClick}
@@ -197,6 +204,7 @@ Icon.defaultProps = {
   background: false,
   size: 16,
   fill: colors.bar,
+  hover: false,
 };
 
 export default Icon;

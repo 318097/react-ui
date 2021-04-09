@@ -127,7 +127,7 @@ const UIComponent = ({ type }) => {
 
   switch (type) {
     case "ICON":
-      return <Icon type="caret" direction="right" fill={colors.orchid} />;
+      return <Icon type="caret" direction="right" fill={colors.orchid} hover />;
     case "BUTTON":
       return <Button>Test</Button>;
     case "CARD":

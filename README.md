@@ -27,7 +27,7 @@
 - [x] Add directions for icons
 - [x] Disable state for button and other components
 - [x] Add notebox & fileops colors
-- [ ] Icon hover effect
+- [x] Icon hover effect
 - [ ] Select should be max-width by default
 - [ ] Set theme from prop
 - [ ] Tag should be closable

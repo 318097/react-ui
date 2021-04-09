@@ -208,6 +208,16 @@ $valueList: 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
     border-radius: 50%;
     display: inline-block;
   }
+
+  .icon.icon-bg {
+    padding: 6px;
+    border-radius: 0;
+    transition: 0.4s;
+    &:hover {
+      background: $strokeOne;
+      border-radius: 50%;
+    }
+  }
 }
 
 @mixin flex($direction: row, $align: center, $justify: center) {
