@@ -16,6 +16,7 @@ const defaultCSS = css`
   ${borderRadius};
   transition: all 0.4s;
   box-sizing: border-box;
+  font-family: inherit;
 `;
 
 // Input fields

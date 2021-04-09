@@ -28,6 +28,7 @@
 - [x] Disable state for button and other components
 - [x] Add notebox & fileops colors
 - [x] Icon hover effect
+- [x] Inherit font from parent
 - [ ] Select should be max-width by default
 - [ ] Set theme from prop
 - [ ] Tag should be closable
@@ -40,5 +41,4 @@
 - [ ] Information component
 - [ ] Toast component
 - [ ] dev.to class
-- [ ] Inherit font size from app
 - [ ] Add prefix for classes

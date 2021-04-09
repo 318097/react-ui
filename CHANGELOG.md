@@ -6,3 +6,4 @@
 - Added nbOrange, nbPink, foBlue, coBlue, coGreen, mustard, purple colors
 - Modified red, green, coffee color codes
 - Added `hover` prop to `Icon`
+- Inherit font-family
