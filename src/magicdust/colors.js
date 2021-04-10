@@ -36,8 +36,8 @@ export default {
   nbOrange: "#FF7A00",
   nbPink: "#FF5151",
   foBlue: "#52ADA2",
-  coBlue: "#1E2F49",
-  coGreen: "#00A962",
+  cdBlue: "#1E2F49",
+  cdGreen: "#00A962",
   mustard: "#FFB400",
   purple: "#908DB9",
 };
