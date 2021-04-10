@@ -18,6 +18,14 @@ import "./Playground.scss";
 import colors from "../magicdust/colors";
 
 const Playground = () => {
+  const [data, setData] = useState({
+    input: "",
+    textarea: "",
+    radio: "a",
+    select: "a",
+    checkbox: true,
+  });
+
   return (
     <section id="playground">
       {/* <Timeline
@@ -39,16 +47,40 @@ const Playground = () => {
       <Button className="" disabled>
         Test
       </Button>
-      <br />
-      <br />
-      <Card curved>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dicta
-        incidunt vero? Vitae, atque culpa, aperiam optio quam dignissimos
-        temporibus omnis reiciendis neque sed nihil expedita aliquam eum!
-        Aliquam, iste tempore esse voluptate facere ratione voluptatem nihil
-        accusantium illo laborum incidunt fuga ullam veritatis temporibus hic
-        nostrum reprehenderit? Reprehenderit, unde?
-      </Card>
+      <Input
+        value={data.input}
+        disabled
+        onChange={(e, value) => setInputField({ input: value })}
+      />
+      <Radio
+        disabled
+        options={[
+          { label: "Option A", value: "a" },
+          { label: "Option B", value: "b" },
+        ]}
+        value={data.radio}
+        onChange={(e, value) => setInputField({ radio: value })}
+      />
+      <Checkbox
+        // size="sm"
+        disabled
+        label={"Check"}
+        value={data.checkbox}
+        onChange={(e, value) => setInputField({ checkbox: value })}
+      />
+      <Select
+        // disabled
+        options={[
+          { label: "Option A", value: "a" },
+          { label: "Option B", value: "b" },
+          { label: "Looooooooooooooooooooong option", value: "c" },
+          { label: "Option d", value: "d" },
+          { label: "Option e", value: "e" },
+          { label: "Option f", value: "f" },
+        ]}
+        value={data.select}
+        onChange={(e, value) => setInputField({ select: value })}
+      />
     </section>
   );
 };

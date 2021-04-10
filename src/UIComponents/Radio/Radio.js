@@ -31,7 +31,7 @@ const switchStyles = css`
 
 const StyledRadio = styled.div`
   width: max-content;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   ${defaultCSS};
   ${(props) => getStyles({ ...props, type: "RADIO" })};

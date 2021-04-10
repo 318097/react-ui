@@ -7,7 +7,7 @@ import { baseCSS, dotCSS, getStyles } from "../styled";
 
 const StyledCheckbox = styled.div`
   width: max-content;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   margin-right: 4px;
   margin-bottom: 4px;

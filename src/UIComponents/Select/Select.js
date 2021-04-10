@@ -8,6 +8,7 @@ import { baseCSS, dotCSS, getStyles } from "../styled";
 
 const StyledSelect = styled.div`
   position: relative;
+  display: inline-flex;
   .select-text {
     ${baseCSS};
     ${(props) => getStyles({ ...props, type: "SELECT" })};

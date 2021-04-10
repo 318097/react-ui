@@ -7,3 +7,5 @@
 - Modified red, green, coffee color codes
 - Added `hover` prop to `Icon`
 - Inherit font-family
+- Change containers in `inline-flex`
+-

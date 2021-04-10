@@ -29,7 +29,8 @@
 - [x] Add notebox & fileops colors
 - [x] Icon hover effect
 - [x] Inherit font from parent
-- [ ] Select should be max-width by default
+- [ ] Add dev.to double-border class
+- [x] Select should be max-width by default
 - [ ] Set theme from prop
 - [ ] Tag should be closable
 - [ ] Checkbox group - HOC & group view (seperated)
@@ -40,5 +41,4 @@
 - [ ] Remove logs at `build`
 - [ ] Information component
 - [ ] Toast component
-- [ ] dev.to class
 - [ ] Add prefix for classes

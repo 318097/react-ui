@@ -10,7 +10,7 @@ import { baseCSS } from "../styled";
 const StyledInput = styled.input`
   background: ${colors.white};
   border: 1px solid ${constants.BG};
-  display: inline-block;
+  display: inline-flex;
   ${baseCSS};
   margin: 0;
   &:active:not(.disabled),
