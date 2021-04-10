@@ -8,4 +8,4 @@
 - Added `hover` prop to `Icon`
 - Inherit font-family
 - Change containers in `inline-flex`
--
+- Added double-border class (db)

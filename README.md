@@ -29,14 +29,14 @@
 - [x] Add notebox & fileops colors
 - [x] Icon hover effect
 - [x] Inherit font from parent
-- [ ] Add dev.to double-border class
+- [x] Add dev.to double-border class
 - [x] Select should be max-width by default
+- [ ] Information/success/error divs (like in bootstrap)
 - [ ] Set theme from prop
 - [ ] Tag should be closable
 - [ ] Checkbox group - HOC & group view (seperated)
 - [ ] Radio - group view (seperated)
-- [ ] Dropdown for Select
-- [ ] Information/success/error divs (like in bootstrap)
+- [ ] Close dropdown on outside click
 - [ ] Add wrapper for external svg
 - [ ] Remove logs at `build`
 - [ ] Information component

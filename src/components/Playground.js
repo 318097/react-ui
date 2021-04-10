@@ -27,7 +27,7 @@ const Playground = () => {
   });
 
   return (
-    <section id="playground">
+    <section id="playground" className="db">
       {/* <Timeline
         items={[
           {
