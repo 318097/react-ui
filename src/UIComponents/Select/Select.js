@@ -32,7 +32,7 @@ const StyledSelect = styled.div`
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
-    border-radius: 4px;
+    border-radius: 2px;
     background: ${constants.BG};
     border: 1px solid ${constants.BG};
     z-index: 1;
@@ -164,6 +164,7 @@ Select.propTypes = {
   options: PropTypes.array.isRequired,
   dropPosition: PropTypes.string,
   size: PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default memo(Select);

@@ -44,16 +44,18 @@ const Playground = () => {
           </div>
         )}
       /> */}
-      <Button className="" disabled>
+      <Button className="mr" color="watermelon">
         Test
       </Button>
       <Input
+        className="mr"
         value={data.input}
         disabled
         onChange={(e, value) => setInputField({ input: value })}
       />
       <Radio
-        disabled
+        className="mr"
+        color="watermelon"
         options={[
           { label: "Option A", value: "a" },
           { label: "Option B", value: "b" },
@@ -63,13 +65,17 @@ const Playground = () => {
       />
       <Checkbox
         // size="sm"
-        disabled
+        className="mr"
+        // disabled
+        color="watermelon"
         label={"Check"}
         value={data.checkbox}
         onChange={(e, value) => setInputField({ checkbox: value })}
       />
       <Select
+        className="mr"
         // disabled
+        color="watermelon"
         options={[
           { label: "Option A", value: "a" },
           { label: "Option B", value: "b" },

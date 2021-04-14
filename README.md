@@ -31,8 +31,8 @@
 - [x] Inherit font from parent
 - [x] Add dev.to double-border class
 - [x] Select should be max-width by default
+- [x] Set color for Button from props
 - [ ] Information/success/error divs (like in bootstrap)
-- [ ] Set theme from prop
 - [ ] Tag should be closable
 - [ ] Checkbox group - HOC & group view (seperated)
 - [ ] Radio - group view (seperated)
@@ -42,3 +42,4 @@
 - [ ] Information component
 - [ ] Toast component
 - [ ] Add prefix for classes
+- [ ] Button - Link type

@@ -39,13 +39,15 @@ const dotCSS = css`
 `;
 
 const getStyles = ({ color, type, hover }) => {
-  const bg = color ? colors[color] : constants.BG;
-  const primary = constants.PRIMARY;
-  const secondary = constants.SECONDARY;
+  const custom = colors[color];
+  const applyCustomBg = custom && ["BUTTON"].includes(type);
+
+  const primary = applyCustomBg ? custom : constants.BG;
+  const secondary = applyCustomBg ? custom : constants.SECONDARY;
 
   let styles = `
-    background: ${bg};
-    border: 1px solid ${bg};
+    background:  ${primary};
+    border: 1px solid ${primary};
   `;
 
   switch (type) {
@@ -63,16 +65,28 @@ const getStyles = ({ color, type, hover }) => {
         `;
       }
       break;
+    // case "RADIO":
+    //   styles += `
+    //     .radio-item.radio-item-selected{
+    //       background: ${primary};
+    //       // &:hover:not(.disabled){
+    //       //   background: ${secondary}BB;
+    //       //   border-color: ${secondary}CC;
+    //       // }
+    //     }
+    //   `;
+    //   break;
     case "BUTTON":
     case "CHECKBOX":
       styles += `
          &:hover:not(.disabled){
-          background: ${secondary};
-          border-color: ${secondary};
+          background: ${secondary}BB;
+          border-color: ${secondary}CC;
         }
       `;
       break;
   }
+  console.log("styles::-", styles);
 
   return styles;
 };

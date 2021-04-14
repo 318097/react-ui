@@ -104,6 +104,7 @@ Radio.propTypes = {
   options: PropTypes.array,
   size: PropTypes.string,
   onChange: PropTypes.func,
+  color: PropTypes.string,
 };
 
 export default Radio;

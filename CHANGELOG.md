@@ -9,3 +9,5 @@
 - Inherit font-family
 - Change containers in `inline-flex`
 - Added double-border class (db)
+- Set color from prop - Button
+- Set default border radius to `2px`

@@ -77,6 +77,7 @@ Checkbox.propTypes = {
   className: PropTypes.string,
   size: PropTypes.string,
   onChange: PropTypes.func,
+  color: PropTypes.string,
 };
 
 export default memo(Checkbox);
