@@ -44,8 +44,8 @@ const dotCSS = css`
   position: absolute;
 `;
 
-const getStyles = ({ color, type, hover }) => {
-  const custom = colors[color];
+const getStyles = ({ color, fontColor, type, hover }) => {
+  const custom = colors[color] || color;
   const applyCustomBg = custom && ["BUTTON"].includes(type);
 
   const primary = applyCustomBg ? custom : constants.BG;
@@ -55,6 +55,8 @@ const getStyles = ({ color, type, hover }) => {
     background:  ${primary};
     border: 1px solid ${primary};
   `;
+
+  if (fontColor) styles += `color: ${color[fontColor] || fontColor};`;
 
   switch (type) {
     case "CARD":

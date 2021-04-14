@@ -26,6 +26,8 @@ const Playground = () => {
     checkbox: true,
   });
 
+  const setInputField = (update) => setData((prev) => ({ ...prev, ...update }));
+
   return (
     <section id="playground" className="db">
       {/* <Timeline
@@ -44,13 +46,13 @@ const Playground = () => {
           </div>
         )}
       /> */}
-      <Button className="mr" color="watermelon">
+      <Button className="mr" color="watermelon" fontColor="white">
         Test
       </Button>
       <Input
         className="mr"
         value={data.input}
-        disabled
+        // disabled
         onChange={(e, value) => setInputField({ input: value })}
       />
       <Radio

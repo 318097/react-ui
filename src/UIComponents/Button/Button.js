@@ -51,6 +51,7 @@ Button.propTypes = {
   curved: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   color: PropTypes.string,
+  fontColor: PropTypes.string,
 };
 
 export default memo(Button);
