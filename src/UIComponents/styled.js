@@ -28,6 +28,12 @@ const baseCSS = css`
   ${defaultCSS};
 `;
 
+// dropdown item
+const itemCSS = css`
+  padding: ${({ size }) =>
+    size === "sm" ? "6px 8px" : size === "md" ? "10px 14px" : "14px 18px"};
+`;
+
 const dotCSS = css`
   content: "";
   display: inline-block;
@@ -86,9 +92,8 @@ const getStyles = ({ color, type, hover }) => {
       `;
       break;
   }
-  console.log("styles::-", styles);
 
   return styles;
 };
 
-export { baseCSS, dotCSS, getStyles, defaultCSS, borderRadius };
+export { baseCSS, dotCSS, getStyles, defaultCSS, borderRadius, itemCSS };

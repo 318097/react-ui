@@ -2,15 +2,18 @@ import React, { useState, memo } from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import Icon from "../Icon";
 
 import constants from "../../magicdust/constants";
-import { baseCSS, dotCSS, getStyles } from "../styled";
+import { baseCSS, dotCSS, getStyles, itemCSS } from "../styled";
 
 const StyledSelect = styled.div`
   position: relative;
   display: inline-flex;
   .select-text {
     ${baseCSS};
+    display: flex;
+    align-items: center;
     ${(props) => getStyles({ ...props, type: "SELECT" })};
   }
   .dropdown {
@@ -38,9 +41,10 @@ const StyledSelect = styled.div`
     z-index: 1;
     .dropdown-item {
       width: 100%;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      word-break: break-all;
+      white-space: break-spaces;
       ${baseCSS};
+      ${itemCSS};
       border-radius: 0;
       /* overflow: hidden; */
       border-bottom: 1px solid ${constants.SECONDARY};
@@ -121,7 +125,15 @@ const Select = ({
       {...others}
     >
       <div className={selectedTextClasses} onClick={toggleVisibility}>
-        {selectedText}
+        {selectedText}{" "}
+        <span className="pl-4">
+          <Icon
+            size={10}
+            style={{ margin: 0 }}
+            type="caret"
+            direction={visible ? "up" : "down"}
+          />
+        </span>
       </div>
       {visible && (
         <div className="dropdown">

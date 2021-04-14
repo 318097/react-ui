@@ -11,3 +11,5 @@
 - Added double-border class (db)
 - Set color from prop - Button
 - Set default border radius to `2px`
+- Added `caret` in Select
+- Fixed Select dropdown padding
