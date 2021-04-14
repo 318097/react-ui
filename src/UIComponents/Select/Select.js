@@ -10,11 +10,17 @@ import { baseCSS, dotCSS, getStyles, itemCSS } from "../styled";
 const StyledSelect = styled.div`
   position: relative;
   display: inline-flex;
-  .select-text {
-    ${baseCSS};
+  .select-text-container {
     display: flex;
     align-items: center;
+    ${baseCSS};
     ${(props) => getStyles({ ...props, type: "SELECT" })};
+    .select-text {
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
   .dropdown {
     position: absolute;
@@ -101,15 +107,15 @@ const Select = ({
   });
 
   const selectedTextClasses = classNames({
-    "select-text": true,
-    disabled: disabled,
+    "select-text-container": true,
+    disabled,
   });
 
   const selectedOption = options.find((option) => option.value === value);
 
   const selectedText = selectedOption ? (
     <>
-      {placeholder && <strong>{`${placeholder}: `}</strong>}
+      {placeholder && <strong className="pr-2">{`${placeholder}:`}</strong>}
       {selectedOption.label}
     </>
   ) : (
@@ -125,7 +131,7 @@ const Select = ({
       {...others}
     >
       <div className={selectedTextClasses} onClick={toggleVisibility}>
-        {selectedText}{" "}
+        <span className="select-text">{selectedText}</span>
         <span className="pl-4">
           <Icon
             size={10}

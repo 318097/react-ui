@@ -13,3 +13,4 @@
 - Set default border radius to `2px`
 - Added `caret` in Select
 - Fixed Select dropdown padding
+- Select dropdown overflow on select
