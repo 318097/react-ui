@@ -9,8 +9,6 @@ const StyledCheckbox = styled.div`
   width: max-content;
   display: inline-flex;
   position: relative;
-  margin-right: 4px;
-  margin-bottom: 4px;
   ${baseCSS};
   ${(props) => getStyles({ ...props, type: "CHECKBOX" })};
   &.checkbox-selected {
