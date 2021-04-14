@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   margin: 2px;
   position: relative;
   cursor: pointer;
-  ${(props) => getStyles({ ...props, type: "TAG" })};
+  ${(props) => getStyles({ ...props, componentName: "TAG" })};
 `;
 
 const Tag = ({ children, className, onClick, style, color, ...others }) => {

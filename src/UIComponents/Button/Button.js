@@ -7,7 +7,7 @@ import { baseCSS, getStyles } from "../styled";
 import { getRandomNoInRange } from "../util";
 
 const StyledButton = styled.button`
-  ${(props) => getStyles({ ...props, type: "BUTTON" })};
+  ${(props) => getStyles({ ...props, componentName: "BUTTON" })};
   ${baseCSS};
 `;
 
@@ -43,6 +43,7 @@ Button.defaultProps = {
   className: "button",
   size: "md",
   curved: false,
+  type: "solid",
 };
 
 Button.propTypes = {
@@ -52,6 +53,7 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
   color: PropTypes.string,
   fontColor: PropTypes.string,
+  type: PropTypes.oneOf(["hollow", "solid", "link"]),
 };
 
 export default memo(Button);

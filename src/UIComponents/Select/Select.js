@@ -14,7 +14,7 @@ const StyledSelect = styled.div`
     display: flex;
     align-items: center;
     ${baseCSS};
-    ${(props) => getStyles({ ...props, type: "SELECT" })};
+    ${(props) => getStyles({ ...props, componentName: "SELECT" })};
     .select-text {
       max-width: 120px;
       overflow: hidden;

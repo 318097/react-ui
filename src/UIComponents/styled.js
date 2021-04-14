@@ -44,9 +44,9 @@ const dotCSS = css`
   position: absolute;
 `;
 
-const getStyles = ({ color, fontColor, type, hover }) => {
+const getStyles = ({ color, fontColor, componentName, hover, type }) => {
   const custom = colors[color] || color;
-  const applyCustomBg = custom && ["BUTTON"].includes(type);
+  const applyCustomBg = custom && ["BUTTON"].includes(componentName);
 
   const primary = applyCustomBg ? custom : constants.BG;
   const secondary = applyCustomBg ? custom : constants.SECONDARY;
@@ -58,7 +58,7 @@ const getStyles = ({ color, fontColor, type, hover }) => {
 
   if (fontColor) styles += `color: ${color[fontColor] || fontColor};`;
 
-  switch (type) {
+  switch (componentName) {
     case "CARD":
       styles = `
         background: ${colors.white};
@@ -85,6 +85,33 @@ const getStyles = ({ color, fontColor, type, hover }) => {
     //   `;
     //   break;
     case "BUTTON":
+      if (type === "hollow")
+        styles += `
+        background: transparent;
+        color: ${primary};
+         &:hover:not(.disabled){
+          background: ${secondary}88;
+          border-color: ${secondary}CC;
+          color: ${colors.white};
+        }
+      `;
+      else if (type === "link")
+        styles += `
+        background: transparent;
+        border-color: transparent;
+        color: ${primary};
+         &:hover:not(.disabled){
+          text-decoration: underline;
+        }
+      `;
+      else
+        styles += `
+        &:hover:not(.disabled){
+          background: ${secondary}BB;
+          border-color: ${secondary}CC;
+        }
+      `;
+      break;
     case "CHECKBOX":
       styles += `
          &:hover:not(.disabled){

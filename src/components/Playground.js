@@ -46,7 +46,7 @@ const Playground = () => {
           </div>
         )}
       /> */}
-      <Button color="watermelon" fontColor="white">
+      <Button color="bar" fontColor="white" type="link">
         Test
       </Button>
       <Input

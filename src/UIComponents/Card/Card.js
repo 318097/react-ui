@@ -14,7 +14,7 @@ const StyledCard = styled.div`
   position: relative;
   overflow-y: auto;
   box-shadow: 3px 3px 3px ${constants.SECONDARY};
-  ${(props) => getStyles({ ...props, type: "CARD" })};
+  ${(props) => getStyles({ ...props, componentName: "CARD" })};
   ${defaultCSS};
 `;
 

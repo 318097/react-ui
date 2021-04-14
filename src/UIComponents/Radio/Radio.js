@@ -34,7 +34,7 @@ const StyledRadio = styled.div`
   display: inline-flex;
   align-items: center;
   ${defaultCSS};
-  ${(props) => getStyles({ ...props, type: "RADIO" })};
+  ${(props) => getStyles({ ...props, componentName: "RADIO" })};
   .radio-item {
     position: relative;
     ${baseCSS};

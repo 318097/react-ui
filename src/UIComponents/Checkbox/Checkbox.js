@@ -10,7 +10,7 @@ const StyledCheckbox = styled.div`
   display: inline-flex;
   position: relative;
   ${baseCSS};
-  ${(props) => getStyles({ ...props, type: "CHECKBOX" })};
+  ${(props) => getStyles({ ...props, componentName: "CHECKBOX" })};
   &.checkbox-selected {
     &:after {
       ${dotCSS};

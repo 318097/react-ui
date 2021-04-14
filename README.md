@@ -32,14 +32,14 @@
 - [x] Add dev.to double-border class
 - [x] Select should be max-width by default
 - [x] Set color for Button from props
+- [x] Button - Solid, Hollow & Link type
+- [ ] Close dropdown on outside click
 - [ ] Information/success/error divs (like in bootstrap)
 - [ ] Tag should be closable
 - [ ] Checkbox group - HOC & group view (seperated)
 - [ ] Radio - group view (seperated)
-- [ ] Close dropdown on outside click
 - [ ] Add wrapper for external svg
 - [ ] Remove logs at `build`
 - [ ] Information component
 - [ ] Toast component
 - [ ] Add prefix for classes
-- [ ] Button - Link type
