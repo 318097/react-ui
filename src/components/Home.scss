@@ -14,7 +14,7 @@ section {
   gap: 2px;
   margin-bottom: 40px;
 
-  .item {
+  & > .item {
     height: auto;
     min-height: 180px;
     padding: 10px;

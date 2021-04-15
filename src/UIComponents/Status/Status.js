@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import styled from "styled-components";
 import colors from "../../magicdust/colors";
 import { v4 as uuidv4 } from "uuid";
@@ -34,33 +34,42 @@ const crux = (arr = [], cmd, node) => {
 
 const StyledContainer = styled.div`
   width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  border-radius: 2px;
   background: ${colors.strokeOne};
-  padding: 0px 12px;
+  padding: 0;
   height: 32px;
-  overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .items-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     height: 100%;
+    max-width: 100%;
+    width: 100%;
     .v-divider {
       display: inline-block;
       width: 2px;
       height: 100%;
       background: ${colors.iron};
+      flex-shrink: 0;
     }
     .item {
       height: 100%;
-      padding: 0 4px 0 8px;
+      padding: 0 8px;
+      flex-shrink: 0;
     }
   }
 `;
 ``;
 
-const Status = () => {
+const Status = ({ title }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -86,19 +95,19 @@ const Status = () => {
 
   return (
     <StyledContainer>
-      <h3 className="mr">Status Bar</h3>
+      {title && <h3 className="pl pr">{title}</h3>}
       <div className="items-container">
         {data.map(({ value, title, styles, id }, idx) => {
           return (
-            <div className="fcc" style={{ height: "100%" }} key={id}>
+            <Fragment key={id}>
               {idx > 0 && idx < data.length && (
-                <span key={idx} className="v-divider"></span>
+                <span className="v-divider"></span>
               )}
               <div className="item fcc" style={styles}>
                 {title && <div className="title">{title}</div>}
                 <div className="value">{value}</div>
               </div>
-            </div>
+            </Fragment>
           );
         })}
       </div>
