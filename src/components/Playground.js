@@ -13,9 +13,12 @@ import {
   ConfirmBox,
   Checkbox,
   TextArea,
+  Status,
 } from "../UIComponents";
 import "./Playground.scss";
 import colors from "../magicdust/colors";
+
+const { triggerEvent } = Status;
 
 const Playground = () => {
   const [data, setData] = useState({
@@ -26,29 +29,12 @@ const Playground = () => {
     checkbox: true,
   });
 
+  const [id, setId] = useState();
+
   const setInputField = (update) => setData((prev) => ({ ...prev, ...update }));
 
   return (
     <section id="playground" className="db">
-      {/* <Timeline
-        items={[
-          {
-            name:
-              "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus            exercitationem eveniet ab vero atque. Modi reprehenderit libero            officiis amet repellendus explicabo pariatur saepe, quos, enim            doloremque recusandae maiores sed unde!",
-            id: 1,
-          },
-          { name: "Item 2", id: 2 },
-        ]}
-        renderItem={(item) => (
-          <div className="timeline-card">
-            <div>Test string</div>
-            {item.name}
-          </div>
-        )}
-      /> */}
-      <Button color="bar" fontColor="white" type="link">
-        Test
-      </Button>
       <Input
         value={data.input}
         // disabled
@@ -81,11 +67,11 @@ const Playground = () => {
           { label: "Loooooooooooooooooooooooooooooong option", value: "c" },
           { label: "Option d", value: "d" },
           { label: "Option e", value: "e" },
-          { label: "Option f", value: "f" },
         ]}
         value={data.select}
         onChange={(e, value) => setInputField({ select: value })}
       />
+      <Status />
     </section>
   );
 };

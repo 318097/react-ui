@@ -13,6 +13,7 @@ import Timeline from "./Timeline";
 import ConfirmBox from "./ConfirmBox";
 import Checkbox from "./Checkbox";
 import TextArea from "./TextArea";
+import Status from "./Status";
 
 export {
   Card,
@@ -28,6 +29,7 @@ export {
   ConfirmBox,
   Checkbox,
   TextArea,
+  Status,
 };
 
 export default color;

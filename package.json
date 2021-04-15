@@ -50,6 +50,7 @@
   },
   "homepage": "https://github.com/318097/react-ui#readme",
   "dependencies": {
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "uuid": "^8.3.2"
   }
 }

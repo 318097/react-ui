@@ -13,9 +13,12 @@ import {
   ConfirmBox,
   Checkbox,
   TextArea,
+  Status,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
+
+const { triggerEvent } = Status;
 
 const uiList = [
   "BUTTON",
@@ -26,6 +29,7 @@ const uiList = [
   "PAGEHEADER",
   "CARD",
   "TAG",
+  "STATUS",
   "SPINNER",
   "TIMELINE",
   "CONFIRMBOX",
@@ -122,6 +126,8 @@ const UIComponent = ({ type }) => {
     select: "a",
     checkbox: true,
   });
+
+  const [id, setId] = useState();
 
   const setInputField = (update) => setData((prev) => ({ ...prev, ...update }));
 
@@ -230,6 +236,64 @@ const UIComponent = ({ type }) => {
           value={data.checkbox}
           onChange={(e, value) => setInputField({ checkbox: value })}
         />
+      );
+    case "STATUS":
+      return (
+        <div className="flex column">
+          <div className="fcc mb">
+            <Button
+              onClick={() =>
+                triggerEvent(
+                  "add",
+                  {
+                    value: "Successfully created",
+                    styles: { background: colors.grey },
+                  },
+                  ({ extra }) => setId(extra)
+                )
+              }
+            >
+              Add
+            </Button>
+            <Button
+              onClick={() =>
+                triggerEvent("update", {
+                  id,
+                  value: "Successfully updated..",
+                })
+              }
+            >
+              Update
+            </Button>
+            <Button
+              onClick={() =>
+                triggerEvent(
+                  "read",
+                  {
+                    id,
+                  },
+                  console.log
+                )
+              }
+            >
+              Read
+            </Button>
+            <Button
+              onClick={() =>
+                triggerEvent(
+                  "remove",
+                  {
+                    id,
+                  },
+                  console.log
+                )
+              }
+            >
+              Delete
+            </Button>
+          </div>
+          <Status />
+        </div>
       );
     default:
       return null;

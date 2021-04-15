@@ -17,29 +17,30 @@
 ### Todo
 
 - [x] Deploy app on Netlify
+- [x] Add directions for icons
 - [ ] Validation
 - [ ] Custom validation
 - [ ] Error state
+- [x] Status component
+  - [ ] Expiry after some time
+- [ ] Information/success/error component
+- [ ] Add wrapper for external svg
+- [ ] Toast component
+- [x] Add notebox & fileops colors
+- [x] Icon hover effect
+- [x] Disable state for button and other components
+- [x] Set color for Button from props
+- [x] Button - Solid, Hollow & Link type
+- [x] Add dev.to double-border class
+- [ ] Tag should be closable
 
 ### Bugs
 
 - [x] Empty state for `Select`
-- [x] Add directions for icons
-- [x] Disable state for button and other components
-- [x] Add notebox & fileops colors
-- [x] Icon hover effect
 - [x] Inherit font from parent
-- [x] Add dev.to double-border class
 - [x] Select should be max-width by default
-- [x] Set color for Button from props
-- [x] Button - Solid, Hollow & Link type
 - [ ] Close dropdown on outside click
-- [ ] Information/success/error divs (like in bootstrap)
-- [ ] Tag should be closable
 - [ ] Checkbox group - HOC & group view (seperated)
 - [ ] Radio - group view (seperated)
-- [ ] Add wrapper for external svg
 - [ ] Remove logs at `build`
-- [ ] Information component
-- [ ] Toast component
-- [ ] Add prefix for classes
+- [ ] Prefix classes
