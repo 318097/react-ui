@@ -244,8 +244,8 @@ const UIComponent = ({ type }) => {
       );
     case "STATUS":
       return (
-        <div className="flex column">
-          <div className="fcc mb">
+        <div className="flex column w-100">
+          <div className="flex space-kids mb">
             <Button
               onClick={() =>
                 triggerEvent(

@@ -227,6 +227,15 @@ $valueList: 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
     box-shadow: 4px 4px $lead;
   }
 
+  .space-kids {
+    & > * {
+      margin-right: $value;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
   .dot-loader {
     animation: 2s spin linear infinite;
     width: 20px;

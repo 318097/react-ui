@@ -16,3 +16,4 @@
 - Select dropdown overflow on select
 - Added `Status` component
 - Add dot loader
+- Added `space-kids` class
