@@ -10,7 +10,6 @@ const borderRadius = css`
   border-radius: ${constants.BORDER_RADIUS};
 `;
 
-// Card
 const defaultCSS = css`
   ${fontSize};
   ${borderRadius};
@@ -73,17 +72,6 @@ const getStyles = ({ color, fontColor, componentName, hover, type }) => {
         `;
       }
       break;
-    // case "RADIO":
-    //   styles += `
-    //     .radio-item.radio-item-selected{
-    //       background: ${primary};
-    //       // &:hover:not(.disabled){
-    //       //   background: ${secondary}BB;
-    //       //   border-color: ${secondary}CC;
-    //       // }
-    //     }
-    //   `;
-    //   break;
     case "BUTTON":
       if (type === "hollow")
         styles += `
@@ -113,6 +101,8 @@ const getStyles = ({ color, fontColor, componentName, hover, type }) => {
       `;
       break;
     case "CHECKBOX":
+    case "SELECT":
+    case "RADIO":
       styles += `
          &:hover:not(.disabled){
           background: ${secondary}BB;

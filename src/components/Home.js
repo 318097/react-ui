@@ -172,7 +172,7 @@ const UIComponent = ({ type }) => {
     case "RADIO":
       return (
         <Radio
-          disabled
+          // disabled
           options={[
             { label: "Option A", value: "a" },
             { label: "Option B", value: "b" },
@@ -191,7 +191,6 @@ const UIComponent = ({ type }) => {
             { label: "Looooooooooooooooooooong option", value: "c" },
             { label: "Option d", value: "d" },
             { label: "Option e", value: "e" },
-            { label: "Option f", value: "f" },
           ]}
           value={data.select}
           onChange={(e, value) => setInputField({ select: value })}
@@ -236,7 +235,7 @@ const UIComponent = ({ type }) => {
       return (
         <Checkbox
           // size="sm"
-          disabled
+          // disabled
           label={"Check"}
           value={data.checkbox}
           onChange={(e, value) => setInputField({ checkbox: value })}

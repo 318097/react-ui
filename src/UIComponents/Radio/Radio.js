@@ -8,15 +8,27 @@ import { defaultCSS, baseCSS, dotCSS, getStyles } from "../styled";
 
 const switchStyles = css`
   .radio-item {
-    border-radius: 0;
-    &:hover:not(.disabled) {
+    &:first-child::before {
+      content: "";
+      display: block;
+      height: 70%;
+      position: absolute;
+      width: 1px;
       background: ${constants.SECONDARY};
+      top: 50%;
+      transform: translateY(-50%);
+      right: -1px;
     }
-    &:first-child {
-      border-right: 0.5px solid ${constants.PRIMARY};
-    }
-    &:last-child {
-      border-left: 0.5px solid ${constants.PRIMARY};
+    &:last-child::before {
+      content: "";
+      display: block;
+      height: 70%;
+      position: absolute;
+      width: 1px;
+      background: ${constants.SECONDARY};
+      top: 50%;
+      transform: translateY(-50%);
+      left: -1px;
     }
     &.radio-item-selected {
       &:after {
@@ -33,10 +45,9 @@ const StyledRadio = styled.div`
   width: max-content;
   display: inline-flex;
   align-items: center;
-  ${defaultCSS};
-  ${(props) => getStyles({ ...props, componentName: "RADIO" })};
   .radio-item {
     position: relative;
+    ${(props) => getStyles({ ...props, componentName: "RADIO" })};
     ${baseCSS};
   }
   ${switchStyles};
