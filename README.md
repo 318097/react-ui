@@ -22,7 +22,7 @@
 - [ ] Custom validation
 - [ ] Error state
 - [x] Status component
-  - [ ] Expiry after some time
+  - [x] Expiry after some time
 - [ ] Information/success/error component
 - [ ] Add wrapper for external svg
 - [ ] Toast component

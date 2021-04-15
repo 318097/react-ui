@@ -46,9 +46,15 @@ const StyledContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
     height: 100%;
+    .v-divider {
+      display: inline-block;
+      width: 2px;
+      height: 100%;
+      background: ${colors.iron};
+    }
     .item {
       height: 100%;
-      padding: 0 4px;
+      padding: 0 4px 0 8px;
     }
   }
 `;
@@ -64,10 +70,18 @@ const Status = () => {
 
   const handleCustomEvent = (event) => {
     const { cmd, input, cb = () => {} } = event.detail;
+    const { expires } = input;
+
     const update = crux(data, cmd, input);
 
     if (cmd !== "read") setData(update.arr);
     cb(update);
+
+    if (expires && cmd === "add") {
+      setTimeout(() => {
+        setData((prev) => crux(prev, "remove", { id: update.extra }).arr);
+      }, expires);
+    }
   };
 
   return (
@@ -78,9 +92,7 @@ const Status = () => {
           return (
             <div className="fcc" style={{ height: "100%" }} key={id}>
               {idx > 0 && idx < data.length && (
-                <span key={idx} className="pl-4 pr-4">
-                  •
-                </span>
+                <span key={idx} className="v-divider"></span>
               )}
               <div className="item fcc" style={styles}>
                 {title && <div className="title">{title}</div>}

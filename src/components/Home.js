@@ -248,6 +248,7 @@ const UIComponent = ({ type }) => {
                   {
                     value: "Successfully created",
                     styles: { background: colors.grey },
+                    // expires: 3000,
                   },
                   ({ extra }) => setId(extra)
                 )
