@@ -198,7 +198,12 @@ const UIComponent = ({ type }) => {
         />
       );
     case "SPINNER":
-      return <Spinner />;
+      return (
+        <>
+          <Spinner />
+          <Spinner type="dot-loader" />
+        </>
+      );
     case "TIMELINE":
       return (
         <Timeline

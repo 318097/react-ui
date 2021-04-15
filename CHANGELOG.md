@@ -15,3 +15,4 @@
 - Fixed Select dropdown padding
 - Select dropdown overflow on select
 - Added `Status` component
+- Add dot loader
