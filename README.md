@@ -29,10 +29,13 @@
 - [ ] Information/success/error component
 - [ ] Add wrapper for external svg
 - [ ] Tag should be closable
-- [ ] Validation
-- [ ] Custom validation
-- [ ] Error state
+- [ ] Input validation
+- [ ] Input error state
 - [ ] Toast component
+- [ ] Checkbox - group & single view
+- [ ] Radio - group & single view
+- [ ] Remove logs at `build`
+- [ ] Prefix classes
 
 ### Bugs
 
@@ -40,7 +43,3 @@
 - [x] Inherit font from parent
 - [x] Select should be max-width by default
 - [x] Close dropdown on outside click
-- [ ] Checkbox group - HOC & group view (seperated)
-- [ ] Radio - group view (seperated)
-- [ ] Remove logs at `build`
-- [ ] Prefix classes

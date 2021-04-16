@@ -3,17 +3,15 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import constants from "../../magicdust/constants";
 import { getRandomNoInRange } from "../util";
 import { defaultCSS, getStyles } from "../styled";
 
 const StyledCard = styled.div`
   display: inline-block;
   max-width: 100%;
-  padding: 16px 12px;
+  padding: 16px;
   position: relative;
   overflow-y: auto;
-  box-shadow: 3px 3px 3px ${constants.SECONDARY};
   ${(props) => getStyles({ ...props, componentName: "CARD" })};
   ${defaultCSS};
 `;
