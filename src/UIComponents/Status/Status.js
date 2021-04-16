@@ -55,7 +55,7 @@ const StyledContainer = styled.div`
     width: 100%;
     .v-divider {
       display: inline-block;
-      width: 2px;
+      width: 1px;
       height: 100%;
       background: ${colors.iron};
       flex-shrink: 0;

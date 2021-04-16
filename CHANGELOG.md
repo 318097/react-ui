@@ -17,3 +17,4 @@
 - Added `Status` component
 - Add dot loader
 - Added `space-kids` class
+- Close dropdown on outside click

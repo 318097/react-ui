@@ -1,4 +1,4 @@
-import React, { useState, memo } from "react";
+import React, { useState, memo, useRef, useEffect } from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
@@ -91,6 +91,26 @@ const Select = ({
   ...others
 }) => {
   const [visible, setVisibility] = useState(false);
+  const containerRef = useRef();
+
+  useEffect(() => {
+    if (visible)
+      document.addEventListener("click", handleOutsideClick, { capture: true });
+  }, [visible]);
+
+  const handleOutsideClick = (e) => {
+    const ref = containerRef.current;
+    const { target } = e;
+
+    // console.log(ref, target, ref.contains(target));
+
+    if (ref && !ref.contains(target)) {
+      setVisibility(false);
+      document.removeEventListener("click", handleOutsideClick, {
+        capture: true,
+      });
+    }
+  };
 
   const handleChange = (option, e) => {
     if (name) onChange(e, { [name]: option.value });
@@ -125,6 +145,7 @@ const Select = ({
 
   return (
     <StyledSelect
+      ref={containerRef}
       name={name}
       style={{ ...style }}
       className={containerClasses}

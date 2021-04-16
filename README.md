@@ -39,7 +39,7 @@
 - [x] Empty state for `Select`
 - [x] Inherit font from parent
 - [x] Select should be max-width by default
-- [ ] Close dropdown on outside click
+- [x] Close dropdown on outside click
 - [ ] Checkbox group - HOC & group view (seperated)
 - [ ] Radio - group view (seperated)
 - [ ] Remove logs at `build`
