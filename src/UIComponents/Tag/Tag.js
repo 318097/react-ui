@@ -10,14 +10,14 @@ const Wrapper = styled.div`
   padding: 2px 4px;
   ${borderRadius};
   font-size: 1rem;
-  transition: 0.4s;
+  transition: 0.2s;
   margin: 2px;
   position: relative;
   cursor: pointer;
   ${(props) => getStyles({ ...props, componentName: "TAG" })};
 `;
 
-const Tag = ({ children, className, onClick, style, color, ...others }) => {
+const Tag = ({ children, className, onClick, style, ...others }) => {
   const classes = classNames({});
 
   const handleClick = () => {
@@ -28,12 +28,7 @@ const Tag = ({ children, className, onClick, style, color, ...others }) => {
     <Wrapper
       className={`${classes} ${className}`}
       onClick={handleClick}
-      style={{
-        ...style,
-        ...(color
-          ? { background: color, borderColor: color, color: "white" }
-          : {}),
-      }}
+      style={style}
       {...others}
     >
       {children}

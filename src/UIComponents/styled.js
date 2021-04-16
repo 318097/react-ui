@@ -58,6 +58,16 @@ const getStyles = ({ color, fontColor, componentName, hover, type }) => {
   if (fontColor) styles += `color: ${color[fontColor] || fontColor};`;
 
   switch (componentName) {
+    case "TAG":
+      styles += `
+         background: ${custom};
+         border-color: ${custom}55;
+          color: white;
+        &:hover{
+          background: ${custom}CC;
+        }
+        `;
+      break;
     case "CARD":
       styles = `
         background: ${colors.white};

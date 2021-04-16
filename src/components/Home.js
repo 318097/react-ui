@@ -151,7 +151,7 @@ const UIComponent = ({ type }) => {
         </Card>
       );
     case "TAG":
-      return <Tag color={colors.yellow}>Tag</Tag>;
+      return <Tag color="coffee">Tag</Tag>;
     case "INPUT":
       return (
         <Input
