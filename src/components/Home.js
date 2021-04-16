@@ -139,7 +139,6 @@ const UIComponent = ({ type }) => {
     case "CARD":
       return (
         <Card
-
         // curved hover
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dicta
@@ -156,14 +155,13 @@ const UIComponent = ({ type }) => {
       return (
         <Input
           value={data.input}
-          disabled
           onChange={(e, value) => setInputField({ input: value })}
         />
       );
     case "TEXTAREA":
       return (
         <TextArea
-          // disabled
+          disabled
           value={data.textarea}
           onChange={(e, value) => setInputField({ textarea: value })}
         />
