@@ -58,7 +58,8 @@ const StyledSelect = styled.div`
         border-bottom: none;
       }
       &:hover {
-        background: ${constants.SECONDARY};
+        background: ${constants.SECONDARY}BB;
+        border-color: ${constants.SECONDARY}CC;
       }
       &.dropdown-selected {
         position: relative;

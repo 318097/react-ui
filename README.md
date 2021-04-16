@@ -18,21 +18,21 @@
 
 - [x] Deploy app on Netlify
 - [x] Add directions for icons
-- [ ] Validation
-- [ ] Custom validation
-- [ ] Error state
 - [x] Status component
   - [x] Expiry after some time
-- [ ] Information/success/error component
-- [ ] Add wrapper for external svg
-- [ ] Toast component
 - [x] Add notebox & fileops colors
 - [x] Icon hover effect
 - [x] Disable state for button and other components
 - [x] Set color for Button from props
 - [x] Button - Solid, Hollow & Link type
 - [x] Add dev.to double-border class
+- [ ] Information/success/error component
+- [ ] Add wrapper for external svg
 - [ ] Tag should be closable
+- [ ] Validation
+- [ ] Custom validation
+- [ ] Error state
+- [ ] Toast component
 
 ### Bugs
 
