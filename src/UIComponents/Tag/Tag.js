@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import { borderRadius, getStyles } from "../styled";
+import colors from "../../magicdust/colors";
 
 const Wrapper = styled.div`
   display: inline-flex;
@@ -39,5 +40,6 @@ const Tag = ({ children, className, onClick, style, ...others }) => {
 Tag.defaultProps = {
   style: {},
   className: "tag",
+  color: colors.steel,
 };
 export default Tag;

@@ -43,3 +43,7 @@
 - [x] Inherit font from parent
 - [x] Select should be max-width by default
 - [x] Close dropdown on outside click
+- [x] Set default color for tag to be `steel`
+- [ ] Add m-0 & p-0 classes
+- [ ] Expose `icon-bg` class for external use
+- [ ] Add linkedin icon

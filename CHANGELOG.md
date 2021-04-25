@@ -18,3 +18,7 @@
 - Add dot loader
 - Added `space-kids` class
 - Close dropdown on outside click
+
+### v1.1.0
+
+- Set default color for tag to be `steel`
