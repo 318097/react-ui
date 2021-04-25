@@ -37,6 +37,7 @@ import Home from "./Home";
 import Copy from "./Copy";
 import LeftArrow from "./LeftArrow";
 import Close from "./Close";
+import Linkedin from "./Linkedin";
 
 export {
   Plus,
@@ -78,4 +79,5 @@ export {
   Copy,
   LeftArrow,
   Close,
+  Linkedin,
 };

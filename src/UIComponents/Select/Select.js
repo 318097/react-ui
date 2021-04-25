@@ -154,10 +154,10 @@ const Select = ({
     >
       <div className={selectedTextClasses} onClick={toggleVisibility}>
         <span className="select-text">{selectedText}</span>
-        <span className="pl-4">
+        <span className="pl-8">
           <Icon
             size={10}
-            style={{ margin: 0 }}
+            style={{ margin: 0, padding: 0 }}
             type="caret"
             direction={visible ? "up" : "down"}
           />

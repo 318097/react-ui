@@ -60,7 +60,7 @@ const icons = [
   },
   {
     title: "Social",
-    icons: ["facebook", "twitter", "instagram", "google"],
+    icons: ["facebook", "twitter", "instagram", "google", "linkedin"],
   },
   {
     title: "Others",

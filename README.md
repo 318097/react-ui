@@ -27,7 +27,7 @@
 - [x] Button - Solid, Hollow & Link type
 - [x] Add dev.to double-border class
 - [ ] Information/success/error component
-- [ ] Add wrapper for external svg
+- [x] Add wrapper for external svg
 - [ ] Tag should be closable
 - [ ] Input validation
 - [ ] Input error state
@@ -44,6 +44,5 @@
 - [x] Select should be max-width by default
 - [x] Close dropdown on outside click
 - [x] Set default color for tag to be `steel`
-- [ ] Add m-0 & p-0 classes
-- [ ] Expose `icon-bg` class for external use
-- [ ] Add linkedin icon
+- [x] Add m-0 & p-0 classes
+- [x] Add linkedin icon

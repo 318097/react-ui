@@ -43,6 +43,7 @@ import {
   Copy,
   LeftArrow,
   Close,
+  Linkedin,
 } from "./icon-svgs";
 
 const StyledIcon = styled.span`
@@ -134,6 +135,8 @@ const SVGIcon = ({ type, ...props }) => {
       return <Twitter {...props} />;
     case "instagram":
       return <Instagram {...props} />;
+    case "linkedin":
+      return <Linkedin {...props} />;
     case "settings":
       return <Settings {...props} />;
     case "upload":
@@ -164,6 +167,7 @@ const Icon = ({
   direction,
   style,
   hover,
+  customIcon,
   ...others
 }) => {
   const classes = classNames({
@@ -184,6 +188,11 @@ const Icon = ({
         : "rotate(0deg)";
   }
 
+  const props = {
+    type,
+    height: size,
+    width: size,
+  };
   return (
     <StyledIcon
       className={classes}
@@ -194,7 +203,7 @@ const Icon = ({
       style={combinedStyles}
       {...others}
     >
-      <SVGIcon type={type} height={size} width={size} />
+      {customIcon ? customIcon(props) : <SVGIcon {...props} />}
     </StyledIcon>
   );
 };

@@ -38,6 +38,5 @@ export default {
   foBlue: "#52ADA2",
   cdBlue: "#1E2F49",
   cdGreen: "#00A962",
-  mustard: "#FFB400",
   purple: "#908DB9",
 };

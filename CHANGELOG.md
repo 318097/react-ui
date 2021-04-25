@@ -22,3 +22,8 @@
 ### v1.1.0
 
 - Set default color for tag to be `steel`
+- Fix icon padding in select
+- Add linkedin icon
+- Add m-0 & p-0 classes
+- Removed `mustard` color
+- Add wrapper for external svg - `customIcon`
