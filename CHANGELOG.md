@@ -1,3 +1,7 @@
+### v1.2.1
+
+- Fix spinner error
+
 ### v1.2.0
 
 - Spinner default classes & props

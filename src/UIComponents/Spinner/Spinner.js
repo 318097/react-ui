@@ -1,9 +1,9 @@
 import React from "react";
 import "./Spinner.scss";
-import className from "classnames";
+import classNames from "classnames";
 
 const Spinner = ({ center, type, className, ...others }) => {
-  const containerClasses = className({
+  const containerClasses = classNames({
     [className]: true,
     [type]: true,
     "center-container": center,
