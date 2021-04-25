@@ -1,3 +1,16 @@
+### v1.2.0
+
+- Spinner default classes & props
+
+### v1.1.0
+
+- Set default color for tag to be `steel`
+- Fix icon padding in select
+- Add linkedin icon
+- Add m-0 & p-0 classes
+- Removed `mustard` color
+- Add wrapper for external svg - `customIcon`
+
 ### v1.0.0
 
 - Timeline new structure
@@ -18,12 +31,3 @@
 - Add dot loader
 - Added `space-kids` class
 - Close dropdown on outside click
-
-### v1.1.0
-
-- Set default color for tag to be `steel`
-- Fix icon padding in select
-- Add linkedin icon
-- Add m-0 & p-0 classes
-- Removed `mustard` color
-- Add wrapper for external svg - `customIcon`
