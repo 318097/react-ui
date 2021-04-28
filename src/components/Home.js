@@ -13,12 +13,12 @@ import {
   ConfirmBox,
   Checkbox,
   TextArea,
-  Status,
+  StatusBar,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
 
-const { triggerEvent } = Status;
+const { triggerEvent } = StatusBar;
 
 const uiList = [
   "BUTTON",
@@ -251,8 +251,8 @@ const UIComponent = ({ type }) => {
                 triggerEvent(
                   "add",
                   {
+                    id: "addd",
                     value: "Successfully created",
-                    styles: { background: colors.grey },
                     // expires: 3000,
                   },
                   ({ extra }) => setId(extra)
@@ -264,7 +264,7 @@ const UIComponent = ({ type }) => {
             <Button
               onClick={() =>
                 triggerEvent("update", {
-                  id,
+                  id: "addd",
                   value: "Successfully updated..",
                 })
               }
@@ -298,7 +298,7 @@ const UIComponent = ({ type }) => {
               Delete
             </Button>
           </div>
-          <Status />
+          <StatusBar />
         </div>
       );
     default:

@@ -13,12 +13,12 @@ import {
   ConfirmBox,
   Checkbox,
   TextArea,
-  Status,
+  StatusBar,
 } from "../UIComponents";
 import "./Playground.scss";
 import colors from "../magicdust/colors";
 
-const { triggerEvent } = Status;
+const { triggerEvent } = StatusBar;
 
 const Playground = () => {
   const [data, setData] = useState({
@@ -71,7 +71,7 @@ const Playground = () => {
         value={data.select}
         onChange={(e, value) => setInputField({ select: value })}
       />
-      <Status />
+      <StatusBar />
     </section>
   );
 };

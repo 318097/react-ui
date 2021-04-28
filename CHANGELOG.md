@@ -1,3 +1,7 @@
+### v1.2.2
+
+- Update StatusBar
+
 ### v1.2.1
 
 - Fix spinner error
@@ -31,7 +35,7 @@
 - Added `caret` in Select
 - Fixed Select dropdown padding
 - Select dropdown overflow on select
-- Added `Status` component
+- Added `StatusBar` component
 - Add dot loader
 - Added `space-kids` class
 - Close dropdown on outside click

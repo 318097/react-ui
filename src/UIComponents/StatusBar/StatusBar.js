@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from "react";
 import styled from "styled-components";
 import colors from "../../magicdust/colors";
 import { v4 as uuidv4 } from "uuid";
+import classNames from "classnames";
 
 const crux = (arr = [], cmd, node) => {
   if (!arr) return { arr: [] };
@@ -14,7 +15,7 @@ const crux = (arr = [], cmd, node) => {
   switch (cmd) {
     case "add":
       const id = uuidv4();
-      result = [...arr, { ...node, id }];
+      result = [...arr, { id, visible: true, ...node }];
       extra = id;
       break;
     case "read":
@@ -35,16 +36,21 @@ const crux = (arr = [], cmd, node) => {
 const StyledContainer = styled.div`
   width: 100%;
   max-width: 100%;
+  bottom: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   border-radius: 2px;
   background: ${colors.strokeOne};
   padding: 0;
-  height: 32px;
+  height: 28px;
   overflow: auto;
   &::-webkit-scrollbar {
     display: none;
+  }
+  h3 {
+    white-space: nowrap;
   }
   .items-container {
     display: flex;
@@ -57,20 +63,26 @@ const StyledContainer = styled.div`
       display: inline-block;
       width: 1px;
       height: 100%;
-      background: ${colors.iron};
+      background: ${colors.white};
       flex-shrink: 0;
     }
     .item {
       height: 100%;
       padding: 0 8px;
       flex-shrink: 0;
+      color: white;
+      background: ${colors.steel};
     }
   }
 `;
 ``;
 
-const Status = ({ title }) => {
+const StatusBar = ({ title, className }) => {
   const [data, setData] = useState([]);
+
+  const classes = classNames({
+    [className]: true,
+  });
 
   useEffect(() => {
     document.addEventListener("status-bar", handleCustomEvent);
@@ -94,22 +106,24 @@ const Status = ({ title }) => {
   };
 
   return (
-    <StyledContainer>
+    <StyledContainer className={classes}>
       {title && <h3 className="pl pr">{title}</h3>}
       <div className="items-container">
-        {data.map(({ value, title, styles, id }, idx) => {
-          return (
-            <Fragment key={id}>
-              {idx > 0 && idx < data.length && (
-                <span className="v-divider"></span>
-              )}
-              <div className="item fcc" style={styles}>
-                {title && <div className="title">{title}</div>}
-                <div className="value">{value}</div>
-              </div>
-            </Fragment>
-          );
-        })}
+        {data
+          .filter((item) => item.visible)
+          .map(({ value, title, styles, id }, idx) => {
+            return (
+              <Fragment key={id}>
+                {idx > 0 && idx < data.length && (
+                  <span className="v-divider"></span>
+                )}
+                <div className="item fcc" style={styles}>
+                  {title && <div className="title">{title}</div>}
+                  <div className="value">{value}</div>
+                </div>
+              </Fragment>
+            );
+          })}
       </div>
     </StyledContainer>
   );
@@ -122,6 +136,10 @@ const triggerEvent = (cmd, input = {}, cb) => {
   document.dispatchEvent(event);
 };
 
-Status.triggerEvent = triggerEvent;
+StatusBar.triggerEvent = triggerEvent;
 
-export default Status;
+StatusBar.defaultProps = {
+  className: "status-bar",
+};
+
+export default StatusBar;
