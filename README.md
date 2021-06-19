@@ -36,6 +36,9 @@
 - [ ] Radio - group & single view
 - [ ] Remove logs at `build`
 - [ ] Prefix classes
+- [ ] Empty State component
+- [ ] `Clear`button in Select
+- [ ] Toggle show placeholder after select
 
 ### Bugs
 
@@ -46,3 +49,4 @@
 - [x] Set default color for tag to be `steel`
 - [x] Add m-0 & p-0 classes
 - [x] Add linkedin icon
+- [ ] Apply rotate on svg instead of wrapper

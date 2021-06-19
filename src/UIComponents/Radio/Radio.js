@@ -44,6 +44,8 @@ const switchStyles = css`
 const StyledRadio = styled.div`
   width: max-content;
   display: inline-flex;
+  flex-shrink: 0;
+  flex-grow: 0;
   align-items: center;
   .radio-item {
     position: relative;

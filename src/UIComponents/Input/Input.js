@@ -11,6 +11,8 @@ const StyledInput = styled.input`
   background: ${colors.white};
   border: 1px solid ${constants.BG};
   display: inline-flex;
+  flex-shrink: 0;
+  flex-grow: 0;
   ${baseCSS};
   margin: 0;
   &:active:not(.disabled),

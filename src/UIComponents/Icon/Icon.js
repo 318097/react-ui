@@ -50,6 +50,8 @@ const StyledIcon = styled.span`
   line-height: 1;
   cursor: pointer;
   display: inline-flex;
+  flex-shrink: 0;
+  flex-grow: 0;
   align-items: center;
   justify-content: center;
   vertical-align: middle;

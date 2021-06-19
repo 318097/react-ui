@@ -6,6 +6,8 @@ import colors from "../../magicdust/colors";
 
 const Wrapper = styled.div`
   display: inline-flex;
+  flex-shrink: 0;
+  flex-grow: 0;
   align-items: center;
   justify-content: center;
   padding: 2px 4px;

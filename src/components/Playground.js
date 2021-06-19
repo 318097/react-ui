@@ -41,7 +41,6 @@ const Playground = () => {
         onChange={(e, value) => setInputField({ input: value })}
       />
       <Radio
-        color="watermelon"
         options={[
           { label: "Option A", value: "a" },
           { label: "Option B", value: "b" },
@@ -51,13 +50,12 @@ const Playground = () => {
       />
       <Checkbox
         // size="sm"
-
         // disabled
-        color="watermelon"
         label={"Check"}
         value={data.checkbox}
         onChange={(e, value) => setInputField({ checkbox: value })}
       />
+      <Icon type="arrow" background />
       <Select
         // disabled
         color="watermelon"

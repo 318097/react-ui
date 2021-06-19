@@ -10,6 +10,8 @@ import { baseCSS, dotCSS, getStyles, itemCSS } from "../styled";
 const StyledSelect = styled.div`
   position: relative;
   display: inline-flex;
+  flex-shrink: 0;
+  flex-grow: 0;
   .select-text-container {
     display: flex;
     align-items: center;

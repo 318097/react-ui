@@ -1,3 +1,7 @@
+### v2.0.0
+
+- Fix flex-grow & flex-shrink issue in components
+
 ### v1.2.2
 
 - Update StatusBar

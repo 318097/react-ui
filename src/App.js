@@ -12,7 +12,7 @@ const App = ({ history }) => {
       </h2>
       <div className="content">
         <Switch>
-          <Route exact path="/play" component={Playground} />
+          <Route exact path="/playground" component={Playground} />
           <Route exact path="/" component={Home} />
           {/* <Route exact path="/:component" component={ComponentView} /> */}
         </Switch>
