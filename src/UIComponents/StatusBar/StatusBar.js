@@ -77,7 +77,7 @@ const StyledContainer = styled.div`
 `;
 ``;
 
-const StatusBar = ({ title, className }) => {
+const StatusBar = ({ title, className, ...others }) => {
   const [data, setData] = useState([]);
 
   const classes = classNames({
@@ -106,7 +106,7 @@ const StatusBar = ({ title, className }) => {
   };
 
   return (
-    <StyledContainer className={classes}>
+    <StyledContainer className={classes} {...others}>
       {title && <h3 className="pl pr">{title}</h3>}
       <div className="items-container">
         {data

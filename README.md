@@ -39,6 +39,14 @@
 - [ ] Empty State component
 - [ ] `Clear`button in Select
 - [ ] Toggle show placeholder after select
+- [ ] Deploy over CDN (jsdelivr)
+- [ ] Generalize classes
+- [ ] Import from other apps
+  - [ ] Notes App: Dropdown, EmptyState, ImageCard, JSONEditor, UploadButton
+  - [ ] Atom: Nested Nodes
+  - [ ] Code Drops: Menu Dropdown
+  - [ ] DOT: Blocker Screen, notify event
+  - [ ] E Feed: Checkbox Group
 
 ### Bugs
 
@@ -49,4 +57,3 @@
 - [x] Set default color for tag to be `steel`
 - [x] Add m-0 & p-0 classes
 - [x] Add linkedin icon
-- [ ] Apply rotate on svg instead of wrapper

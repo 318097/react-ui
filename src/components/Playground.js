@@ -55,7 +55,12 @@ const Playground = () => {
         value={data.checkbox}
         onChange={(e, value) => setInputField({ checkbox: value })}
       />
-      <Icon type="arrow" background />
+      <Icon
+        style={{ margin: "0 0 0 12px" }}
+        type="arrow"
+        background
+        direction="up"
+      />
       <Select
         // disabled
         color="watermelon"
