@@ -1,0 +1,278 @@
+@import "./colors.scss";
+
+$value: 8px;
+$valueList: 0 0px, 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
+
+.defaults {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#react-ui,
+.react-ui {
+  .absolute {
+    position: absolute;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .mt {
+    margin-top: $value;
+  }
+
+  .mr {
+    margin-right: $value;
+  }
+
+  .mb {
+    margin-bottom: $value;
+  }
+
+  .ml {
+    margin-left: $value;
+  }
+
+  .pt {
+    padding-top: $value;
+  }
+
+  .pr {
+    padding-right: $value;
+  }
+
+  .pb {
+    padding-bottom: $value;
+  }
+
+  .pl {
+    padding-left: $value;
+  }
+
+  @each $item, $value in $valueList {
+    .m-#{$item} {
+      margin: $value;
+    }
+
+    .mt-#{$item} {
+      margin-top: $value;
+    }
+
+    .mr-#{$item} {
+      margin-right: $value;
+    }
+
+    .mb-#{$item} {
+      margin-bottom: $value;
+    }
+
+    .ml-#{$item} {
+      margin-left: $value;
+    }
+    .p-#{$item} {
+      padding: $value;
+    }
+
+    .pt-#{$item} {
+      padding-top: $value;
+    }
+
+    .pr-#{$item} {
+      padding-right: $value;
+    }
+
+    .pb-#{$item} {
+      padding-bottom: $value;
+    }
+
+    .pl-#{$item} {
+      padding-left: $value;
+    }
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .disabled {
+    cursor: not-allowed;
+    & * {
+      cursor: not-allowed;
+    }
+  }
+
+  .center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .underline {
+    position: relative;
+    &:after {
+      content: "";
+      width: 105%;
+      height: 4px;
+      background: $red;
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex.wrap {
+    flex-wrap: wrap;
+  }
+
+  .flex.center,
+  .flex.row.center {
+    align-items: center;
+  }
+
+  .flex.column {
+    flex-direction: column;
+  }
+
+  .flex.column.center {
+    justify-content: center;
+  }
+
+  .flex.space-between {
+    justify-content: space-between;
+  }
+
+  .flex.space-around {
+    justify-content: space-around;
+  }
+
+  .fcc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fc {
+    display: flex;
+    align-items: center;
+  }
+
+  /* CARD */
+
+  .curve-border-1 {
+    // border-radius: 3% 97% 5% 95% / 95% 4% 96% 5%;
+    border-radius: 1% 98% 2% 98% / 94% 7% 94% 3%;
+  }
+
+  .curve-border-2 {
+    border-radius: 48% 46% 1% 53% / 2% 2% 42% 2%;
+  }
+
+  .curve-border-3 {
+    border-radius: 48% 6% 1% 4% / 2% 7% 18% 5%;
+  }
+
+  .bottom-line {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: $strokeTwo;
+    }
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: $chrome;
+    margin: 8px 0;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: $yellow;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .icon.icon-bg {
+    padding: 6px;
+    border-radius: 0;
+    transition: 0.4s;
+    &:hover {
+      background: $strokeOne;
+      border-radius: 50%;
+    }
+  }
+
+  .db {
+    border: 4px solid $steel;
+    box-shadow: 4px 4px $lead;
+  }
+
+  .space-kids {
+    & > * {
+      margin-right: $value;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .dot-loader {
+    animation: 2s spin linear infinite;
+    width: 20px;
+    height: 20px;
+    background: $coffee;
+    transform: rotate(0deg);
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  @keyframes spin {
+    0% {
+      background: $coffee;
+      transform: rotate(0deg);
+      border-radius: 50%;
+    }
+    25% {
+      background: $yellow;
+    }
+    50% {
+      background: $orange;
+      border-radius: 44%;
+    }
+    75% {
+      background: $primary;
+    }
+    100% {
+      background: $orchid;
+      transform: rotate(360deg);
+      border-radius: 50%;
+    }
+  }
+}
+
+@mixin flex($direction: row, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  align-items: $justify;
+}
