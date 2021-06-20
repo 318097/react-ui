@@ -1,6 +1,7 @@
 ### v3.0.0
 
 - Renamed `Spinner` to `Loading`
+- Loading - refactored, default props & types
 - Updated `underline` styles
 - Updated `divider` class styles
 

@@ -74,7 +74,19 @@ const Playground = () => {
         value={data.select}
         onChange={(e, value) => setInputField({ select: value })}
       />
-      <div className="divider"></div>
+      <div className="defaults">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cumque,
+        maxime odio blanditiis sapiente animi hic mollitia tempora ex saepe
+        molestias perferendis et sit eum soluta doloremque? Vel a fugiat
+        obcaecati sequi mollitia! Sed libero accusantium architecto debitis,
+        quidem cum rerum magnam velit ut harum quas sit recusandae culpa,
+        excepturi sequi quod, ab maiores vero illum. Labore voluptatibus porro
+        ducimus? Ducimus commodi cumque architecto labore temporibus culpa modi
+        doloribus aut, mollitia natus ex dolorum repellendus laborum. Ipsa quos
+        nulla alias voluptatum, nostrum modi tempora sapiente omnis quia, iure
+        praesentium ratione consectetur reiciendis aliquam accusamus quibusdam?
+        Temporibus placeat eaque ratione numquam.
+      </div>
       <StatusBar />
     </section>
   );
