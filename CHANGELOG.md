@@ -1,3 +1,7 @@
+### v3.0.0
+
+- Renamed `Spinner` to `Loading`
+
 ### v2.0.0
 
 - Deploy as cdn (test)

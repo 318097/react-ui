@@ -8,7 +8,7 @@ import {
   Icon,
   Radio,
   Select,
-  Spinner,
+  Loading,
   Timeline,
   ConfirmBox,
   Checkbox,
@@ -30,7 +30,7 @@ const uiList = [
   "CARD",
   "TAG",
   "STATUS",
-  "SPINNER",
+  "LOADING",
   "TIMELINE",
   "CONFIRMBOX",
   "CHECKBOX",
@@ -197,11 +197,11 @@ const UIComponent = ({ type }) => {
           onChange={(e, value) => setInputField({ select: value })}
         />
       );
-    case "SPINNER":
+    case "LOADING":
       return (
         <>
-          <Spinner />
-          <Spinner type="dot-loader" />
+          <Loading />
+          <Loading type="dot-loader" />
         </>
       );
     case "TIMELINE":

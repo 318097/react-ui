@@ -8,7 +8,7 @@ import Tag from "./atom/Tag";
 import Input from "./atom/Input";
 import Radio from "./atom/Radio";
 import Select from "./atom/Select";
-import Spinner from "./atom/Spinner";
+import Loading from "./atom/Loading";
 import Timeline from "./atom/Timeline";
 import ConfirmBox from "./atom/ConfirmBox";
 import Checkbox from "./atom/Checkbox";
@@ -24,7 +24,7 @@ export {
   Input,
   Radio,
   Select,
-  Spinner,
+  Loading,
   Timeline,
   ConfirmBox,
   Checkbox,

@@ -8,7 +8,7 @@ import {
   Icon,
   Radio,
   Select,
-  Spinner,
+  Loading,
   Timeline,
   ConfirmBox,
   Checkbox,
