@@ -1,6 +1,6 @@
 {
   "name": "@codedrops/react-ui",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "private": false,
   "description": "React UI library",
   "main": "dist/index.js",
@@ -41,8 +41,9 @@
     "build:app": "rimraf './build' && webpack --config webpack.app.js",
     "build:lib": "rimraf './dist' && webpack --config webpack.lib.js",
     "build:cdn": "rimraf './dist' && webpack --config webpack.cdn.js",
+    "publish": "npm publish --access=public",
     "predeploy": "npm run build:lib",
-    "deploy": "npm publish --access=public"
+    "deploy": "npm run publish"
   },
   "repository": {
     "type": "git",
