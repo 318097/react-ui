@@ -3,7 +3,11 @@
   "version": "2.0.0",
   "private": false,
   "description": "React UI library",
-  "main": "dist",
+  "main": "dist/index.js",
+  "dependencies": {
+    "rimraf": "^3.0.2",
+    "uuid": "^8.3.2"
+  },
   "devDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -36,6 +40,7 @@
     "dev": "webpack-dev-server --config webpack.app.js",
     "build:app": "rimraf './build' && webpack --config webpack.app.js",
     "build:lib": "rimraf './dist' && webpack --config webpack.lib.js",
+    "build:cdn": "rimraf './dist' && webpack --config webpack.cdn.js",
     "predeploy": "npm run build:lib",
     "deploy": "npm publish --access=public"
   },
@@ -48,9 +53,5 @@
   "bugs": {
     "url": "https://github.com/318097/react-ui/issues"
   },
-  "homepage": "https://github.com/318097/react-ui#readme",
-  "dependencies": {
-    "rimraf": "^3.0.2",
-    "uuid": "^8.3.2"
-  }
+  "homepage": "https://github.com/318097/react-ui#readme"
 }

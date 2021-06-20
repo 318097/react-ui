@@ -6,7 +6,6 @@ module.exports = {
   ...commonConfig,
   entry: "./src/UIComponents/index.js",
   mode: "production",
-  devtool: "cheap-module-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",

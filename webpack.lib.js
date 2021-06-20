@@ -10,8 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
-    libraryTarget: "umd",
-    library: "reactUI",
+    libraryTarget: "commonjs2",
   },
   externals: {
     react: "react",
