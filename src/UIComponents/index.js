@@ -16,6 +16,7 @@ import TextArea from "./atom/TextArea";
 import StatusBar from "./atom/StatusBar";
 
 import EmptyState from "./molecules/EmptyState";
+import BlockerScreen from "./molecules/BlockerScreen";
 import CheckboxGroup from "./molecules/CheckboxGroup";
 
 export {
@@ -35,6 +36,7 @@ export {
   StatusBar,
   EmptyState,
   CheckboxGroup,
+  BlockerScreen,
 };
 
 export default color;

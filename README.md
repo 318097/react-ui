@@ -58,7 +58,7 @@
   - [ ] Atom: Nested Nodes
   - [ ] Code Drops: Menu Dropdown
   - [ ] DOT:
-    - [ ] Blocker Screen
+    - [x] Blocker Screen
     - [x] notify event
   - [x] E Feed: Checkbox Group
 

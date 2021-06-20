@@ -10,6 +10,7 @@
 - Add: EmptyState component
 - Add: CheckboxGroup from E Feed - checkbox/radio
 - Add: StatusBar `notify` event
+- Add: Blocker Screen
 
 ### v2.0.0
 

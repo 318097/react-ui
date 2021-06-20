@@ -16,6 +16,7 @@ import {
   StatusBar,
   EmptyState,
   CheckboxGroup,
+  BlockerScreen,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -39,6 +40,7 @@ const uiList = [
   "ICON",
   "EMPTYSTATE",
   "CHECKBOX_GROUP",
+  "BLOCKERSCREEN",
 ];
 
 const icons = [
@@ -322,6 +324,12 @@ const UIComponent = ({ type }) => {
           mode="single"
           value={data.checkboxGroup}
         />
+      );
+    case "BLOCKERSCREEN":
+      return (
+        <BlockerScreen>
+          <h3>Hello world</h3>
+        </BlockerScreen>
       );
     default:
       return null;
