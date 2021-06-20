@@ -3,20 +3,20 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 const Loading = ({ center, type, className, skipDefaultClass, ...others }) => {
-  const containerClasses = classNames({
+  const classes = classNames({
     loading: !skipDefaultClass,
     [className]: !!className,
     [type]: true,
     "center-container": center,
   });
 
-  return <div className={containerClasses} {...others}></div>;
+  return <div {...others} className={classes}></div>;
 };
 
 Loading.defaultProps = {
-  className: null,
   center: false,
   type: "default-loader",
+  className: null,
   skipDefaultClass: false,
 };
 

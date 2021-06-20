@@ -18,21 +18,23 @@ const Button = ({
   size,
   curved,
   disabled,
+  skipDefaultClass,
   ...others
 }) => {
   const classes = classNames({
-    [className]: true,
-    disabled: disabled,
+    button: !skipDefaultClass,
+    [className]: !!className,
+    disabled,
     [`curve-border-${getRandomNoInRange(3)}`]: curved,
   });
 
   return (
     <StyledButton
+      {...others}
       className={classes}
       onClick={onClick}
       size={size}
       disabled={disabled}
-      {...others}
     >
       {children}
     </StyledButton>
@@ -40,10 +42,11 @@ const Button = ({
 };
 
 Button.defaultProps = {
-  className: "button",
   size: "md",
   curved: false,
   type: "solid",
+  className: null,
+  skipDefaultClass: false,
 };
 
 Button.propTypes = {

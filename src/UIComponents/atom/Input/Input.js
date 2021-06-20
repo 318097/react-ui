@@ -32,11 +32,13 @@ const Input = ({
   onBlur,
   name,
   disabled,
+  skipDefaultClass,
   ...others
 }) => {
   const classes = classNames({
-    [className]: true,
-    disabled: disabled,
+    input: !skipDefaultClass,
+    [className]: !!className,
+    disabled,
     "curve-border-1": curved,
   });
 
@@ -55,22 +57,23 @@ const Input = ({
 
   return (
     <StyledInput
+      {...others}
       name={name}
-      style={{ ...style }}
+      style={style}
       className={classes}
       onChange={handleChange}
       onBlur={handleBlur}
       disabled={disabled}
-      {...others}
     />
   );
 };
 
 Input.defaultProps = {
-  className: "input",
   style: {},
   size: "md",
   curved: false,
+  className: null,
+  skipDefaultClass: false,
 };
 
 Input.propTypes = {

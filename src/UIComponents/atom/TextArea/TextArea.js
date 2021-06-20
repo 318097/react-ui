@@ -31,11 +31,13 @@ const TextArea = ({
   onBlur,
   name,
   disabled,
+  skipDefaultClass,
   ...others
 }) => {
   const classes = classNames({
-    [className]: true,
-    disabled: disabled,
+    textarea: !skipDefaultClass,
+    [className]: !!className,
+    disabled,
     "curve-border-1": curved,
   });
 
@@ -54,23 +56,24 @@ const TextArea = ({
 
   return (
     <StyledTextArea
+      {...others}
       name={name}
-      style={{ ...style }}
+      style={style}
       className={classes}
       onChange={handleChange}
       onBlur={handleBlur}
       disabled={disabled}
-      {...others}
     />
   );
 };
 
 TextArea.defaultProps = {
-  className: "textarea",
   style: {},
   size: "md",
   curved: false,
   rows: 2,
+  className: null,
+  skipDefaultClass: false,
 };
 
 TextArea.propTypes = {

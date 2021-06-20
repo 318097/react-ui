@@ -77,11 +77,12 @@ const StyledContainer = styled.div`
 `;
 ``;
 
-const StatusBar = ({ title, className, ...others }) => {
+const StatusBar = ({ title, className, skipDefaultClass, ...others }) => {
   const [data, setData] = useState([]);
 
   const classes = classNames({
-    [className]: true,
+    "status-bar": !skipDefaultClass,
+    [className]: !!className,
   });
 
   useEffect(() => {
@@ -106,7 +107,7 @@ const StatusBar = ({ title, className, ...others }) => {
   };
 
   return (
-    <StyledContainer className={classes} {...others}>
+    <StyledContainer {...others} className={classes}>
       {title && <h3 className="pl pr">{title}</h3>}
       <div className="items-container">
         {data
@@ -139,7 +140,8 @@ const triggerEvent = (cmd, input = {}, cb) => {
 StatusBar.triggerEvent = triggerEvent;
 
 StatusBar.defaultProps = {
-  className: "status-bar",
+  className: null,
+  skipDefaultClass: false,
 };
 
 export default StatusBar;

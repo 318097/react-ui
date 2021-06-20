@@ -4,6 +4,7 @@
 - Loading - refactored, default props & types
 - Updated `underline` styles
 - Updated `divider` class styles
+- Refactor: Default classname and skipDefaultClass prop
 
 ### v2.0.0
 

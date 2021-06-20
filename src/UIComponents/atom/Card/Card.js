@@ -16,25 +16,34 @@ const StyledCard = styled.div`
   ${defaultCSS};
 `;
 
-const Card = ({ children, className, curved, bottomLine, ...others }) => {
+const Card = ({
+  children,
+  className,
+  curved,
+  bottomLine,
+  skipDefaultClass,
+  ...others
+}) => {
   const classes = classNames({
-    [className]: true,
+    card: !skipDefaultClass,
+    [className]: !!className,
     [`curve-border-${getRandomNoInRange(3)}`]: curved,
     "bottom-line": bottomLine,
   });
 
   return (
-    <StyledCard className={classes} {...others}>
+    <StyledCard {...others} className={classes}>
       {children}
     </StyledCard>
   );
 };
 
 Card.defaultProps = {
-  className: "card",
   curved: false,
   bottomLine: false,
   hover: true,
+  className: null,
+  skipDefaultClass: false,
 };
 
 Card.propTypes = {

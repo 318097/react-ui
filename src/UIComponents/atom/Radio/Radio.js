@@ -64,6 +64,7 @@ const Radio = ({
   onBlur,
   name,
   disabled,
+  skipDefaultClass,
   ...others
 }) => {
   const handleClick = (e, option) => {
@@ -73,16 +74,17 @@ const Radio = ({
     else onChange(e, option.value);
   };
 
-  const containerClasses = classNames({
-    [className]: true,
+  const classes = classNames({
+    radio: !skipDefaultClass,
+    [className]: !!className,
   });
 
   return (
     <StyledRadio
+      {...others}
       name={name}
       style={{ ...style }}
-      className={containerClasses}
-      {...others}
+      className={classes}
     >
       {options.map((option) => {
         const itemClasses = classNames({
@@ -105,10 +107,11 @@ const Radio = ({
 };
 
 Radio.defaultProps = {
-  className: "radio",
   style: {},
   options: [],
   size: "md",
+  className: null,
+  skipDefaultClass: false,
 };
 
 Radio.propTypes = {

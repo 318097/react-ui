@@ -28,13 +28,20 @@ const StyledPageHeader = styled.div`
   }
 `;
 
-const PageHeader = ({ title, actions, className, ...others }) => {
+const PageHeader = ({
+  title,
+  actions,
+  className,
+  skipDefaultClass,
+  ...others
+}) => {
   const classes = classNames({
-    [className]: true,
+    "page-header": !skipDefaultClass,
+    [className]: !!className,
   });
 
   return (
-    <StyledPageHeader className={classes} {...others}>
+    <StyledPageHeader {...others} className={classes}>
       <div className="title">{title}</div>
       <div className="actions">{actions}</div>
     </StyledPageHeader>
@@ -42,8 +49,9 @@ const PageHeader = ({ title, actions, className, ...others }) => {
 };
 
 PageHeader.defaultProps = {
-  className: "page-header",
   background: true,
+  className: null,
+  skipDefaultClass: false,
 };
 
 PageHeader.propTypes = {

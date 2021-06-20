@@ -170,10 +170,12 @@ const Icon = ({
   style,
   hover,
   customIcon,
+  skipDefaultClass,
   ...others
 }) => {
   const classes = classNames({
-    [className]: true,
+    icon: !skipDefaultClass,
+    [className]: !!className,
     "icon-bg": hover,
   });
 
@@ -197,13 +199,13 @@ const Icon = ({
   };
   return (
     <StyledIcon
+      {...others}
       className={classes}
       background={background}
       size={size}
       onClick={onClick}
       fill={fill}
       style={combinedStyles}
-      {...others}
     >
       {customIcon ? customIcon(props) : <SVGIcon {...props} />}
     </StyledIcon>
@@ -211,11 +213,12 @@ const Icon = ({
 };
 
 Icon.defaultProps = {
-  className: "icon",
   background: false,
   size: 16,
   fill: colors.bar,
   hover: false,
+  className: null,
+  skipDefaultClass: false,
 };
 
 export default Icon;

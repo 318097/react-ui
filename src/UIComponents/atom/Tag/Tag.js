@@ -20,8 +20,18 @@ const Wrapper = styled.div`
   ${(props) => getStyles({ ...props, componentName: "TAG" })};
 `;
 
-const Tag = ({ children, className, onClick, style, ...others }) => {
-  const classes = classNames({});
+const Tag = ({
+  children,
+  className,
+  onClick,
+  style,
+  skipDefaultClass,
+  ...others
+}) => {
+  const classes = classNames({
+    tag: !skipDefaultClass,
+    [className]: !!className,
+  });
 
   const handleClick = () => {
     if (onClick) onClick(children);
@@ -29,10 +39,10 @@ const Tag = ({ children, className, onClick, style, ...others }) => {
 
   return (
     <Wrapper
-      className={`${classes} ${className}`}
+      {...others}
+      className={classes}
       onClick={handleClick}
       style={style}
-      {...others}
     >
       {children}
     </Wrapper>
@@ -41,7 +51,8 @@ const Tag = ({ children, className, onClick, style, ...others }) => {
 
 Tag.defaultProps = {
   style: {},
-  className: "tag",
   color: colors.steel,
+  className: null,
+  skipDefaultClass: false,
 };
 export default Tag;

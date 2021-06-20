@@ -90,6 +90,7 @@ const Select = ({
   placeholder,
   dropPosition,
   disabled,
+  skipDefaultClass,
   ...others
 }) => {
   const [visible, setVisibility] = useState(false);
@@ -126,7 +127,8 @@ const Select = ({
   };
 
   const containerClasses = classNames({
-    [className]: true,
+    select: !skipDefaultClass,
+    [className]: !!className,
   });
 
   const selectedTextClasses = classNames({
@@ -147,12 +149,12 @@ const Select = ({
 
   return (
     <StyledSelect
+      {...others}
       ref={containerRef}
       name={name}
       style={{ ...style }}
       className={containerClasses}
       dropPosition={dropPosition}
-      {...others}
     >
       <div className={selectedTextClasses} onClick={toggleVisibility}>
         <span className="select-text">{selectedText}</span>
@@ -191,12 +193,13 @@ const Select = ({
 };
 
 Select.defaultProps = {
-  className: "select",
   style: {},
   placeholder: "Select",
   options: [],
   dropPosition: "bottom",
   size: "md",
+  className: null,
+  skipDefaultClass: false,
 };
 
 Select.propTypes = {

@@ -1,15 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
-import className from "classnames";
+import classNames from "classnames";
 import "./Timeline.scss";
 
-const Timeline = ({ items, renderItem, customStopItem }) => {
-  const classList = className({
-    timeline: true,
+const Timeline = ({
+  items,
+  renderItem,
+  customStopItem,
+  skipDefaultClass,
+  className,
+  ...others
+}) => {
+  const classes = classNames({
+    timeline: !skipDefaultClass,
+    [className]: !!className,
   });
 
   return (
-    <div className={classList}>
+    <div {...others} className={classes}>
       {items.map((item) => (
         <div key={item.id} className="timeline-block">
           <div className="timeline-block-stops">
@@ -22,7 +30,10 @@ const Timeline = ({ items, renderItem, customStopItem }) => {
   );
 };
 
-Timeline.defaultProps = {};
+Timeline.defaultProps = {
+  className: null,
+  skipDefaultClass: false,
+};
 
 Timeline.propTypes = {
   customStopItem: PropTypes.func,

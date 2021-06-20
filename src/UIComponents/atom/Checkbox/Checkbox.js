@@ -31,12 +31,14 @@ const Checkbox = ({
   name,
   label,
   disabled,
+  skipDefaultClass,
   ...others
 }) => {
   const classes = classNames({
-    [className]: true,
+    checkbox: !skipDefaultClass,
+    [className]: !!className,
     ["checkbox-selected"]: value,
-    disabled: disabled,
+    disabled,
   });
 
   const handleClick = (e) => {
@@ -48,11 +50,11 @@ const Checkbox = ({
 
   return (
     <StyledCheckbox
+      {...others}
       name={name}
-      style={{ ...style }}
+      style={style}
       className={classes}
       onClick={handleClick}
-      {...others}
     >
       {label}
     </StyledCheckbox>
@@ -63,9 +65,10 @@ Checkbox.defaultProps = {
   label: "",
   value: false,
   style: {},
-  className: "checkbox",
   size: "md",
   onChange: () => {},
+  className: null,
+  skipDefaultClass: false,
 };
 
 Checkbox.propTypes = {

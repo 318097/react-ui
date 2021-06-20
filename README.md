@@ -26,22 +26,28 @@
 - [x] Set color for Button from props
 - [x] Button - Solid, Hollow & Link type
 - [x] Add dev.to double-border class
-- [ ] Information/success/error component
 - [x] Add wrapper for external svg
-- [ ] Tag should be closable
-- [ ] Input validation
-- [ ] Input error state
+
+#### Components
+
+- [ ] Information/success/error component
 - [ ] Toast component
 - [ ] Checkbox - group & single view
 - [ ] Radio - group & single view
+- [ ] Profile component
+- [ ] Empty State component
+
+- [ ] Input validation
+- [ ] Tag should be closable
+- [ ] Input error state
 - [ ] Remove logs at `build`
 - [ ] Prefix classes
-- [ ] Empty State component
 - [ ] `Clear`button in Select
 - [ ] Toggle show placeholder after select
-- [ ] Deploy over CDN (jsdelivr)
 - [ ] Generalize classes
-- [ ] Profile component
+- [ ] Deploy over CDN (jsdelivr)
+- [ ] Single script to update version and deploy or precommit hook to update minor everytime
+
 - [ ] Import from other apps
   - [ ] Notes App: Dropdown, EmptyState, ImageCard, JSONEditor, UploadButton
   - [ ] Atom: Nested Nodes
