@@ -90,6 +90,7 @@ const Select = ({
   dropPosition,
   disabled,
   skipDefaultClass,
+  showPlaceholder,
   ...others
 }) => {
   const [visible, setVisibility] = useState(false);
@@ -142,7 +143,9 @@ const Select = ({
 
   const selectedText = selectedOption ? (
     <>
-      {placeholder && <strong className="pr-2">{`${placeholder}:`}</strong>}
+      {placeholder && showPlaceholder && (
+        <strong className="pr-2">{`${placeholder}:`}</strong>
+      )}
       {selectedOption.label}
     </>
   ) : (
@@ -212,6 +215,7 @@ Select.defaultProps = {
   size: "md",
   className: null,
   skipDefaultClass: false,
+  showPlaceholder: true,
 };
 
 Select.propTypes = {
@@ -222,6 +226,7 @@ Select.propTypes = {
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
+  showPlaceholder: PropTypes.bool,
 };
 
 export default memo(Select);

@@ -43,7 +43,7 @@
 - [ ] Remove logs at `build`
 - [ ] Prefix classes
 - [x] `Clear`button in Select
-- [ ] Toggle show placeholder after select
+- [x] Prop to show/hide placeholder
 - [ ] Generalize classes
 - [ ] Deploy over CDN (jsdelivr)
 - [ ] Single script to update version and deploy or precommit hook to update minor everytime

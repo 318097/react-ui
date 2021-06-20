@@ -6,6 +6,7 @@
 - Updated `divider` class styles
 - Refactor: Default classname and skipDefaultClass prop
 - Add: `Clear`button in Select
+- Update: Select - Prop to show/hide placeholder
 
 ### v2.0.0
 
