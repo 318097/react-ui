@@ -67,9 +67,6 @@ const StyledIcon = styled.span`
     font-family: initial;
     fill: ${({ fill }) => fill};
   }
-  /* &:hover {
-    background: ${colors.strokeOne};
-  } */
 `;
 
 const SVGIcon = ({ type, ...props }) => {
@@ -194,11 +191,12 @@ const Icon = ({
         : "rotate(0deg)";
   }
 
-  const props = {
+  const svgProps = {
     type,
     height: size,
     width: size,
   };
+
   return (
     <StyledIcon
       {...others}
@@ -209,7 +207,7 @@ const Icon = ({
       fill={fill}
       style={combinedStyles}
     >
-      {customIcon ? customIcon(props) : <SVGIcon {...props} />}
+      {customIcon ? customIcon(svgProps) : <SVGIcon {...svgProps} />}
     </StyledIcon>
   );
 };
@@ -230,6 +228,7 @@ Icon.propTypes = {
   hover: PropTypes.bool,
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
+  customIcon: PropTypes.any,
 };
 
 export default Icon;
