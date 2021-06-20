@@ -8,7 +8,7 @@
 - Add: `Clear`button in Select
 - Update: Select - Prop to show/hide placeholder
 - Add: EmptyState component
-- Add: CheckboxGroup from E Feed
+- Add: CheckboxGroup from E Feed - checkbox/radio
 
 ### v2.0.0
 

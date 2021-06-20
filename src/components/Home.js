@@ -318,6 +318,7 @@ const UIComponent = ({ type }) => {
             { label: "Option D", value: "d" },
             { label: "Option E", value: "e" },
           ]}
+          mode="single"
           value={data.checkboxGroup}
         />
       );

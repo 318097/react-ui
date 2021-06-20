@@ -56,7 +56,7 @@ const CheckboxGroup = ({
           <input
             checked={value.includes(option.value)}
             onChange={handleChange}
-            type="checkbox"
+            type={mode === "multiple" ? "checkbox" : "radio"}
             id={option.value}
             name={option.value}
           />
