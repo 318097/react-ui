@@ -77,10 +77,12 @@ TextArea.defaultProps = {
 };
 
 TextArea.propTypes = {
-  className: PropTypes.string,
   style: PropTypes.object,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
   curved: PropTypes.bool,
+  rows: PropTypes.number,
+  className: PropTypes.string,
+  skipDefaultClass: PropTypes.bool,
   name: PropTypes.string,
   onChange: PropTypes.func,
 };

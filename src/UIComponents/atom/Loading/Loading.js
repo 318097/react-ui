@@ -23,6 +23,7 @@ Loading.defaultProps = {
 Loading.propTypes = {
   center: PropTypes.bool,
   type: PropTypes.oneOf(["default-loader", "dot-loader"]),
+  className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
 };
 

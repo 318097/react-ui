@@ -203,13 +203,13 @@ Select.defaultProps = {
 };
 
 Select.propTypes = {
-  className: PropTypes.string,
   style: PropTypes.object,
   placeholder: PropTypes.string,
   options: PropTypes.array.isRequired,
   dropPosition: PropTypes.string,
-  size: PropTypes.string,
-  color: PropTypes.string,
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  className: PropTypes.string,
+  skipDefaultClass: PropTypes.bool,
 };
 
 export default memo(Select);

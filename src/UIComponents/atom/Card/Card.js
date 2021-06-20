@@ -47,10 +47,10 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  className: PropTypes.string,
   curved: PropTypes.bool,
   bottomLine: PropTypes.bool,
   hover: PropTypes.bool,
+  skipDefaultClass: PropTypes.bool,
 };
 
 export default memo(Card);

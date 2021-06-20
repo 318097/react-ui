@@ -55,10 +55,11 @@ PageHeader.defaultProps = {
 };
 
 PageHeader.propTypes = {
-  className: PropTypes.string,
-  // title: PropTypes.string.isRequired,
-  // actions: PropTypes.array,
   background: PropTypes.bool,
+  className: PropTypes.string,
+  skipDefaultClass: PropTypes.bool,
+  title: PropTypes.any,
+  actions: PropTypes.any,
 };
 
 export default memo(PageHeader);

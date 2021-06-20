@@ -115,10 +115,11 @@ Radio.defaultProps = {
 };
 
 Radio.propTypes = {
-  className: PropTypes.string,
   style: PropTypes.object,
-  options: PropTypes.array,
-  size: PropTypes.string,
+  options: PropTypes.array.isRequired,
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  className: PropTypes.string,
+  skipDefaultClass: PropTypes.bool,
   onChange: PropTypes.func,
   color: PropTypes.string,
 };

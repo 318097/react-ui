@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
+import PropTypes from "prop-types";
+
 import colors from "../../../magicdust/colors";
 import {
   Plus,
@@ -219,6 +221,15 @@ Icon.defaultProps = {
   hover: false,
   className: null,
   skipDefaultClass: false,
+};
+
+Icon.propTypes = {
+  background: PropTypes.bool,
+  size: PropTypes.number,
+  fill: PropTypes.string,
+  hover: PropTypes.bool,
+  className: PropTypes.string,
+  skipDefaultClass: PropTypes.bool,
 };
 
 export default Icon;

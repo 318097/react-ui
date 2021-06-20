@@ -36,6 +36,8 @@ Timeline.defaultProps = {
 };
 
 Timeline.propTypes = {
+  className: PropTypes.string,
+  skipDefaultClass: PropTypes.bool,
   customStopItem: PropTypes.func,
 };
 

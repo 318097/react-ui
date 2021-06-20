@@ -1,8 +1,9 @@
 import React, { useState, useEffect, Fragment } from "react";
 import styled from "styled-components";
-import colors from "../../../magicdust/colors";
 import { v4 as uuidv4 } from "uuid";
+import PropTypes from "prop-types";
 import classNames from "classnames";
+import colors from "../../../magicdust/colors";
 
 const crux = (arr = [], cmd, node) => {
   if (!arr) return { arr: [] };
@@ -142,6 +143,11 @@ StatusBar.triggerEvent = triggerEvent;
 StatusBar.defaultProps = {
   className: null,
   skipDefaultClass: false,
+};
+
+StatusBar.propTypes = {
+  className: PropTypes.string,
+  skipDefaultClass: PropTypes.bool,
 };
 
 export default StatusBar;

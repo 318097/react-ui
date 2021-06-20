@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import { borderRadius, getStyles } from "../../styled";
 import colors from "../../../magicdust/colors";
 
@@ -55,4 +56,12 @@ Tag.defaultProps = {
   className: null,
   skipDefaultClass: false,
 };
+
+Tag.propTypes = {
+  style: PropTypes.object,
+  color: PropTypes.string,
+  className: PropTypes.string,
+  skipDefaultClass: PropTypes.bool,
+};
+
 export default Tag;

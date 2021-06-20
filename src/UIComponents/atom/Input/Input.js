@@ -77,11 +77,12 @@ Input.defaultProps = {
 };
 
 Input.propTypes = {
-  className: PropTypes.string,
   style: PropTypes.object,
-  size: PropTypes.string,
-  curved: PropTypes.bool,
   name: PropTypes.string,
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  curved: PropTypes.bool,
+  className: PropTypes.string,
+  skipDefaultClass: PropTypes.bool,
   onChange: PropTypes.func,
 };
 
