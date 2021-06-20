@@ -1,5 +1,6 @@
 ### v2.0.0
 
+- Deploy as cdn (test)
 - Fix flex-grow & flex-shrink issue in components
 
 ### v1.2.2
