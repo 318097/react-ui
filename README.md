@@ -59,7 +59,7 @@
   - [ ] Code Drops: Menu Dropdown
   - [ ] DOT:
     - [ ] Blocker Screen
-    - [ ] notify event
+    - [x] notify event
   - [x] E Feed: Checkbox Group
 
 ### Bugs

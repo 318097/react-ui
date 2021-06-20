@@ -9,6 +9,7 @@
 - Update: Select - Prop to show/hide placeholder
 - Add: EmptyState component
 - Add: CheckboxGroup from E Feed - checkbox/radio
+- Add: StatusBar `notify` event
 
 ### v2.0.0
 

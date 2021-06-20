@@ -89,7 +89,7 @@ const StatusBar = ({ title, className, skipDefaultClass, ...others }) => {
   useEffect(() => {
     document.addEventListener("status-bar", handleCustomEvent);
     return () => document.removeEventListener("status-bar", handleCustomEvent);
-  }, [data]);
+  }, []);
 
   const handleCustomEvent = (event) => {
     const { cmd, input, cb = () => {} } = event.detail;
@@ -138,7 +138,13 @@ const triggerEvent = (cmd, input = {}, cb) => {
   document.dispatchEvent(event);
 };
 
+const notify = (msg, options = {}) => {
+  const { expires = 3000 } = options;
+  triggerEvent("add", { ...options, expires, value: msg });
+};
+
 StatusBar.triggerEvent = triggerEvent;
+StatusBar.notify = notify;
 
 StatusBar.defaultProps = {
   className: null,

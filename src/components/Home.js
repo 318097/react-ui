@@ -20,7 +20,7 @@ import {
 import "./Home.scss";
 import colors from "../magicdust/colors";
 
-const { triggerEvent } = StatusBar;
+const { triggerEvent, notify } = StatusBar;
 
 const uiList = [
   "BUTTON",
@@ -250,6 +250,7 @@ const UIComponent = ({ type }) => {
       return (
         <div className="flex column w-100">
           <div className="flex space-kids mb">
+            <Button onClick={() => notify("Test")}>Notify</Button>
             <Button
               onClick={() =>
                 triggerEvent(
