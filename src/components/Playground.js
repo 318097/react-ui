@@ -74,6 +74,7 @@ const Playground = () => {
         value={data.select}
         onChange={(e, value) => setInputField({ select: value })}
       />
+      <div className="divider"></div>
       <StatusBar />
     </section>
   );

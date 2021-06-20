@@ -7,7 +7,7 @@ import "./App.scss";
 const App = ({ history }) => {
   return (
     <div className="app react-ui">
-      <h2 className="title" onClick={() => history.push("/play")}>
+      <h2 className="title" onClick={() => history.push("/playground")}>
         <span className="underline">React UI</span>
       </h2>
       <div className="content">

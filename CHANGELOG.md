@@ -2,6 +2,7 @@
 
 - Renamed `Spinner` to `Loading`
 - Updated `underline` styles
+- Updated `divider` class styles
 
 ### v2.0.0
 
