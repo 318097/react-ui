@@ -3,8 +3,8 @@ import styled, { css } from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import constants from "../../magicdust/constants";
-import { defaultCSS, baseCSS, dotCSS, getStyles } from "../styled";
+import constants from "../../../magicdust/constants";
+import { defaultCSS, baseCSS, dotCSS, getStyles } from "../../styled";
 
 const switchStyles = css`
   .radio-item {

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import { baseCSS, dotCSS, getStyles } from "../styled";
+import { baseCSS, dotCSS, getStyles } from "../../styled";
 
 const StyledCheckbox = styled.div`
   width: max-content;

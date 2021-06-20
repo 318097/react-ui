@@ -3,8 +3,8 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import { baseCSS, getStyles } from "../styled";
-import { getRandomNoInRange } from "../util";
+import { baseCSS, getStyles } from "../../styled";
+import { getRandomNoInRange } from "../../util";
 
 const StyledButton = styled.button`
   ${(props) => getStyles({ ...props, componentName: "BUTTON" })};

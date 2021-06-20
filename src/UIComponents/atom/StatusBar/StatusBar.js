@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import styled from "styled-components";
-import colors from "../../magicdust/colors";
+import colors from "../../../magicdust/colors";
 import { v4 as uuidv4 } from "uuid";
 import classNames from "classnames";
 

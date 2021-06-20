@@ -3,15 +3,16 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import colors from "../../magicdust/colors";
-import constants from "../../magicdust/constants";
-import { baseCSS } from "../styled";
+import colors from "../../../magicdust/colors";
+import constants from "../../../magicdust/constants";
+import { baseCSS } from "../../styled";
 
-const StyledTextArea = styled.textarea`
+const StyledInput = styled.input`
   background: ${colors.white};
   border: 1px solid ${constants.BG};
-  display: inline-block;
-  resize: none;
+  display: inline-flex;
+  flex-shrink: 0;
+  flex-grow: 0;
   ${baseCSS};
   margin: 0;
   &:active:not(.disabled),
@@ -23,7 +24,7 @@ const StyledTextArea = styled.textarea`
   }
 `;
 
-const TextArea = ({
+const Input = ({
   style,
   className,
   curved,
@@ -53,7 +54,7 @@ const TextArea = ({
   };
 
   return (
-    <StyledTextArea
+    <StyledInput
       name={name}
       style={{ ...style }}
       className={classes}
@@ -65,15 +66,14 @@ const TextArea = ({
   );
 };
 
-TextArea.defaultProps = {
-  className: "textarea",
+Input.defaultProps = {
+  className: "input",
   style: {},
   size: "md",
   curved: false,
-  rows: 2,
 };
 
-TextArea.propTypes = {
+Input.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   size: PropTypes.string,
@@ -82,4 +82,4 @@ TextArea.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default memo(TextArea);
+export default memo(Input);

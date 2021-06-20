@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
-import { borderRadius, getStyles } from "../styled";
-import colors from "../../magicdust/colors";
+import { borderRadius, getStyles } from "../../styled";
+import colors from "../../../magicdust/colors";
 
 const Wrapper = styled.div`
   display: inline-flex;

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import { getRandomNoInRange } from "../util";
-import { defaultCSS, getStyles } from "../styled";
+import { getRandomNoInRange } from "../../util";
+import { defaultCSS, getStyles } from "../../styled";
 
 const StyledCard = styled.div`
   display: inline-block;

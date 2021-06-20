@@ -4,8 +4,8 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import Icon from "../Icon";
 
-import constants from "../../magicdust/constants";
-import { baseCSS, dotCSS, getStyles, itemCSS } from "../styled";
+import constants from "../../../magicdust/constants";
+import { baseCSS, dotCSS, getStyles, itemCSS } from "../../styled";
 
 const StyledSelect = styled.div`
   position: relative;

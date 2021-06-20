@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
-import colors from "../../magicdust/colors";
+import colors from "../../../magicdust/colors";
 import {
   Plus,
   Google,
