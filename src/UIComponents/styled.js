@@ -72,7 +72,7 @@ const getStyles = ({ color, fontColor, componentName, hover, type }) => {
       styles = `
         background: ${colors.white};
         border: 1px solid ${secondary};
-        box-shadow: 3px 3px 3px ${secondary};
+        box-shadow: 4px 4px 4px ${secondary};
       `;
 
       if (hover) {

@@ -11,9 +11,13 @@ const CheckBoxContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    input {
+      margin: 0 4px 0 0;
+    }
     label {
       cursor: pointer;
       text-transform: capitalize;
+      font-size: 1.2rem;
     }
   }
 `;

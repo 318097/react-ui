@@ -251,7 +251,7 @@ const UIComponent = ({ type }) => {
     case "STATUS":
       return (
         <div className="flex column w-100">
-          <div className="flex space-kids mb">
+          <div className="flex mb wrap" style={{ gap: "8px" }}>
             <Button onClick={() => notify("Test")}>Notify</Button>
             <Button
               onClick={() =>
