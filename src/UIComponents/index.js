@@ -16,6 +16,7 @@ import TextArea from "./atom/TextArea";
 import StatusBar from "./atom/StatusBar";
 
 import EmptyState from "./molecules/EmptyState";
+import CheckboxGroup from "./molecules/CheckboxGroup";
 
 export {
   Card,
@@ -33,6 +34,7 @@ export {
   TextArea,
   StatusBar,
   EmptyState,
+  CheckboxGroup,
 };
 
 export default color;

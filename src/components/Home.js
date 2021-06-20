@@ -15,6 +15,7 @@ import {
   TextArea,
   StatusBar,
   EmptyState,
+  CheckboxGroup,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -37,6 +38,7 @@ const uiList = [
   "CHECKBOX",
   "ICON",
   "EMPTYSTATE",
+  "CHECKBOX_GROUP",
 ];
 
 const icons = [
@@ -305,6 +307,20 @@ const UIComponent = ({ type }) => {
       );
     case "EMPTYSTATE":
       return <EmptyState input={[]}>Test</EmptyState>;
+    case "CHECKBOX_GROUP":
+      return (
+        <CheckboxGroup
+          onChange={(value) => setData({ checkboxGroup: value })}
+          options={[
+            { label: "Option A", value: "a" },
+            { label: "Option B", value: "b" },
+            { label: "Option C", value: "c" },
+            { label: "Option D", value: "d" },
+            { label: "Option E", value: "e" },
+          ]}
+          value={data.checkboxGroup}
+        />
+      );
     default:
       return null;
   }

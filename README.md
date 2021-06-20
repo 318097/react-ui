@@ -60,7 +60,7 @@
   - [ ] DOT:
     - [ ] Blocker Screen
     - [ ] notify event
-  - [ ] E Feed: Checkbox Group
+  - [x] E Feed: Checkbox Group
 
 ### Bugs
 
