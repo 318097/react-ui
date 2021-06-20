@@ -54,7 +54,6 @@ const StyledSelect = styled.div`
       ${baseCSS};
       ${itemCSS};
       border-radius: 0;
-      /* overflow: hidden; */
       border-bottom: 1px solid ${constants.SECONDARY};
       &:last-child {
         border-bottom: none;
@@ -105,8 +104,6 @@ const Select = ({
     const ref = containerRef.current;
     const { target } = e;
 
-    // console.log(ref, target, ref.contains(target));
-
     if (ref && !ref.contains(target)) {
       setVisibility(false);
       document.removeEventListener("click", handleOutsideClick, {
@@ -115,7 +112,7 @@ const Select = ({
     }
   };
 
-  const handleChange = (option, e) => {
+  const handleChange = (e, option) => {
     if (name) onChange(e, { [name]: option.value });
     else onChange(e, option.value);
     setVisibility(false);
@@ -124,6 +121,11 @@ const Select = ({
   const toggleVisibility = () => {
     if (disabled) return;
     setVisibility((prev) => !prev);
+  };
+
+  const handleClear = (e) => {
+    e.stopPropagation();
+    handleChange(e, { value: null });
   };
 
   const containerClasses = classNames({
@@ -166,6 +168,16 @@ const Select = ({
             direction={visible ? "up" : "down"}
           />
         </span>
+        {selectedOption && (
+          <span className="pl-4">
+            <Icon
+              size={6}
+              style={{ margin: 0, padding: "2px", background: "white" }}
+              type={"close"}
+              onClick={handleClear}
+            />
+          </span>
+        )}
       </div>
       {visible && (
         <div className="dropdown">
@@ -174,7 +186,7 @@ const Select = ({
               return (
                 <div
                   key={option.value}
-                  onClick={(e) => handleChange(option, e)}
+                  onClick={(e) => handleChange(e, option)}
                   className={`dropdown-item${
                     value === option.value ? " dropdown-selected" : ""
                   }`}

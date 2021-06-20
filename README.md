@@ -42,7 +42,7 @@
 - [ ] Input error state
 - [ ] Remove logs at `build`
 - [ ] Prefix classes
-- [ ] `Clear`button in Select
+- [x] `Clear`button in Select
 - [ ] Toggle show placeholder after select
 - [ ] Generalize classes
 - [ ] Deploy over CDN (jsdelivr)

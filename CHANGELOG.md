@@ -5,6 +5,7 @@
 - Updated `underline` styles
 - Updated `divider` class styles
 - Refactor: Default classname and skipDefaultClass prop
+- Add: `Clear`button in Select
 
 ### v2.0.0
 
