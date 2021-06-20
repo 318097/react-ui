@@ -122,10 +122,10 @@ $valueList: 0 0px, 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
     &:after {
       content: "";
       width: 105%;
-      height: 4px;
-      background: $red;
+      height: 6px;
+      background: rgba($green, 0.5);
       position: absolute;
-      bottom: 1px;
+      bottom: -1px;
       left: 0;
     }
   }

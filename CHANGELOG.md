@@ -1,6 +1,7 @@
 ### v3.0.0
 
 - Renamed `Spinner` to `Loading`
+- Updated `underline` styles
 
 ### v2.0.0
 

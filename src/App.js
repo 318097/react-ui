@@ -8,7 +8,7 @@ const App = ({ history }) => {
   return (
     <div className="app react-ui">
       <h2 className="title" onClick={() => history.push("/play")}>
-        React UI
+        <span className="underline">React UI</span>
       </h2>
       <div className="content">
         <Switch>

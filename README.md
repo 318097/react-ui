@@ -41,6 +41,7 @@
 - [ ] Toggle show placeholder after select
 - [ ] Deploy over CDN (jsdelivr)
 - [ ] Generalize classes
+- [ ] Profile component
 - [ ] Import from other apps
   - [ ] Notes App: Dropdown, EmptyState, ImageCard, JSONEditor, UploadButton
   - [ ] Atom: Nested Nodes
