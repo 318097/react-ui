@@ -7,6 +7,7 @@
 - Refactor: Default classname and skipDefaultClass prop
 - Add: `Clear`button in Select
 - Update: Select - Prop to show/hide placeholder
+- Add: EmptyState component
 
 ### v2.0.0
 

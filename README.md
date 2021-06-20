@@ -35,7 +35,7 @@
 - [ ] Checkbox - group & single view
 - [ ] Radio - group & single view
 - [ ] Profile component
-- [ ] Empty State component
+- [x] Empty State component
 
 - [ ] Input validation
 - [ ] Tag should be closable
@@ -49,10 +49,17 @@
 - [ ] Single script to update version and deploy or precommit hook to update minor everytime
 
 - [ ] Import from other apps
-  - [ ] Notes App: Dropdown, EmptyState, ImageCard, JSONEditor, UploadButton
+  - [ ] Notes App:
+    - [ ] Dropdown
+    - [x] EmptyState
+    - [ ] ImageCard
+    - [ ] JSONEditor
+    - [ ] UploadButton
   - [ ] Atom: Nested Nodes
   - [ ] Code Drops: Menu Dropdown
-  - [ ] DOT: Blocker Screen, notify event
+  - [ ] DOT:
+    - [ ] Blocker Screen
+    - [ ] notify event
   - [ ] E Feed: Checkbox Group
 
 ### Bugs

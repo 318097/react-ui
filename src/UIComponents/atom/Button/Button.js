@@ -57,6 +57,7 @@ Button.propTypes = {
   color: PropTypes.string,
   fontColor: PropTypes.string,
   type: PropTypes.oneOf(["hollow", "solid", "link"]),
+  skipDefaultClass: PropTypes.bool,
 };
 
 export default memo(Button);

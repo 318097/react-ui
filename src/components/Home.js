@@ -14,6 +14,7 @@ import {
   Checkbox,
   TextArea,
   StatusBar,
+  EmptyState,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -35,6 +36,7 @@ const uiList = [
   "CONFIRMBOX",
   "CHECKBOX",
   "ICON",
+  "EMPTYSTATE",
 ];
 
 const icons = [
@@ -301,6 +303,8 @@ const UIComponent = ({ type }) => {
           <StatusBar />
         </div>
       );
+    case "EMPTYSTATE":
+      return <EmptyState input={[]}>Test</EmptyState>;
     default:
       return null;
   }
