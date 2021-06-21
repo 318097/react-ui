@@ -14,6 +14,7 @@
 - Update: Blur class and loader with blur bg
 - Update: Scrollbar style - width, color & radius
 - Add: Dropdown component
+- Add: Profile Avatar
 
 ### v2.0.0
 

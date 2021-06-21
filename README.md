@@ -34,10 +34,11 @@
 - [ ] Toast component
 - [ ] Checkbox - group & single view
 - [ ] Radio - group & single view
-- [ ] Profile component
 - [x] Empty State component
-- [ ] Update scrollbar style
+- [ ] Profile Dropdown
+- [ ] Profile Avatar
 
+- [x] Update scrollbar style
 - [ ] Input validation
 - [ ] Tag should be closable
 - [ ] Input error state
