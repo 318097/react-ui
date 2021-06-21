@@ -11,6 +11,7 @@
 - Add: CheckboxGroup from E Feed - checkbox/radio
 - Add: StatusBar `notify` event
 - Add: Blocker Screen
+- Update: Blur class and loader with blur bg
 
 ### v2.0.0
 

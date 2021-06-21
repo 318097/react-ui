@@ -2,15 +2,28 @@ import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-const Loading = ({ center, type, className, skipDefaultClass, ...others }) => {
-  const classes = classNames({
+const Loading = ({
+  center,
+  type,
+  className,
+  skipDefaultClass,
+  background,
+  ...others
+}) => {
+  const containerClasses = classNames({
+    [`${background}-bg`]: !!background,
+  });
+
+  const loaderClasses = classNames({
     loading: !skipDefaultClass,
     [className]: !!className,
     [type]: true,
-    "center-container": center,
+    "center-container": center || background,
   });
 
-  return <div {...others} className={classes}></div>;
+  const loader = <div {...others} className={loaderClasses}></div>;
+
+  return background ? <div className={containerClasses}>{loader}</div> : loader;
 };
 
 Loading.defaultProps = {
@@ -25,6 +38,7 @@ Loading.propTypes = {
   type: PropTypes.oneOf(["default-loader", "dot-loader"]),
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
+  background: PropTypes.oneOf(["blur"]),
 };
 
 export default Loading;

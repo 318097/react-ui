@@ -206,8 +206,19 @@ const UIComponent = ({ type }) => {
     case "LOADING":
       return (
         <>
-          <Loading />
-          <Loading type="dot-loader" />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, a
+          voluptate. Recusandae quod sint aliquid unde, hic fugit eaque.
+          Repudiandae, ullam. Consequatur nam voluptatum atque eos, doloremque,
+          aspernatur hic blanditiis recusandae quisquam laborum eveniet, natus
+          iste temporibus id accusamus exercitationem quis numquam voluptatibus
+          nesciunt? Aut harum dolorum, quidem accusamus a pariatur fuga sed amet
+          quam, et minus earum ex corporis culpa repudiandae eius sapiente.
+          Pariatur possimus, a excepturi aliquam ab molestiae maiores fugiat,
+          quisquam doloremque cumque inventore. Iure beatae laudantium iusto
+          minima, ullam odio animi ipsam dolores illum veniam numquam dolorem
+          ducimus corrupti itaque ipsa cumque mollitia repellendus vitae. Fuga!
+          {/* <Loading /> */}
+          <Loading type="dot-loader" background="blur" />
         </>
       );
     case "TIMELINE":

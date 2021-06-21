@@ -47,6 +47,8 @@
 - [ ] Generalize classes
 - [ ] Deploy over CDN (jsdelivr)
 - [ ] Single script to update version and deploy or precommit hook to update minor everytime
+- [ ] Loading - blur background and backdrop state
+- [ ] Switch to height for components
 
 - [ ] Import from other apps
   - [ ] Notes App:
@@ -60,7 +62,9 @@
   - [ ] DOT:
     - [x] Blocker Screen
     - [x] notify event
-  - [x] E Feed: Checkbox Group
+  - [x] E Feed
+    - [x] Checkbox Group
+    - [x] Blur css
 
 ### Bugs
 
