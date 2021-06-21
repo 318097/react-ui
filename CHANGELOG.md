@@ -12,6 +12,7 @@
 - Add: StatusBar `notify` event
 - Add: Blocker Screen
 - Update: Blur class and loader with blur bg
+- Update: Scrollbar style - width, color & radius
 
 ### v2.0.0
 

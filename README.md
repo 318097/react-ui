@@ -36,6 +36,7 @@
 - [ ] Radio - group & single view
 - [ ] Profile component
 - [x] Empty State component
+- [ ] Update scrollbar style
 
 - [ ] Input validation
 - [ ] Tag should be closable
@@ -59,7 +60,7 @@
     - [ ] UploadButton
   - [ ] Atom: Nested Nodes
   - [ ] Code Drops: Menu Dropdown
-  - [ ] DOT:
+  - [x] DOT:
     - [x] Blocker Screen
     - [x] notify event
   - [x] E Feed

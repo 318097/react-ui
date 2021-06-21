@@ -46,8 +46,8 @@ body,
 /* Custom scrollbar */
 /* width */
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
 }
 
 /* Track */
@@ -57,13 +57,11 @@ body,
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $slate;
-  opacity: 0.7;
-  border-radius: 15px;
+  background: $iron;
+  border-radius: 1px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $iron;
-  opacity: 0.4;
+  background: $slate;
 }
