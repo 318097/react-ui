@@ -48,8 +48,8 @@
 - [ ] Generalize classes
 - [ ] Deploy over CDN (jsdelivr)
 - [ ] Single script to update version and deploy or precommit hook to update minor everytime
-- [ ] Loading - blur background and backdrop state
-- [ ] Switch to height for components
+- [x] Loading - blur background and backdrop state
+- [ ] Use height rather than padding for components
 
 - [ ] Import from other apps
   - [ ] Notes App:
@@ -59,7 +59,7 @@
     - [ ] JSONEditor
     - [ ] UploadButton
   - [ ] Atom: Nested Nodes
-  - [ ] Code Drops: Menu Dropdown
+  - [x] Code Drops: Dropdown
   - [x] DOT:
     - [x] Blocker Screen
     - [x] notify event

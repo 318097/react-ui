@@ -13,6 +13,7 @@
 - Add: Blocker Screen
 - Update: Blur class and loader with blur bg
 - Update: Scrollbar style - width, color & radius
+- Add: Dropdown component
 
 ### v2.0.0
 

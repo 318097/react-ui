@@ -93,20 +93,20 @@ const Select = ({
   showPlaceholder,
   ...others
 }) => {
-  const [visible, setVisibility] = useState(false);
+  const [dropdownVisibility, setDropdownVisibility] = useState(false);
   const containerRef = useRef();
 
   useEffect(() => {
-    if (visible)
+    if (dropdownVisibility)
       document.addEventListener("click", handleOutsideClick, { capture: true });
-  }, [visible]);
+  }, [dropdownVisibility]);
 
   const handleOutsideClick = (e) => {
     const ref = containerRef.current;
     const { target } = e;
 
     if (ref && !ref.contains(target)) {
-      setVisibility(false);
+      setDropdownVisibility(false);
       document.removeEventListener("click", handleOutsideClick, {
         capture: true,
       });
@@ -116,12 +116,12 @@ const Select = ({
   const handleChange = (e, option) => {
     if (name) onChange(e, { [name]: option.value });
     else onChange(e, option.value);
-    setVisibility(false);
+    setDropdownVisibility(false);
   };
 
   const toggleVisibility = () => {
     if (disabled) return;
-    setVisibility((prev) => !prev);
+    setDropdownVisibility((prev) => !prev);
   };
 
   const handleClear = (e) => {
@@ -168,7 +168,7 @@ const Select = ({
             size={10}
             style={{ margin: 0, padding: 0 }}
             type="caret"
-            direction={visible ? "up" : "down"}
+            direction={dropdownVisibility ? "up" : "down"}
           />
         </span>
         {selectedOption && (
@@ -182,7 +182,7 @@ const Select = ({
           </span>
         )}
       </div>
-      {visible && (
+      {dropdownVisibility && (
         <div className="dropdown">
           {options.length ? (
             options.map((option) => {

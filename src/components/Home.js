@@ -17,6 +17,7 @@ import {
   EmptyState,
   CheckboxGroup,
   BlockerScreen,
+  Dropdown,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -26,6 +27,7 @@ const { triggerEvent, notify } = StatusBar;
 const uiList = [
   "BUTTON",
   "RADIO",
+  "DROPDOWN",
   "SELECT",
   "INPUT",
   "TEXTAREA",
@@ -34,13 +36,13 @@ const uiList = [
   "TAG",
   "STATUS",
   "LOADING",
+  "CHECKBOX",
+  "CHECKBOX_GROUP",
   "TIMELINE",
   "CONFIRMBOX",
-  "CHECKBOX",
-  "ICON",
   "EMPTYSTATE",
-  "CHECKBOX_GROUP",
   "BLOCKERSCREEN",
+  "ICON",
 ];
 
 const icons = [
@@ -341,6 +343,19 @@ const UIComponent = ({ type }) => {
         <BlockerScreen>
           <h3>Hello world</h3>
         </BlockerScreen>
+      );
+    case "DROPDOWN":
+      return (
+        <Dropdown
+          onChange={console.log}
+          options={[
+            { label: "Option A", value: "a" },
+            { label: "Option B", value: "b" },
+            { label: "Option C", value: "c" },
+            { label: "Option D", value: "d" },
+            { label: "Option E", value: "e" },
+          ]}
+        />
       );
     default:
       return null;
