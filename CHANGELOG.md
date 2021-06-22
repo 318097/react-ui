@@ -15,6 +15,7 @@
 - Update: Scrollbar style - width, color & radius
 - Add: Dropdown component
 - Add: Profile Avatar
+- Add: Profile Dropdown
 
 ### v2.0.0
 

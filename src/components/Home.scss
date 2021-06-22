@@ -14,7 +14,7 @@ section {
   gap: 2px;
   margin-bottom: 40px;
 
-  & > .item {
+  > .item {
     height: auto;
     min-height: 180px;
     padding: 10px;
@@ -24,14 +24,14 @@ section {
     position: relative;
     background: white;
     transition: 0.3s;
-    .name {
+    > .name {
       position: absolute;
       font-size: 1rem;
       bottom: 2px;
       right: 4px;
       color: lightgray;
     }
-    .card {
+    & > .card {
       height: 80%;
     }
   }

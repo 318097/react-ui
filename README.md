@@ -35,8 +35,8 @@
 - [ ] Checkbox - group & single view
 - [ ] Radio - group & single view
 - [x] Empty State component
-- [ ] Profile Dropdown
-- [ ] Profile Avatar
+- [x] Profile Dropdown
+- [x] Profile Avatar
 
 - [x] Update scrollbar style
 - [ ] Input validation

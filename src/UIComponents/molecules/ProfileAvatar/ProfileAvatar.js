@@ -20,7 +20,7 @@ const StyledContainer = styled.div`
   cursor: pointer;
   overflow: hidden;
   &:hover {
-    border-color: ${colors.green};
+    border-color: ${colors.blue};
   }
   img {
     width: 100%;

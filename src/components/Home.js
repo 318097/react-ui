@@ -18,6 +18,8 @@ import {
   CheckboxGroup,
   BlockerScreen,
   Dropdown,
+  ProfileDropdown,
+  ProfileAvatar,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -25,6 +27,8 @@ import colors from "../magicdust/colors";
 const { triggerEvent, notify } = StatusBar;
 
 const uiList = [
+  "PROFILE_AVATAR",
+  "PROFILE_DROPDOWN",
   "BUTTON",
   "RADIO",
   "DROPDOWN",
@@ -140,6 +144,21 @@ const UIComponent = ({ type }) => {
   const setInputField = (update) => setData((prev) => ({ ...prev, ...update }));
 
   switch (type) {
+    case "PROFILE_AVATAR":
+      return (
+        <ProfileAvatar
+          name="Mehul Lakhanpal"
+          url="https://lh3.googleusercontent.com/a-/AOh14Gj3jT11sey95Pv4J12bgoIjqzc9IW0mNiZUjh7o0Q=s96-c"
+        />
+      );
+    case "PROFILE_DROPDOWN":
+      return (
+        <ProfileDropdown
+          name="Mehul Lakhanpal"
+          email={"mehullakhanpal@gmail.com"}
+          url="https://lh3.googleusercontent.com/a-/AOh14Gj3jT11sey95Pv4J12bgoIjqzc9IW0mNiZUjh7o0Q=s96-c"
+        />
+      );
     case "ICON":
       return <Icon type="caret" direction="right" fill={colors.orchid} hover />;
     case "BUTTON":

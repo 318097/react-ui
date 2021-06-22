@@ -19,6 +19,8 @@ import Dropdown from "./atom/Dropdown";
 import EmptyState from "./molecules/EmptyState";
 import BlockerScreen from "./molecules/BlockerScreen";
 import CheckboxGroup from "./molecules/CheckboxGroup";
+import ProfileDropdown from "./molecules/ProfileDropdown";
+import ProfileAvatar from "./molecules/ProfileAvatar";
 
 export {
   Card,
@@ -39,6 +41,8 @@ export {
   CheckboxGroup,
   BlockerScreen,
   Dropdown,
+  ProfileDropdown,
+  ProfileAvatar,
 };
 
 export default color;

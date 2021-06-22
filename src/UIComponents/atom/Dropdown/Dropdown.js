@@ -14,7 +14,7 @@ const StyledContainer = styled.div`
     position: absolute;
     top: 100%;
     left: -30px;
-    min-height: 200px;
+    /* min-height: 200px; */
     height: auto;
     z-index: 100;
     max-height: 450px;
@@ -28,15 +28,19 @@ const StyledContainer = styled.div`
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      .item-value {
-        font-family: inherit;
-        font-size: 1.2rem;
-        padding: 12px;
-        border-bottom: 1px solid ${colors.strokeOne};
-        margin: 0;
-        &:hover {
-          background: ${colors.bg};
-        }
+    }
+    .item-value {
+      font-family: inherit;
+      font-size: 1.2rem;
+      padding: 0 12px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-bottom: 1px solid ${colors.strokeOne};
+      margin: 0;
+      &:hover {
+        background: ${colors.bg};
       }
     }
   }
@@ -57,7 +61,7 @@ const Dropdown = ({
   const containerRef = useRef();
   const [dropdownVisibility, setDropdownVisibility] = useState(false);
 
-  const classes = classNames({
+  const containerClasses = classNames({
     "menu-dropdown": !skipDefaultClass,
     [className]: !!className,
   });
@@ -87,9 +91,13 @@ const Dropdown = ({
   };
 
   return (
-    <StyledContainer {...others} className={classes} ref={containerRef}>
+    <StyledContainer
+      {...others}
+      className={containerClasses}
+      ref={containerRef}
+    >
       {renderButtonComponent ? (
-        renderButtonComponent
+        <span onClick={toggleDropdown}>{renderButtonComponent}</span>
       ) : buttonType === "button" ? (
         <Button onClick={toggleDropdown}>{label}</Button>
       ) : (
@@ -105,12 +113,18 @@ const Dropdown = ({
         <Card className="dropdown-container">
           {!_.isEmpty(options)
             ? options.map((option) => {
-                const { label, value, subMenu = [] } = option;
+                const { label, value, subMenu = [], styles } = option;
+                const itemClasses = classNames({
+                  "item-value": true,
+                  [value]: true,
+                  link: !!value,
+                });
                 return (
                   <div key={label} className="item">
                     <div
                       onClick={() => handleItemClick(option)}
-                      className={`item-value${value ? " link" : ""}`}
+                      className={itemClasses}
+                      style={styles}
                     >
                       {label}
                     </div>
