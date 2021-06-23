@@ -1,7 +1,5 @@
 @import "./colors.scss";
-
-$value: 8px;
-$valueList: 0 0px, 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
+@import "./constants.scss";
 
 .reset {
   margin: 0;
@@ -27,75 +25,75 @@ $valueList: 0 0px, 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
   }
 
   .mt {
-    margin-top: $value;
+    margin-top: $VALUE;
   }
 
   .mr {
-    margin-right: $value;
+    margin-right: $VALUE;
   }
 
   .mb {
-    margin-bottom: $value;
+    margin-bottom: $VALUE;
   }
 
   .ml {
-    margin-left: $value;
+    margin-left: $VALUE;
   }
 
   .pt {
-    padding-top: $value;
+    padding-top: $VALUE;
   }
 
   .pr {
-    padding-right: $value;
+    padding-right: $VALUE;
   }
 
   .pb {
-    padding-bottom: $value;
+    padding-bottom: $VALUE;
   }
 
   .pl {
-    padding-left: $value;
+    padding-left: $VALUE;
   }
 
-  @each $item, $value in $valueList {
+  @each $item, $VALUE in $VALUE_LIST {
     .m-#{$item} {
-      margin: $value;
+      margin: $VALUE;
     }
 
     .mt-#{$item} {
-      margin-top: $value;
+      margin-top: $VALUE;
     }
 
     .mr-#{$item} {
-      margin-right: $value;
+      margin-right: $VALUE;
     }
 
     .mb-#{$item} {
-      margin-bottom: $value;
+      margin-bottom: $VALUE;
     }
 
     .ml-#{$item} {
-      margin-left: $value;
+      margin-left: $VALUE;
     }
     .p-#{$item} {
-      padding: $value;
+      padding: $VALUE;
     }
 
     .pt-#{$item} {
-      padding-top: $value;
+      padding-top: $VALUE;
     }
 
     .pr-#{$item} {
-      padding-right: $value;
+      padding-right: $VALUE;
     }
 
     .pb-#{$item} {
-      padding-bottom: $value;
+      padding-bottom: $VALUE;
     }
 
     .pl-#{$item} {
-      padding-left: $value;
+      padding-left: $VALUE;
     }
   }
 
@@ -132,6 +130,10 @@ $valueList: 0 0px, 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
       bottom: -1px;
       left: 0;
     }
+  }
+
+  .pointer {
+    cursor: pointer;
   }
 
   .flex {
@@ -233,7 +235,7 @@ $valueList: 0 0px, 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
 
   .space-kids {
     & > * {
-      margin-right: $value;
+      margin-right: $VALUE;
       &:last-child {
         margin-right: 0;
       }
@@ -317,6 +319,31 @@ $valueList: 0 0px, 2 2px, 4 4px, 8 8px, 16 16px, 20 20px, 32 32px;
     height: 100%;
     width: 100%;
     @extend .blur;
+  }
+
+  .default-css {
+    font-size: $FONT_SIZE;
+    border-radius: $BORDER_RADIUS;
+    transition: all 0.4s;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+  .base-css {
+    @extend .default-css;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .size-sm {
+    height: 22px;
+  }
+  .size-md {
+    height: 28px;
+  }
+  .size-lg {
+    height: 36px;
   }
 }
 

@@ -37,6 +37,7 @@
 - [x] Empty State component
 - [x] Profile Dropdown
 - [x] Profile Avatar
+- [ ] Modal
 
 - [x] Update scrollbar style
 - [ ] Input validation
