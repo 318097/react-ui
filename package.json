@@ -1,6 +1,6 @@
 {
   "name": "@codedrops/react-ui",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "private": false,
   "description": "React UI library",
   "main": "dist/index.js",
