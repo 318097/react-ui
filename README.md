@@ -53,7 +53,7 @@
 - [ ] Deploy over CDN (jsdelivr)
 - [ ] Single script to update version and deploy or precommit hook to update minor everytime
 
-- [ ] Import from other apps
+- Import from other apps
   - [ ] Notes App:
     - [ ] Dropdown
     - [x] EmptyState

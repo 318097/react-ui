@@ -8,6 +8,7 @@ const Loading = ({
   className,
   skipDefaultClass,
   background,
+  styles,
   ...others
 }) => {
   const containerClasses = classNames({
@@ -21,7 +22,18 @@ const Loading = ({
     "center-container": center || background,
   });
 
-  const loader = <div {...others} className={loaderClasses}></div>;
+  const customStyles = {
+    ...styles,
+  };
+
+  // temp hack
+  if (background && type === "dot-loader") {
+    customStyles["margin"] = "-10px";
+  }
+
+  const loader = (
+    <div {...others} className={loaderClasses} style={customStyles}></div>
+  );
 
   return background ? <div className={containerClasses}>{loader}</div> : loader;
 };
