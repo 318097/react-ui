@@ -321,6 +321,7 @@
     @extend .blur;
   }
 
+  /* WIP */
   .default-css {
     font-size: $FONT_SIZE;
     border-radius: $BORDER_RADIUS;
@@ -328,13 +329,18 @@
     box-sizing: border-box;
     font-family: inherit;
   }
-  .base-css {
-    @extend .default-css;
-    cursor: pointer;
-    outline: none;
-    display: flex;
+  .flex-css {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .base-css {
+    @extend .default-css;
+    @extend .base-css;
+    cursor: pointer;
+    outline: none;
   }
   .size-sm {
     height: 22px;
@@ -345,6 +351,7 @@
   .size-lg {
     height: 36px;
   }
+  /* WIP - end */
 }
 
 @mixin flex($direction: row, $align: center, $justify: center) {

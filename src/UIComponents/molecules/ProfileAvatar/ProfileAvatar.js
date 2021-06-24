@@ -4,13 +4,12 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import colors from "../../../magicdust/colors";
+import { flexCSS } from "../../styled";
 
 const StyledContainer = styled.div`
+  ${flexCSS};
   height: 36px;
   width: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   font-size: 16px;
   color: ${colors.steel};
   border: 2px solid ${colors.strokeTwo};
@@ -20,7 +19,7 @@ const StyledContainer = styled.div`
   cursor: pointer;
   overflow: hidden;
   &:hover {
-    border-color: ${colors.blue};
+    border-color: ${colors.iron};
   }
   img {
     width: 100%;

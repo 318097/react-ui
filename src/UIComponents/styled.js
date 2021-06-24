@@ -2,6 +2,17 @@ import { css } from "styled-components";
 import colors from "../magicdust/colors";
 import constants from "../magicdust/constants";
 
+const getPadding = ({ size, className }) => {
+  if (className === "textarea")
+    return size === "sm" ? "3px 6px" : size === "md" ? "6px 12px" : "10px 20px";
+  return size === "sm" ? "0 6px" : size === "md" ? "0 12px" : "0px 20px";
+};
+
+const getHeight = ({ size, className }) => {
+  if (className === "textarea") return "auto";
+  return size === "sm" ? "22px" : size === "md" ? "28px" : "36px";
+};
+
 const fontSize = css`
   font-size: ${constants.FONT_SIZE};
 `;
@@ -18,19 +29,29 @@ const defaultCSS = css`
   font-family: inherit;
 `;
 
+const flexCSS = css`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+`;
+
 // Input fields
 const baseCSS = css`
   cursor: pointer;
   outline: none;
-  padding: ${({ size }) =>
-    size === "sm" ? "3px 6px" : size === "md" ? "6px 12px" : "10px 20px"};
+  padding: ${getPadding};
+  height: ${getHeight};
   ${defaultCSS};
 `;
 
 // dropdown item
 const itemCSS = css`
+  ${flexCSS};
   padding: ${({ size }) =>
     size === "sm" ? "6px 8px" : size === "md" ? "10px 14px" : "14px 18px"};
+  justify-content: flex-start;
 `;
 
 const dotCSS = css`
@@ -51,7 +72,7 @@ const getStyles = ({ color, fontColor, componentName, hover, type }) => {
   const secondary = applyCustomBg ? custom : constants.SECONDARY;
 
   let styles = `
-    background:  ${primary};
+    background: ${primary};
     border: 1px solid ${primary};
   `;
 
@@ -126,4 +147,12 @@ const getStyles = ({ color, fontColor, componentName, hover, type }) => {
   return styles;
 };
 
-export { baseCSS, dotCSS, getStyles, defaultCSS, borderRadius, itemCSS };
+export {
+  baseCSS,
+  dotCSS,
+  getStyles,
+  defaultCSS,
+  flexCSS,
+  borderRadius,
+  itemCSS,
+};

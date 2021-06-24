@@ -4,7 +4,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 import constants from "../../../magicdust/constants";
-import { defaultCSS, baseCSS, dotCSS, getStyles } from "../../styled";
+import { defaultCSS, baseCSS, flexCSS, dotCSS, getStyles } from "../../styled";
 
 const switchStyles = css`
   .radio-item {
@@ -43,14 +43,12 @@ const switchStyles = css`
 
 const StyledRadio = styled.div`
   width: max-content;
-  display: inline-flex;
-  flex-shrink: 0;
-  flex-grow: 0;
-  align-items: center;
+  ${flexCSS};
   .radio-item {
     position: relative;
     ${(props) => getStyles({ ...props, componentName: "RADIO" })};
     ${baseCSS};
+    ${flexCSS};
   }
   ${switchStyles};
 `;

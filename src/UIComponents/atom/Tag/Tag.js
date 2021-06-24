@@ -2,18 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import { borderRadius, getStyles } from "../../styled";
+import { borderRadius, flexCSS, getStyles } from "../../styled";
 import colors from "../../../magicdust/colors";
 
 const Wrapper = styled.div`
-  display: inline-flex;
-  flex-shrink: 0;
-  flex-grow: 0;
-  align-items: center;
-  justify-content: center;
+  ${flexCSS};
   padding: 2px 4px;
   ${borderRadius};
-  font-size: 1rem;
+  font-size: 90%;
   transition: 0.2s;
   margin: 2px;
   position: relative;

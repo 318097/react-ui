@@ -5,17 +5,14 @@ import PropTypes from "prop-types";
 import Icon from "../Icon";
 
 import constants from "../../../magicdust/constants";
-import { baseCSS, dotCSS, getStyles, itemCSS } from "../../styled";
+import { baseCSS, flexCSS, dotCSS, getStyles, itemCSS } from "../../styled";
 
 const StyledSelect = styled.div`
   position: relative;
-  display: inline-flex;
-  flex-shrink: 0;
-  flex-grow: 0;
+  ${flexCSS};
   .select-text-container {
-    display: flex;
-    align-items: center;
     ${baseCSS};
+    ${flexCSS};
     ${(props) => getStyles({ ...props, componentName: "SELECT" })};
     .select-text {
       max-width: 120px;

@@ -47,15 +47,12 @@ import {
   Close,
   Linkedin,
 } from "./icon-svgs";
+import { flexCSS } from "../../styled";
 
 const StyledIcon = styled.span`
+  ${flexCSS};
   line-height: 1;
   cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  flex-grow: 0;
-  align-items: center;
-  justify-content: center;
   vertical-align: middle;
   border-radius: 50%;
   margin: 2px;

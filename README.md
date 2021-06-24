@@ -13,6 +13,9 @@
 - Input
 - Card
 - Textarea
+- Empty State component
+- Profile Dropdown
+- Profile Avatar
 
 ### Todo
 
@@ -34,24 +37,21 @@
 - [ ] Toast component
 - [ ] Checkbox - group & single view
 - [ ] Radio - group & single view
-- [x] Empty State component
-- [x] Profile Dropdown
-- [x] Profile Avatar
 - [ ] Modal
 
 - [x] Update scrollbar style
+- [x] Prop to show/hide placeholder
+- [x] `Clear`button in Select
+- [x] Loading - blur background and backdrop state
+- [x] Use height rather than padding for components
 - [ ] Input validation
 - [ ] Tag should be closable
 - [ ] Input error state
-- [ ] Remove logs at `build`
 - [ ] Prefix classes
-- [x] `Clear`button in Select
-- [x] Prop to show/hide placeholder
 - [ ] Generalize classes
+- [ ] Remove logs at `build`
 - [ ] Deploy over CDN (jsdelivr)
 - [ ] Single script to update version and deploy or precommit hook to update minor everytime
-- [x] Loading - blur background and backdrop state
-- [ ] Use height rather than padding for components
 
 - [ ] Import from other apps
   - [ ] Notes App:

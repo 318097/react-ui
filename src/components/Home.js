@@ -188,7 +188,7 @@ const UIComponent = ({ type }) => {
     case "TEXTAREA":
       return (
         <TextArea
-          disabled
+          // disabled
           value={data.textarea}
           onChange={(e, value) => setInputField({ textarea: value })}
         />

@@ -16,6 +16,7 @@
 - Add: Dropdown component
 - Add: Profile Avatar
 - Add: Profile Dropdown
+- Use height rather than padding for components
 
 ### v2.0.0
 
