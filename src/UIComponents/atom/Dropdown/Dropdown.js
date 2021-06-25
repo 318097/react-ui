@@ -13,7 +13,8 @@ const StyledContainer = styled.div`
   .dropdown-container {
     position: absolute;
     top: 100%;
-    left: -30px;
+    left: ${({ dropPosition }) => (dropPosition === "right" ? "0" : "unset")};
+    right: ${({ dropPosition }) => (dropPosition === "left" ? "0" : "unset")};
     /* min-height: 200px; */
     height: auto;
     z-index: 100;
@@ -158,6 +159,7 @@ Dropdown.defaultProps = {
   skipDefaultClass: false,
   iconType: "menu",
   options: [],
+  dropPosition: "left",
 };
 
 Dropdown.propTypes = {
@@ -167,6 +169,7 @@ Dropdown.propTypes = {
   skipDefaultClass: PropTypes.bool,
   options: PropTypes.array,
   buttonType: PropTypes.oneOf(["button", "icon"]),
+  dropPosition: PropTypes.oneOf(["left", "center", "right"]),
 };
 
 export default Dropdown;

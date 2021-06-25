@@ -2,6 +2,7 @@
 
 - Fix: Changed to 'source-map'
 - Fix: Added size prop for Profile Avatar
+- Fix: Drop position for 'Dropdown'
 
 ### v3.0.0
 
