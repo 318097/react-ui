@@ -22,17 +22,17 @@ const Loading = ({
     "center-container": center || background,
   });
 
-  const customStyles = {
+  const combinedStyles = {
     ...styles,
   };
 
   // temp hack
   if (background && type === "dot-loader") {
-    customStyles["margin"] = "-10px";
+    combinedStyles["margin"] = "-10px";
   }
 
   const loader = (
-    <div {...others} className={loaderClasses} style={customStyles}></div>
+    <div {...others} className={loaderClasses} style={combinedStyles}></div>
   );
 
   return background ? <div className={containerClasses}>{loader}</div> : loader;

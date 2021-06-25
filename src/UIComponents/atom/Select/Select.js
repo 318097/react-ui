@@ -154,7 +154,7 @@ const Select = ({
       {...others}
       ref={containerRef}
       name={name}
-      style={{ ...style }}
+      style={style}
       className={containerClasses}
       dropPosition={dropPosition}
     >
@@ -219,7 +219,7 @@ Select.propTypes = {
   style: PropTypes.object,
   placeholder: PropTypes.string,
   options: PropTypes.array.isRequired,
-  dropPosition: PropTypes.string,
+  dropPosition: PropTypes.oneOf(["top", "bottom"]),
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,

@@ -6,6 +6,7 @@ module.exports = {
   ...commonConfig,
   entry: "./src/index.js",
   mode: "development",
+  devtool: "eval",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "script.js",

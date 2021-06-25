@@ -226,6 +226,7 @@ Icon.propTypes = {
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
   customIcon: PropTypes.any,
+  direction: PropTypes.oneOf(["up", "right", "down", "left"]),
 };
 
 export default Icon;
