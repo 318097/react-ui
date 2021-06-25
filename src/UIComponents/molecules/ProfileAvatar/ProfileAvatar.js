@@ -8,18 +8,18 @@ import { flexCSS } from "../../styled";
 
 const StyledContainer = styled.div`
   ${flexCSS};
-  height: 36px;
-  width: 36px;
+  height: ${(props) => `${props.size}px`};
+  width: ${(props) => `${props.size}px`};
   font-size: 16px;
   color: ${colors.steel};
-  border: 2px solid ${colors.strokeTwo};
+  border: 1px solid transparent;
   border-radius: 50%;
   background: ${colors.bg};
   transition: 0.4s;
   cursor: pointer;
   overflow: hidden;
   &:hover {
-    border-color: ${colors.iron};
+    border-color: ${colors.strokeTwo};
   }
   img {
     width: 100%;
@@ -50,6 +50,7 @@ const ProfileAvatar = ({
 ProfileAvatar.defaultProps = {
   className: null,
   skipDefaultClass: false,
+  size: 28,
 };
 
 ProfileAvatar.propTypes = {
@@ -57,6 +58,7 @@ ProfileAvatar.propTypes = {
   skipDefaultClass: PropTypes.bool,
   url: PropTypes.string,
   name: PropTypes.string.isRequired,
+  size: PropTypes.number,
 };
 
 export default ProfileAvatar;

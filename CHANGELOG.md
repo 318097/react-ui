@@ -1,6 +1,7 @@
 ### v3.0.1
 
 - Fix: Changed to 'source-map'
+- Fix: Added size prop for Profile Avatar
 
 ### v3.0.0
 
