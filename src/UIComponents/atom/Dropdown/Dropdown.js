@@ -16,7 +16,7 @@ const StyledContainer = styled.div`
   }
   .dropdown-container {
     position: absolute;
-    top: calc(100% + 2px);
+    top: calc(100% + 4px);
     left: ${({ dropPosition }) => (dropPosition === "right" ? "0" : "unset")};
     right: ${({ dropPosition }) => (dropPosition === "left" ? "0" : "unset")};
     /* min-height: 200px; */

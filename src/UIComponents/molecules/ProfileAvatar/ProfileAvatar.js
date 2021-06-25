@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   width: ${(props) => `${props.size}px`};
   font-size: 16px;
   color: ${colors.steel};
-  border: 1px solid transparent;
+  border: 1px solid ${colors.strokeOne};
   border-radius: 50%;
   background: ${colors.bg};
   transition: 0.4s;

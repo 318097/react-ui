@@ -20,6 +20,8 @@ const StyledContainer = styled.div`
       .name {
       }
       .email {
+        font-size: 1rem;
+        line-height: 1.4rem;
         color: ${colors.steel};
         max-width: 120px;
         text-overflow: ellipsis;
