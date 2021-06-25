@@ -42,6 +42,8 @@ const ProfileDropdown = ({
   className,
   options,
   size,
+  dropPosition,
+  onItemClick,
   ...others
 }) => {
   const classes = classNames({
@@ -65,7 +67,7 @@ const ProfileDropdown = ({
     {
       label: (
         <>
-          Logout <Icon type="logout" />
+          Logout <Icon type="logout" size={12} />
         </>
       ),
       value: "logout",
@@ -77,6 +79,8 @@ const ProfileDropdown = ({
       <Dropdown
         renderButtonComponent={buttonComponent}
         options={dropdownOptions}
+        dropPosition={dropPosition}
+        onChange={onItemClick}
       />
     </StyledContainer>
   );
@@ -95,6 +99,8 @@ ProfileDropdown.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   url: PropTypes.string,
+  dropPosition: PropTypes.oneOf(["left", "center", "right"]),
+  onItemClick: PropTypes.func.isRequired,
 };
 
 export default ProfileDropdown;
