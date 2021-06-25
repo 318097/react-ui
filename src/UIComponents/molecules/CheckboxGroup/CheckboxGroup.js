@@ -13,6 +13,7 @@ const CheckBoxContainer = styled.div`
     justify-content: center;
     input {
       margin: 0 4px 0 0;
+      cursor: pointer;
     }
     label {
       cursor: pointer;
