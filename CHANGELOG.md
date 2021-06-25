@@ -1,4 +1,8 @@
-### v3.0.1
+### v3.0.3
+
+- Fix: Mismatched dropdown height
+
+### v3.0.2 (Same as v3.0.1)
 
 - Fix: Changed to 'source-map'
 - Fix: Added size prop for Profile Avatar

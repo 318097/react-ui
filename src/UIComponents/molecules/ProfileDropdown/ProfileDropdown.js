@@ -10,6 +10,7 @@ import ProfileAvatar from "../ProfileAvatar";
 import Icon from "../../atom/Icon";
 
 const StyledContainer = styled.div`
+  display: inline-flex;
   .dropdown-container {
     .profile {
       display: flex;

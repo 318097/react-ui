@@ -10,9 +10,13 @@ import Button from "../Button";
 
 const StyledContainer = styled.div`
   position: relative;
+  display: inline-flex;
+  span.button-component-wrapper {
+    display: inline-flex;
+  }
   .dropdown-container {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 2px);
     left: ${({ dropPosition }) => (dropPosition === "right" ? "0" : "unset")};
     right: ${({ dropPosition }) => (dropPosition === "left" ? "0" : "unset")};
     /* min-height: 200px; */
@@ -98,7 +102,9 @@ const Dropdown = ({
       ref={containerRef}
     >
       {renderButtonComponent ? (
-        <span onClick={toggleDropdown}>{renderButtonComponent}</span>
+        <span className="button-component-wrapper" onClick={toggleDropdown}>
+          {renderButtonComponent}
+        </span>
       ) : buttonType === "button" ? (
         <Button onClick={toggleDropdown}>{label}</Button>
       ) : (
@@ -164,7 +170,7 @@ Dropdown.defaultProps = {
 
 Dropdown.propTypes = {
   renderButtonComponent: PropTypes.any,
-  renderDropdownComponent: PropTypes.any.isRequired,
+  renderDropdownComponent: PropTypes.any,
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
   options: PropTypes.array,
