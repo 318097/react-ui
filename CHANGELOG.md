@@ -1,3 +1,7 @@
+### v3.0.1
+
+- Fix: Changed to 'source-map'
+
 ### v3.0.0
 
 - Renamed `Spinner` to `Loading`
