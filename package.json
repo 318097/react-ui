@@ -41,8 +41,9 @@
     "build:app": "rimraf './build' && webpack --config webpack.app.js",
     "build:lib": "rimraf './dist' && webpack --config webpack.lib.js",
     "build:cdn": "rimraf './dist' && webpack --config webpack.cdn.js",
-    "predeploy": "npm version patch",
-    "deploy": "npm run build:lib && npm run publish",
+    "predeploy": "npm run build:lib",
+    "patch": "npm version patch",
+    "deploy": "npm run patch && npm run publish",
     "publish": "npm publish --access=public"
   },
   "repository": {

@@ -30,7 +30,7 @@ const BlockerScreen = ({
   ...others
 }) => {
   const classes = classNames({
-    "empty-container": !skipDefaultClass,
+    "blocker-screen": !skipDefaultClass,
     [className]: !!className,
   });
 

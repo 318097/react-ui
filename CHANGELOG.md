@@ -1,3 +1,7 @@
+### v3.0.5
+
+- Fix: Default class for blocker screen
+
 ### v3.0.4
 
 - Fix: Add blur for BlockerScreen
