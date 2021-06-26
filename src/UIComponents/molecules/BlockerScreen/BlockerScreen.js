@@ -14,10 +14,10 @@ const StyledContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${colors.bg};
-  z-index: 100;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(2px);
+  z-index: 10;
   cursor: not-allowed;
-  opacity: 0.8;
   text-align: center;
   color: ${colors.strokeThree};
 `;

@@ -10,7 +10,7 @@ const StyledContainer = styled.div`
   ${flexCSS};
   height: ${(props) => `${props.size}px`};
   width: ${(props) => `${props.size}px`};
-  font-size: 16px;
+  font-size: ${(props) => `${props.size / 2 - 2}px`};
   color: ${colors.steel};
   border: 1px solid ${colors.strokeOne};
   border-radius: 50%;

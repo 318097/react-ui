@@ -1,3 +1,7 @@
+### v3.0.4
+
+- Fix: Add blur for BlockerScreen
+
 ### v3.0.3
 
 - Fix: Mismatched dropdown height

@@ -148,7 +148,8 @@ const UIComponent = ({ type }) => {
       return (
         <ProfileAvatar
           name="Mehul Lakhanpal"
-          url="https://lh3.googleusercontent.com/a-/AOh14Gj3jT11sey95Pv4J12bgoIjqzc9IW0mNiZUjh7o0Q=s96-c"
+          size={46}
+          // url="https://lh3.googleusercontent.com/a-/AOh14Gj3jT11sey95Pv4J12bgoIjqzc9IW0mNiZUjh7o0Q=s96-c"
         />
       );
     case "PROFILE_DROPDOWN":
@@ -360,9 +361,15 @@ const UIComponent = ({ type }) => {
       );
     case "BLOCKERSCREEN":
       return (
-        <BlockerScreen>
-          <h3>Hello world</h3>
-        </BlockerScreen>
+        <div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa non,
+            placeat enim laborum quae similique ad cupiditate voluptatem
+            maiores, vitae dignissimos quas accusamus, iusto assumenda ducimus
+            natus deleniti sequi quia!
+          </div>
+          <BlockerScreen />
+        </div>
       );
     case "DROPDOWN":
       return (
