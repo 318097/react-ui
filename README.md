@@ -53,12 +53,15 @@
 
 - Import from other apps
   - [ ] Notes App:
+    - [ ] Autocomplete component
     - [ ] Dropdown
     - [x] EmptyState
     - [ ] ImageCard
     - [ ] JSONEditor
     - [ ] UploadButton
-  - [ ] Atom: Nested Nodes
+  - [ ] Atom:
+    - [ ] Nested Nodes
+    - [ ] Item component for render, used in Flash - history
   - [x] Code Drops: Dropdown
   - [x] DOT:
     - [x] Blocker Screen
@@ -76,3 +79,4 @@
 - [x] Set default color for tag to be `steel`
 - [x] Add m-0 & p-0 classes
 - [x] Add linkedin icon
+- [ ] Fix radio seperator for more than 3 options

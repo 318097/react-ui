@@ -15,7 +15,6 @@ module.exports = {
   externals: {
     react: "react",
     "react-dom": "react-dom",
-    "styled-components": "styled-components",
   },
   plugins: [new CopyPlugin([{ from: "./src/magicdust", to: "./styles/" }])],
 };
