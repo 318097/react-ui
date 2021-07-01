@@ -44,7 +44,8 @@ const StyledContainer = styled.div`
       justify-content: flex-start;
       border-bottom: 1px solid ${colors.strokeOne};
       margin: 0;
-      &:hover {
+      &:hover,
+      &.selected {
         background: ${colors.bg};
       }
     }
@@ -61,6 +62,8 @@ const Dropdown = ({
   iconType,
   options,
   onChange,
+  hover,
+  value: dropdownValue,
   ...others
 }) => {
   const containerRef = useRef();
@@ -111,7 +114,7 @@ const Dropdown = ({
         <Icon
           className="ant-icon"
           type={iconType}
-          hover
+          hover={hover}
           onClick={toggleDropdown}
         />
       )}
@@ -121,10 +124,12 @@ const Dropdown = ({
           {!_.isEmpty(options)
             ? options.map((option) => {
                 const { label, value, subMenu = [], styles } = option;
+                const selected = value === dropdownValue;
                 const itemClasses = classNames({
                   "item-value": true,
                   [value]: true,
                   link: !!value,
+                  selected,
                 });
                 return (
                   <div key={label} className="item">
@@ -176,6 +181,7 @@ Dropdown.propTypes = {
   options: PropTypes.array,
   buttonType: PropTypes.oneOf(["button", "icon"]),
   dropPosition: PropTypes.oneOf(["left", "center", "right"]),
+  value: PropTypes.string,
 };
 
 export default Dropdown;

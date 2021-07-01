@@ -28,6 +28,7 @@
 - [x] Button - Solid, Hollow & Link type
 - [x] Add dev.to double-border class
 - [x] Add wrapper for external svg
+- [ ] Setup storybook
 
 #### Components
 
@@ -50,6 +51,7 @@
 - [ ] Remove logs at `build`
 - [ ] Deploy over CDN (jsdelivr)
 - [ ] Single script to update version and deploy or precommit hook to update minor everytime
+- [ ] Add `gap` classes
 
 - Import from other apps
   - [ ] Notes App:
@@ -80,3 +82,9 @@
 - [x] Add m-0 & p-0 classes
 - [x] Add linkedin icon
 - [ ] Fix radio seperator for more than 3 options
+- [ ] Icon hover effect
+- [ ] Group Icon props in profiledropdown
+- [ ] Add bookmark icon
+- [ ] Add link class
+- [ ] Fix Dropdown should close when renderDropdownComponent item is closed
+- [ ] Fix name overflow in profile dropdown>name

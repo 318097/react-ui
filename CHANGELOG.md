@@ -1,3 +1,7 @@
+### v3.0.6
+
+- Add: 'value' prop for Dropdown
+
 ### v3.0.5
 
 - Fix: Default class for blocker screen

@@ -374,6 +374,7 @@ const UIComponent = ({ type }) => {
     case "DROPDOWN":
       return (
         <Dropdown
+          value={"c"}
           onChange={console.log}
           options={[
             { label: "Option A", value: "a" },
