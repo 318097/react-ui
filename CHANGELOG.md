@@ -4,6 +4,7 @@
 - Add: hover effect for icons
 - Fix: ProfileDropdown name overvlow
 - Fix: 'Group' Icon props in Dropdown
+- Fix: Dropdown should close when renderDropdownComponent item is clicked
 
 ### v3.0.5
 

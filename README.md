@@ -86,5 +86,5 @@
 - [x] Group Icon props in Dropdown
 - [ ] Add bookmark icon
 - [ ] Add link class
-- [ ] Fix Dropdown should close when renderDropdownComponent item is closed
+- [x] Fix Dropdown should close when renderDropdownComponent item is clicked
 - [x] Fix name overflow in profile dropdown>name

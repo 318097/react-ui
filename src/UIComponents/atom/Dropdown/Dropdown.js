@@ -83,8 +83,11 @@ const Dropdown = ({
   const handleOutsideClick = (e) => {
     const ref = containerRef.current;
     const { target } = e;
+    const outsideNode = ref && !ref.contains(target);
+    const customComponent =
+      renderDropdownComponent && ref && ref.contains(target);
 
-    if (ref && !ref.contains(target) && dropdownVisibility) {
+    if ((outsideNode || customComponent) && dropdownVisibility) {
       setDropdownVisibility(false);
       document.removeEventListener("click", handleOutsideClick, {
         capture: true,
