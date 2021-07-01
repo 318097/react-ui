@@ -84,7 +84,8 @@
 - [ ] Fix radio seperator for more than 3 options
 - [x] Icon hover effect
 - [x] Group Icon props in Dropdown
-- [ ] Add bookmark icon
+- [x] Add bookmark icon
 - [ ] Add link class
 - [x] Fix Dropdown should close when renderDropdownComponent item is clicked
 - [x] Fix name overflow in profile dropdown>name
+- [ ] Update profile avatar style

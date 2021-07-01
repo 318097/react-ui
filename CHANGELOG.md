@@ -5,6 +5,7 @@
 - Fix: ProfileDropdown name overvlow
 - Fix: 'Group' Icon props in Dropdown
 - Fix: Dropdown should close when renderDropdownComponent item is clicked
+- Add: Bookmark Icon (filled & outline)
 
 ### v3.0.5
 

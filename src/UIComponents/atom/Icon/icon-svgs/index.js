@@ -38,6 +38,7 @@ import Copy from "./Copy";
 import LeftArrow from "./LeftArrow";
 import Close from "./Close";
 import Linkedin from "./Linkedin";
+import Bookmark from "./Bookmark";
 
 export {
   Plus,
@@ -80,4 +81,5 @@ export {
   LeftArrow,
   Close,
   Linkedin,
+  Bookmark,
 };

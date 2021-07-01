@@ -46,6 +46,7 @@ import {
   LeftArrow,
   Close,
   Linkedin,
+  Bookmark,
 } from "./icon-svgs";
 import { flexCSS } from "../../styled";
 
@@ -153,6 +154,8 @@ const SVGIcon = ({ type, ...props }) => {
       return <LeftArrow {...props} />;
     case "close":
       return <Close {...props} />;
+    case "bookmark":
+      return <Bookmark {...props} />;
     default:
       return <span>{type === "-" ? "x" : "-"}</span>;
   }
@@ -170,6 +173,7 @@ const Icon = ({
   hover,
   customIcon,
   skipDefaultClass,
+  iconType,
   ...others
 }) => {
   const classes = classNames({
@@ -195,6 +199,7 @@ const Icon = ({
     type,
     height: size,
     width: size,
+    iconType,
   };
 
   return (
@@ -230,6 +235,7 @@ Icon.propTypes = {
   skipDefaultClass: PropTypes.bool,
   customIcon: PropTypes.any,
   direction: PropTypes.oneOf(["up", "right", "down", "left"]),
+  iconType: PropTypes.oneOf(["outline", "filled"]),
 };
 
 export default Icon;

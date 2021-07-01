@@ -68,6 +68,7 @@ const icons = [
       "login",
       "logout",
       "copy",
+      "bookmark",
     ],
   },
   {
@@ -119,7 +120,7 @@ const Home = () => {
           <div className="icon-list">
             {icons.map((icon) => (
               <span className="icon-container" title={icon} key={icon}>
-                <Icon key={icon} type={icon} size={28} />
+                <Icon key={icon} type={icon} size={28} iconType={"outline"} />
                 <span className="name">{icon}</span>
               </span>
             ))}
