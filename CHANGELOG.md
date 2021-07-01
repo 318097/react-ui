@@ -1,6 +1,7 @@
 ### v3.0.6
 
 - Add: 'value' prop for Dropdown
+- Add: hover effect for icons
 
 ### v3.0.5
 

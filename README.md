@@ -78,11 +78,11 @@
 - [x] Inherit font from parent
 - [x] Select should be max-width by default
 - [x] Close dropdown on outside click
-- [x] Set default color for tag to be `steel`
+- [x] Set default color for tag teo be `steel`
 - [x] Add m-0 & p-0 classes
 - [x] Add linkedin icon
 - [ ] Fix radio seperator for more than 3 options
-- [ ] Icon hover effect
+- [x] Icon hover effect
 - [ ] Group Icon props in profiledropdown
 - [ ] Add bookmark icon
 - [ ] Add link class

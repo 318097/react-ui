@@ -63,6 +63,10 @@ const StyledIcon = styled.span`
   svg {
     font-family: initial;
     fill: ${({ fill }) => fill};
+    &:hover {
+      fill: ${({ fill, hover }) => (hover ? fill : `${fill}aa`)};
+      color: ${({ fill, hover }) => (hover ? fill : `${fill}aa`)};
+    }
   }
 `;
 
@@ -86,7 +90,6 @@ const SVGIcon = ({ type, ...props }) => {
       return <Check {...props} />;
     case "drop":
       return <Drop {...props} />;
-    case "caret-left":
     case "caret":
       return <CaretLeft {...props} />;
     case "wallet":
