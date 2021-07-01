@@ -12,18 +12,23 @@ import Icon from "../../atom/Icon";
 const StyledContainer = styled.div`
   display: inline-flex;
   .dropdown-container {
+    max-width: 140px;
     .profile {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
       .name {
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: pre;
       }
       .email {
         font-size: 1rem;
         line-height: 1.4rem;
         color: ${colors.steel};
-        max-width: 120px;
+        width: 100%;
         text-overflow: ellipsis;
         overflow: hidden;
       }
