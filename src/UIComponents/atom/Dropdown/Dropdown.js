@@ -84,10 +84,8 @@ const Dropdown = ({
     const ref = containerRef.current;
     const { target } = e;
     const outsideNode = ref && !ref.contains(target);
-    const customComponent =
-      renderDropdownComponent && ref && ref.contains(target);
 
-    if ((outsideNode || customComponent) && dropdownVisibility) {
+    if (outsideNode && dropdownVisibility) {
       setDropdownVisibility(false);
       document.removeEventListener("click", handleOutsideClick, {
         capture: true,
@@ -119,15 +117,16 @@ const Dropdown = ({
       )}
 
       {dropdownVisibility && (
-        <Card className="dropdown-container">
+        <Card
+          className="dropdown-container"
+          onClick={() => (renderDropdownComponent ? toggleDropdown() : null)}
+        >
           {!_.isEmpty(options)
             ? options.map((option) => {
                 const { label, value, subMenu = [], styles } = option;
                 const selected = value === dropdownValue;
                 const itemClasses = classNames({
                   "item-value": true,
-                  [value]: true,
-                  link: !!value,
                   selected,
                 });
                 return (

@@ -1,4 +1,8 @@
-### v3.0.6
+### v3.0.9
+
+- Fix: Dropdown custom render click not working
+
+### v3.0.8
 
 - Add: 'value' prop for Dropdown
 - Add: hover effect for icons
@@ -8,11 +12,11 @@
 - Add: Bookmark Icon (filled & outline)
 - Add `gap`, `link` classes
 
-### v3.0.5
+### v3.0.6
 
 - Fix: Default class for blocker screen
 
-### v3.0.4
+### v3.0.5
 
 - Fix: Add blur for BlockerScreen
 
