@@ -6,6 +6,7 @@
 - Fix: 'Group' Icon props in Dropdown
 - Fix: Dropdown should close when renderDropdownComponent item is clicked
 - Add: Bookmark Icon (filled & outline)
+- Add `gap`, `link` classes
 
 ### v3.0.5
 

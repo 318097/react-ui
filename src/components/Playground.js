@@ -80,6 +80,7 @@ const Playground = () => {
       />
       <Icon customIcon={Envelope} />
       <StatusBar />
+      <div className="link">Hello world</div>
     </section>
   );
 };

@@ -51,7 +51,6 @@
 - [ ] Remove logs at `build`
 - [ ] Deploy over CDN (jsdelivr)
 - [ ] Single script to update version and deploy or precommit hook to update minor everytime
-- [ ] Add `gap` classes
 
 - Import from other apps
   - [ ] Notes App:
@@ -81,11 +80,11 @@
 - [x] Set default color for tag teo be `steel`
 - [x] Add m-0 & p-0 classes
 - [x] Add linkedin icon
-- [ ] Fix radio seperator for more than 3 options
 - [x] Icon hover effect
 - [x] Group Icon props in Dropdown
 - [x] Add bookmark icon
-- [ ] Add link class
 - [x] Fix Dropdown should close when renderDropdownComponent item is clicked
 - [x] Fix name overflow in profile dropdown>name
+- [x] Add `gap`, `link` classes
 - [ ] Update profile avatar style
+- [ ] Fix radio seperator for more than 3 options

@@ -76,6 +76,7 @@
     .ml-#{$item} {
       margin-left: $VALUE;
     }
+
     .p-#{$item} {
       padding: $VALUE;
     }
@@ -94,6 +95,10 @@
 
     .pl-#{$item} {
       padding-left: $VALUE;
+    }
+
+    .gap-#{$item} {
+      gap: $VALUE;
     }
   }
 
@@ -239,6 +244,15 @@
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      color: $blue;
     }
   }
 
