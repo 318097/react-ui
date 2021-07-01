@@ -3,6 +3,7 @@
 - Add: 'value' prop for Dropdown
 - Add: hover effect for icons
 - Fix: ProfileDropdown name overvlow
+- Fix: 'Group' Icon props in Dropdown
 
 ### v3.0.5
 

@@ -58,12 +58,11 @@ const Dropdown = ({
   className,
   skipDefaultClass,
   buttonType,
-  label,
-  iconType,
   options,
   onChange,
-  hover,
   value: dropdownValue,
+  iconProps,
+  buttonProps,
   ...others
 }) => {
   const containerRef = useRef();
@@ -109,14 +108,11 @@ const Dropdown = ({
           {renderButtonComponent}
         </span>
       ) : buttonType === "button" ? (
-        <Button onClick={toggleDropdown}>{label}</Button>
+        <Button onClick={toggleDropdown} {...buttonProps}>
+          {buttonProps.label}
+        </Button>
       ) : (
-        <Icon
-          className="ant-icon"
-          type={iconType}
-          hover={hover}
-          onClick={toggleDropdown}
-        />
+        <Icon onClick={toggleDropdown} {...iconProps} />
       )}
 
       {dropdownVisibility && (
@@ -168,9 +164,13 @@ const Dropdown = ({
 Dropdown.defaultProps = {
   className: null,
   skipDefaultClass: false,
-  iconType: "menu",
   options: [],
   dropPosition: "left",
+  iconProps: {
+    type: "menu",
+    hover: false,
+  },
+  buttonProps: { label: "Menu" },
 };
 
 Dropdown.propTypes = {
@@ -182,6 +182,8 @@ Dropdown.propTypes = {
   buttonType: PropTypes.oneOf(["button", "icon"]),
   dropPosition: PropTypes.oneOf(["left", "center", "right"]),
   value: PropTypes.string,
+  iconProps: PropTypes.object,
+  buttonProps: PropTypes.object,
 };
 
 export default Dropdown;

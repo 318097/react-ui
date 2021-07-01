@@ -83,8 +83,8 @@
 - [x] Add linkedin icon
 - [ ] Fix radio seperator for more than 3 options
 - [x] Icon hover effect
-- [ ] Group Icon props in profiledropdown
+- [x] Group Icon props in Dropdown
 - [ ] Add bookmark icon
 - [ ] Add link class
 - [ ] Fix Dropdown should close when renderDropdownComponent item is closed
-- [ ] Fix name overflow in profile dropdown>name
+- [x] Fix name overflow in profile dropdown>name
