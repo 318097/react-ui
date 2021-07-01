@@ -127,6 +127,7 @@ const Dropdown = ({
                 const selected = value === dropdownValue;
                 const itemClasses = classNames({
                   "item-value": true,
+                  [value]: true, // used to override individual items. ex., 'profile', 'logout'
                   selected,
                 });
                 return (

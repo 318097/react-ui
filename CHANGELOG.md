@@ -1,3 +1,7 @@
+### v3.0.10
+
+- Revert: Deleted individual item class in dropdown
+
 ### v3.0.9
 
 - Fix: Dropdown custom render click not working
