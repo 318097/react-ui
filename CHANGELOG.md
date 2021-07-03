@@ -1,6 +1,7 @@
 ### v3.0.10
 
 - Add: `text-overflow` class
+- Update: 'profileAvatarProps' for ProfileDropdown
 
 ### v3.0.10
 

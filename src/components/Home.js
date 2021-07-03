@@ -160,6 +160,10 @@ const UIComponent = ({ type }) => {
           email={"mehullakhanpal@gmail.com"}
           url="https://lh3.googleusercontent.com/a-/AOh14Gj3jT11sey95Pv4J12bgoIjqzc9IW0mNiZUjh7o0Q=s96-c"
           onItemClick={console.log}
+          profileAvatarProps={{
+            style: { borderColor: "black", background: "yellow" },
+            className: "ddooooo",
+          }}
         />
       );
     case "ICON":

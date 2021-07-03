@@ -49,9 +49,9 @@ const ProfileDropdown = ({
   skipDefaultClass,
   className,
   options,
-  size,
   dropPosition,
   onItemClick,
+  profileAvatarProps,
   ...others
 }) => {
   const classes = classNames({
@@ -59,7 +59,9 @@ const ProfileDropdown = ({
     [className]: !!className,
   });
 
-  const buttonComponent = <ProfileAvatar name={name} url={url} size={size} />;
+  const buttonComponent = (
+    <ProfileAvatar name={name} url={url} {...profileAvatarProps} />
+  );
 
   const dropdownOptions = [
     {

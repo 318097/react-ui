@@ -51,6 +51,7 @@
 - [ ] Remove logs at `build`
 - [ ] Deploy over CDN (jsdelivr)
 - [ ] Single script to update version and deploy or precommit hook to update minor everytime
+- [ ] Expose internal methods
 
 - Import from other apps
   - [ ] Notes App:
@@ -62,7 +63,7 @@
     - [ ] UploadButton
   - [ ] Atom:
     - [ ] Nested Nodes
-    - [ ] Item component for render, used in Flash - history
+    - [ ] Item component - used in Flash - history
   - [x] Code Drops: Dropdown
   - [x] DOT:
     - [x] Blocker Screen
