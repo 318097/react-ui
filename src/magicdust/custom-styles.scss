@@ -56,6 +56,10 @@
     padding-left: $VALUE;
   }
 
+  .gap {
+    gap: $VALUE;
+  }
+
   @each $item, $VALUE in $VALUE_LIST {
     .m-#{$item} {
       margin: $VALUE;
@@ -373,11 +377,4 @@
     height: 36px;
   }
   /* WIP - end */
-}
-
-@mixin flex($direction: row, $align: center, $justify: center) {
-  display: flex;
-  flex-direction: $direction;
-  align-items: $align;
-  align-items: $justify;
 }

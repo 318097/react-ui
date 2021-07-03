@@ -1,0 +1,43 @@
+@import "./colors.scss";
+
+@mixin flex($direction: row, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  align-items: $justify;
+}
+
+@mixin center-layout-header-wrapper($maxWidth: 500px, $padding: 0 12px) {
+  position: sticky;
+  background: $feather;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 10px;
+  box-shadow: 4px 4px 4px $strokeOne;
+  padding: $padding;
+  header {
+    padding: 10px 0;
+    max-width: $maxWidth;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+@mixin center-layout-section-wrapper($maxWidth: 500px, $padding: 0 12px) {
+  position: relative;
+  padding: $padding;
+  width: 100%;
+  overflow: overlay;
+  & > section {
+    position: relative;
+    max-width: $maxWidth;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,4 +1,8 @@
-### v3.0.10
+### v3.0.12
+
+- Add: center-layout mixin
+
+### v3.0.11
 
 - Add: `text-overflow` class
 - Update: 'profileAvatarProps' for ProfileDropdown
