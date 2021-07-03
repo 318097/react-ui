@@ -266,6 +266,13 @@
     z-index: 10;
   }
 
+  .text-overflow {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
+  }
+
   @keyframes spin {
     0% {
       background: $blue;

@@ -1,5 +1,9 @@
 ### v3.0.10
 
+- Add: `text-overflow` class
+
+### v3.0.10
+
 - Revert: Deleted individual item class in dropdown
 
 ### v3.0.9
