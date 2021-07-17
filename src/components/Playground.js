@@ -75,10 +75,11 @@ const Playground = () => {
       <Icon
         style={{ margin: "0 0 0 12px" }}
         type="arrow"
-        background
+        // background
+        highlight
         direction="up"
       />
-      <Icon customIcon={Envelope} />
+      {/* <Icon customIcon={Envelope} /> */}
       <StatusBar />
       <div className="link">Hello world</div>
     </section>

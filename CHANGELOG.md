@@ -1,6 +1,7 @@
 ### v3.0.13
 
 - Add: Size for EmptyState
+- Add: Highlight prop for Icon
 
 ### v3.0.12
 

@@ -65,8 +65,8 @@ const StyledIcon = styled.span`
     font-family: initial;
     fill: ${({ fill }) => fill};
     &:hover {
-      fill: ${({ fill, hover }) => (hover ? fill : `${fill}aa`)};
-      color: ${({ fill, hover }) => (hover ? fill : `${fill}aa`)};
+      fill: ${({ fill, highlight }) => (highlight ? `${fill}aa` : fill)};
+      color: ${({ fill, highlight }) => (highlight ? `${fill}aa` : fill)};
     }
   }
 `;
@@ -173,6 +173,7 @@ const Icon = ({
   customIcon,
   skipDefaultClass,
   iconType,
+  highlight,
   ...others
 }) => {
   const classes = classNames({
@@ -201,11 +202,15 @@ const Icon = ({
     iconType,
   };
 
+  highlight = hover || background ? false : highlight;
+  console.log(hover, highlight);
   return (
     <StyledIcon
       {...others}
+      hover={hover}
       className={classes}
       background={background}
+      highlight={highlight}
       size={size}
       onClick={onClick}
       fill={fill}
@@ -218,18 +223,20 @@ const Icon = ({
 
 Icon.defaultProps = {
   background: false,
+  hover: false,
+  highlight: true,
   size: 16,
   fill: colors.bar,
-  hover: false,
   className: null,
   skipDefaultClass: false,
 };
 
 Icon.propTypes = {
-  background: PropTypes.bool,
+  background: PropTypes.bool, // just background, no changes on hover
+  hover: PropTypes.bool, // round up on hover
+  highlight: PropTypes.bool, // no background, highlight icon on hover
   size: PropTypes.number,
   fill: PropTypes.string,
-  hover: PropTypes.bool,
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
   customIcon: PropTypes.any,

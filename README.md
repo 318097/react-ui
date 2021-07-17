@@ -89,4 +89,4 @@
 - [x] Add `gap`, `link` classes
 - [x] Update profile avatar style
 - [ ] Fix radio seperator for more than 3 options
-- [ ] Turn off icon hover effect
+- [x] Turn off icon hover effect
