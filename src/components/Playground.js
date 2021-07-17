@@ -35,7 +35,8 @@ const Playground = () => {
   const setInputField = (update) => setData((prev) => ({ ...prev, ...update }));
 
   return (
-    <section id="playground" className="db">
+    <section id="playground" className="db relative">
+      <Loading background="blur" renderLoadingComponent="llkjkjl" />
       <Input
         value={data.input}
         // disabled

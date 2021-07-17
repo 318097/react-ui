@@ -2,6 +2,7 @@
 
 - Add: Size for EmptyState
 - Add: Highlight prop for Icon
+- Add: renderLoadingComponent for Loading
 
 ### v3.0.12
 

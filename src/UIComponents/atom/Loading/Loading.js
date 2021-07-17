@@ -9,6 +9,7 @@ const Loading = ({
   skipDefaultClass,
   background,
   styles,
+  renderLoadingComponent,
   ...others
 }) => {
   const containerClasses = classNames({
@@ -18,7 +19,7 @@ const Loading = ({
   const loaderClasses = classNames({
     loading: !skipDefaultClass,
     [className]: !!className,
-    [type]: true,
+    [type]: !!type && !renderLoadingComponent,
     "center-container": center || background,
   });
 
@@ -27,15 +28,24 @@ const Loading = ({
   };
 
   // temp hack
-  if (background && type === "dot-loader") {
-    combinedStyles["margin"] = "-10px";
+  if (background && !renderLoadingComponent) {
+    if (type === "dot-loader") combinedStyles["margin"] = "-10px";
+    else if (type === "default-loader") combinedStyles["margin"] = "-20px";
   }
 
   const loader = (
-    <div {...others} className={loaderClasses} style={combinedStyles}></div>
+    <div {...others} className={loaderClasses} style={combinedStyles}>
+      {renderLoadingComponent || null}
+    </div>
   );
 
-  return background ? <div className={containerClasses}>{loader}</div> : loader;
+  return background ? (
+    <div style={{ zIndex: 1000 }} className={containerClasses}>
+      {loader}
+    </div>
+  ) : (
+    loader
+  );
 };
 
 Loading.defaultProps = {
@@ -51,6 +61,7 @@ Loading.propTypes = {
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
   background: PropTypes.oneOf(["blur"]),
+  renderLoadingComponent: PropTypes.any,
 };
 
 export default Loading;
