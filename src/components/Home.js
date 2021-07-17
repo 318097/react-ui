@@ -53,8 +53,8 @@ const icons = [
   {
     title: "Basic",
     icons: [
-      "caret-left",
-      "left-arrow",
+      "caret",
+      "arrow",
       "close",
       "plus",
       "minus",

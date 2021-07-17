@@ -18,6 +18,7 @@ const StyledContainer = styled.div`
   transition: 0.4s;
   cursor: pointer;
   overflow: hidden;
+  line-height: normal;
   &:hover {
     border-color: ${colors.strokeTwo};
   }

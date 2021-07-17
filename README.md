@@ -87,5 +87,6 @@
 - [x] Fix Dropdown should close when renderDropdownComponent item is clicked
 - [x] Fix name overflow in profile dropdown>name
 - [x] Add `gap`, `link` classes
-- [ ] Update profile avatar style
+- [x] Update profile avatar style
 - [ ] Fix radio seperator for more than 3 options
+- [ ] Turn off icon hover effect

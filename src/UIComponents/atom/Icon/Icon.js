@@ -149,7 +149,6 @@ const SVGIcon = ({ type, ...props }) => {
       return <Copy {...props} />;
     case "football-2":
       return <Football2 {...props} />;
-    case "left-arrow":
     case "arrow":
       return <LeftArrow {...props} />;
     case "close":

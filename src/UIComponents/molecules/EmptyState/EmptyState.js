@@ -8,8 +8,10 @@ import colors from "../../../magicdust/colors";
 const StyledContainer = styled.div`
   text-align: center;
   width: 100%;
-  font-size: 200%;
+  font-size: ${({ size }) =>
+    size === "md" ? "1.6rem" : size === "sm" ? "1rem" : "2.4rem"};
   color: ${colors.steel};
+  font-weight: bold;
 `;
 
 const EmptyState = ({
@@ -40,6 +42,7 @@ EmptyState.defaultProps = {
   message: "Empty",
   className: null,
   skipDefaultClass: false,
+  size: "md",
 };
 
 EmptyState.propTypes = {
@@ -48,6 +51,7 @@ EmptyState.propTypes = {
   children: PropTypes.any.isRequired,
   skipDefaultClass: PropTypes.bool,
   message: PropTypes.string,
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
 };
 
 export default EmptyState;

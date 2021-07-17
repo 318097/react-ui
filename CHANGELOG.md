@@ -1,3 +1,7 @@
+### v3.0.13
+
+- Add: Size for EmptyState
+
 ### v3.0.12
 
 - Add: center-layout mixin
