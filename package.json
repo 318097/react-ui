@@ -4,11 +4,9 @@
   "private": false,
   "description": "React UI library",
   "main": "dist/index.js",
-  "dependencies": {
-    "rimraf": "^3.0.2",
-    "uuid": "^8.3.2"
-  },
   "devDependencies": {
+    "rimraf": "^3.0.2",
+    "uuid": "^8.3.2",
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
