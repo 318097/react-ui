@@ -6,15 +6,23 @@ const Loading = ({
   center,
   type,
   className,
+  containerClassName,
   skipDefaultClass,
   background,
-  styles,
+  style,
+  customStyles,
   renderLoadingComponent,
   ...others
 }) => {
   const containerClasses = classNames({
     [`${background}-bg`]: !!background,
+    [containerClassName]: !!containerClassName,
   });
+
+  const combinedContainerStyles = {
+    zIndex: 1000,
+    ...(customStyles.container || {}),
+  };
 
   const loaderClasses = classNames({
     loading: !skipDefaultClass,
@@ -23,24 +31,26 @@ const Loading = ({
     "center-container": center || background,
   });
 
-  const combinedStyles = {
-    ...styles,
+  const combinedLoaderStyles = {
+    ...(customStyles.loader || {}),
+    ...(style || {}),
   };
 
   // temp hack
   if (background && !renderLoadingComponent) {
-    if (type === "dot-loader") combinedStyles["margin"] = "-10px";
-    else if (type === "default-loader") combinedStyles["margin"] = "-20px";
+    if (type === "dot-loader") combinedLoaderStyles["margin"] = "-10px";
+    else if (type === "default-loader")
+      combinedLoaderStyles["margin"] = "-20px";
   }
 
   const loader = (
-    <div {...others} className={loaderClasses} style={combinedStyles}>
+    <div {...others} className={loaderClasses} style={combinedLoaderStyles}>
       {renderLoadingComponent || null}
     </div>
   );
 
   return background ? (
-    <div style={{ zIndex: 1000 }} className={containerClasses}>
+    <div style={combinedContainerStyles} className={containerClasses}>
       {loader}
     </div>
   ) : (
