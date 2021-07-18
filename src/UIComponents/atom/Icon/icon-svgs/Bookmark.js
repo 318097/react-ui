@@ -7,7 +7,7 @@ const Bookmark = (props) =>
       focusable="false"
       data-prefix="far"
       data-icon="bookmark"
-      class="svg-inline--fa fa-bookmark fa-w-12"
+      className="svg-inline--fa fa-bookmark fa-w-12"
       role="img"
       viewBox="0 0 384 512"
       height={props.height}
@@ -24,7 +24,7 @@ const Bookmark = (props) =>
       focusable="false"
       data-prefix="fas"
       data-icon="bookmark"
-      class="svg-inline--fa fa-bookmark fa-w-12"
+      className="svg-inline--fa fa-bookmark fa-w-12"
       role="img"
       viewBox="0 0 384 512"
       height={props.height}
