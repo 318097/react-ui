@@ -203,7 +203,6 @@ const Icon = ({
   };
 
   highlight = hover || background ? false : highlight;
-  console.log(hover, highlight);
   return (
     <StyledIcon
       {...others}

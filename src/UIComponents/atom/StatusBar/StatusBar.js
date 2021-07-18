@@ -113,13 +113,13 @@ const StatusBar = ({ title, className, skipDefaultClass, ...others }) => {
       <div className="items-container">
         {data
           .filter((item) => item.visible)
-          .map(({ value, title, styles, id }, idx) => {
+          .map(({ value, title, style, id }, idx) => {
             return (
               <Fragment key={id}>
                 {idx > 0 && idx < data.length && (
                   <span className="v-divider"></span>
                 )}
-                <div className="item fcc" style={styles}>
+                <div className="item fcc" style={style}>
                   {title && <div className="title">{title}</div>}
                   <div className="value">{value}</div>
                 </div>

@@ -123,7 +123,7 @@ const Dropdown = ({
         >
           {!_.isEmpty(options)
             ? options.map((option) => {
-                const { label, value, subMenu = [], styles } = option;
+                const { label, value, subMenu = [], style } = option;
                 const selected = value === dropdownValue;
                 const itemClasses = classNames({
                   "item-value": true,
@@ -135,7 +135,7 @@ const Dropdown = ({
                     <div
                       onClick={() => handleItemClick(option)}
                       className={itemClasses}
-                      style={styles}
+                      style={style}
                     >
                       {label}
                     </div>
