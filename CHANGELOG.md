@@ -1,3 +1,8 @@
+### v3.0.14
+
+- Update: Webpack to v5
+- Add: Terser webpack plugin
+
 ### v3.0.13
 
 - Add: Size for EmptyState

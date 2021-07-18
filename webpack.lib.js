@@ -1,4 +1,5 @@
 const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const commonConfig = require("./webpack.common");
 
@@ -16,5 +17,21 @@ module.exports = {
     react: "react",
     "react-dom": "react-dom",
   },
-  plugins: [new CopyPlugin([{ from: "./src/magicdust", to: "./styles/" }])],
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: "./src/magicdust", to: "./styles/" }],
+    }),
+  ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            pure_funcs: ["console.log"],
+          },
+        },
+      }),
+    ],
+  },
 };
