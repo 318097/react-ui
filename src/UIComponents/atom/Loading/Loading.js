@@ -63,6 +63,8 @@ Loading.defaultProps = {
   type: "default-loader",
   className: null,
   skipDefaultClass: false,
+  customStyles: {},
+  style: {},
 };
 
 Loading.propTypes = {
