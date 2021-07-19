@@ -36,7 +36,7 @@ const Playground = () => {
 
   return (
     <section id="playground" className="db relative">
-      <Loading background="blur" renderLoadingComponent="llkjkjl" />
+      {/* <Loading background="blur" renderLoadingComponent="llkjkjl" /> */}
       <Input
         value={data.input}
         // disabled

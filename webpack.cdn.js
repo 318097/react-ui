@@ -13,5 +13,9 @@ module.exports = {
     libraryTarget: "umd",
     library: "reactUI",
   },
-  plugins: [new CopyPlugin([{ from: "./src/magicdust", to: "./styles/" }])],
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: "./src/magicdust", to: "./styles/" }],
+    }),
+  ],
 };
