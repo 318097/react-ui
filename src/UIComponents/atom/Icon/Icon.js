@@ -176,6 +176,10 @@ const Icon = ({
   highlight,
   ...others
 }) => {
+  const handleClick = (e) => {
+    if (onClick) onClick(e);
+  };
+
   const classes = classNames({
     icon: !skipDefaultClass,
     [className]: !!className,
@@ -211,7 +215,7 @@ const Icon = ({
       background={background}
       highlight={highlight}
       size={size}
-      onClick={onClick}
+      onClick={handleClick}
       fill={fill}
       style={combinedStyles}
     >
