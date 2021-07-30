@@ -6,7 +6,7 @@ module.exports = {
   ...commonConfig,
   entry: "./src/index.js",
   mode: "development",
-  devtool: "eval",
+  devtool: "eval-cheap-module-source-map",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "script.js",

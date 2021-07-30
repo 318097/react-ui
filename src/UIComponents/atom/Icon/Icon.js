@@ -16,7 +16,6 @@ import {
   Drop,
   CaretLeft,
   Wallet,
-  Bulb,
   BinaryCode,
   BinaryCode2,
   Check2,

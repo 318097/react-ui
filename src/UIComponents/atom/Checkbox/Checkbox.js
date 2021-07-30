@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
@@ -22,12 +22,12 @@ const StyledCheckbox = styled.div`
 `;
 
 const Checkbox = ({
-  options,
+  // options,
   value,
   style,
   className,
   onChange,
-  onBlur,
+  // onBlur,
   name,
   label,
   disabled,
@@ -78,7 +78,6 @@ Checkbox.propTypes = {
   className: PropTypes.string,
   onChange: PropTypes.func,
   color: PropTypes.string,
-  className: PropTypes.string,
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   skipDefaultClass: PropTypes.bool,
 };

@@ -1,5 +1,5 @@
 import React, { useState, memo, useRef, useEffect } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import Icon from "../Icon";

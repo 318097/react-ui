@@ -123,7 +123,7 @@ const Dropdown = ({
         >
           {!_.isEmpty(options)
             ? options.map((option) => {
-                const { label, value, subMenu = [], style } = option;
+                const { label, value, style } = option;
                 const selected = value === dropdownValue;
                 const itemClasses = classNames({
                   "item-value": true,

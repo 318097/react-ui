@@ -115,7 +115,7 @@ const Home = () => {
       </div>
 
       {icons.map(({ title, icons }) => (
-        <Fragment>
+        <Fragment key="title">
           <h3 className="icon-title">{title}</h3>
           <div className="icon-list">
             {icons.map((icon) => (
@@ -161,7 +161,6 @@ const UIComponent = ({ type }) => {
           url="https://lh3.googleusercontent.com/a-/AOh14Gj3jT11sey95Pv4J12bgoIjqzc9IW0mNiZUjh7o0Q=s96-c"
           onItemClick={console.log}
           profileAvatarProps={{
-            style: { borderColor: "black", background: "yellow" },
             className: "ddooooo",
           }}
         />

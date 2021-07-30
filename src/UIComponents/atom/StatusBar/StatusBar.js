@@ -14,11 +14,12 @@ const crux = (arr = [], cmd, node) => {
   let result = [],
     extra;
   switch (cmd) {
-    case "add":
+    case "add": {
       const id = uuidv4();
       result = [...arr, { id, visible: true, ...node }];
       extra = id;
       break;
+    }
     case "read":
       result = arr.find((item) => item.id === node.id);
       break;
@@ -76,7 +77,6 @@ const StyledContainer = styled.div`
     }
   }
 `;
-``;
 
 const StatusBar = ({ title, className, skipDefaultClass, ...others }) => {
   const [data, setData] = useState([]);

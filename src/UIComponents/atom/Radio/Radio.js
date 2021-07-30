@@ -4,7 +4,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 import constants from "../../../magicdust/constants";
-import { defaultCSS, baseCSS, flexCSS, dotCSS, getStyles } from "../../styled";
+import { baseCSS, flexCSS, dotCSS, getStyles } from "../../styled";
 
 const switchStyles = css`
   .radio-item {
@@ -59,7 +59,6 @@ const Radio = ({
   style,
   className,
   onChange,
-  onBlur,
   name,
   disabled,
   skipDefaultClass,

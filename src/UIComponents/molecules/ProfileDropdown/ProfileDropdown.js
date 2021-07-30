@@ -1,5 +1,4 @@
 import React from "react";
-import _ from "lodash";
 import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
