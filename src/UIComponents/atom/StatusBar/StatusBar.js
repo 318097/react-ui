@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment, useRef } from "react";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 import PropTypes from "prop-types";
@@ -43,8 +43,9 @@ const StyledContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-radius: 2px;
-  background: ${colors.strokeOne};
+  border-radius: ${({ showBackground }) => (showBackground ? "2px" : "0px")};
+  background: ${({ showBackground }) =>
+    showBackground ? colors.strokeOne : "transparent"};
   padding: 0;
   height: 28px;
   overflow: auto;
@@ -78,13 +79,23 @@ const StyledContainer = styled.div`
   }
 `;
 
-const StatusBar = ({ title, className, skipDefaultClass, ...others }) => {
+const StatusBar = ({
+  title,
+  className,
+  skipDefaultClass,
+  itemStyle,
+  ...others
+}) => {
   const [data, setData] = useState([]);
+  const dataRef = useRef();
 
   const classes = classNames({
     "status-bar": !skipDefaultClass,
     [className]: !!className,
   });
+  useEffect(() => {
+    dataRef.current = data;
+  }, [data]);
 
   useEffect(() => {
     document.addEventListener("status-bar", handleCustomEvent);
@@ -95,7 +106,7 @@ const StatusBar = ({ title, className, skipDefaultClass, ...others }) => {
     const { cmd, input, cb = () => {} } = event.detail;
     const { expires } = input;
 
-    const update = crux(data, cmd, input);
+    const update = crux(dataRef.current, cmd, input);
 
     if (cmd !== "read") setData(update.arr);
     cb(update);
@@ -113,13 +124,21 @@ const StatusBar = ({ title, className, skipDefaultClass, ...others }) => {
       <div className="items-container">
         {data
           .filter((item) => item.visible)
-          .map(({ value, title, style, id }, idx) => {
+          .map(({ value, title, style = {}, id, type }, idx) => {
+            const customStyle =
+              type === "success"
+                ? { background: colors.cdGreen }
+                : type === "error"
+                ? { background: colors.watermelon }
+                : {};
+
+            const combinedStyles = { ...itemStyle, ...customStyle, ...style };
             return (
               <Fragment key={id}>
                 {idx > 0 && idx < data.length && (
                   <span className="v-divider"></span>
                 )}
-                <div className="item fcc" style={style}>
+                <div className="item fcc" style={combinedStyles}>
                   {title && <div className="title">{title}</div>}
                   <div className="value">{value}</div>
                 </div>
@@ -140,7 +159,12 @@ const triggerEvent = (cmd, input = {}, cb) => {
 
 const notify = (msg, options = {}) => {
   const { expires = 3000 } = options;
-  triggerEvent("add", { ...options, expires, value: msg });
+  triggerEvent("add", {
+    expires,
+    style: { borderRadius: "2px" },
+    ...options,
+    value: msg,
+  });
 };
 
 StatusBar.triggerEvent = triggerEvent;
@@ -149,11 +173,16 @@ StatusBar.notify = notify;
 StatusBar.defaultProps = {
   className: null,
   skipDefaultClass: false,
+  showBackground: false,
+  itemStyle: {},
 };
 
 StatusBar.propTypes = {
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
+  showBackground: PropTypes.bool,
+  title: PropTypes.string,
+  itemStyle: PropTypes.any,
 };
 
 export default StatusBar;

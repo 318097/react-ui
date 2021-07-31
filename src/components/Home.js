@@ -290,7 +290,15 @@ const UIComponent = ({ type }) => {
       return (
         <div className="flex column w-100">
           <div className="flex mb wrap" style={{ gap: "8px" }}>
-            <Button onClick={() => notify("Test")}>Notify</Button>
+            <Button
+              onClick={() =>
+                notify("Test", {
+                  type: "success",
+                })
+              }
+            >
+              Notify
+            </Button>
             <Button
               onClick={() =>
                 triggerEvent(
