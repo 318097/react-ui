@@ -93,7 +93,7 @@
 - [x] Disable tag hover effect
 - [x] Handle long select options
 - [ ] Date input type
-- [ ] Text overflow class
+- [x] Text overflow class
 - [ ] Move popover position
-- [ ] Change dot loader colors
+- [x] Change dot loader colors
 - [ ] Create item component/card or move NodeEditor from Octon

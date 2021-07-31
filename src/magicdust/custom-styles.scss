@@ -264,7 +264,7 @@
     animation: 2s spin linear infinite;
     width: 20px;
     height: 20px;
-    background: $blue;
+    background: $foBlue;
     transform: rotate(0deg);
     border-radius: 50%;
     z-index: 10;
@@ -279,23 +279,24 @@
 
   @keyframes spin {
     0% {
-      background: $blue;
-      transform: rotate(0deg);
+      background: $foBlue;
+      transform: rotate(0deg) scale(1);
       border-radius: 50%;
     }
     25% {
-      background: $yellow;
+      background: $blue;
     }
     50% {
-      background: $nbOrange;
+      background: $purple;
       border-radius: 44%;
+      transform: scale(1.1);
     }
     75% {
-      background: $green;
+      background: $orchid;
     }
     100% {
-      background: $purple;
-      transform: rotate(360deg);
+      background: $watermelon;
+      transform: rotate(360deg) scale(1);
       border-radius: 50%;
     }
   }

@@ -3,6 +3,7 @@
 - Update: Control tag hover from prop
 - Fix: Long options for Select
 - Add: 'text-overflow' class
+- Update: New dot-loader animation
 
 ### v3.0.14
 
