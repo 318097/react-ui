@@ -1,3 +1,7 @@
+### v3.0.15
+
+- Update: Control tag hover from prop
+
 ### v3.0.14
 
 - Update: Webpack to v5

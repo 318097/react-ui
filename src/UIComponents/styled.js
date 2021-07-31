@@ -84,7 +84,10 @@ const getStyles = ({ color, fontColor, componentName, hover, type }) => {
          background: ${custom};
          border-color: ${custom}55;
           color: white;
-        &:hover{
+          `;
+
+      if (hover)
+        styles += `&:hover{
           background: ${custom}CC;
         }
         `;

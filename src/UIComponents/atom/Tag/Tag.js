@@ -51,6 +51,7 @@ Tag.defaultProps = {
   color: colors.steel,
   className: null,
   skipDefaultClass: false,
+  hover: false,
 };
 
 Tag.propTypes = {
@@ -58,6 +59,7 @@ Tag.propTypes = {
   color: PropTypes.string,
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
+  hover: PropTypes.bool,
 };
 
 export default Tag;
