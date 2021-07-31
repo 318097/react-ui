@@ -25,7 +25,7 @@ const StyledSelect = styled.div`
     position: absolute;
     min-width: 100%;
     width: max-content;
-    max-width: 200%;
+    max-width: 150%;
     left: 0;
     bottom: ${({ dropPosition }) =>
       dropPosition === "top" ? "calc(100% + 2px)" : "unset"};
@@ -46,12 +46,15 @@ const StyledSelect = styled.div`
     z-index: 1;
     .dropdown-item {
       width: 100%;
-      word-break: break-all;
-      white-space: break-spaces;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
       ${baseCSS};
       ${itemCSS};
+      height: auto;
       border-radius: 0;
       border-bottom: 1px solid ${constants.SECONDARY};
+      display: inline-block;
       &:last-child {
         border-bottom: none;
       }

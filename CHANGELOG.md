@@ -1,6 +1,7 @@
 ### v3.0.15
 
 - Update: Control tag hover from prop
+- Fix: Long options for Select
 
 ### v3.0.14
 

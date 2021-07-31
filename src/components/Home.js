@@ -222,7 +222,10 @@ const UIComponent = ({ type }) => {
           options={[
             { label: "Option A", value: "a" },
             { label: "Option B", value: "b" },
-            { label: "Looooooooooooooooooooong option", value: "c" },
+            {
+              label: "Looooooooooooooooooooooooooooooooooooooooooog option",
+              value: "c",
+            },
             { label: "Option d", value: "d" },
             { label: "Option e", value: "e" },
           ]}

@@ -91,7 +91,7 @@
 - [ ] Fix radio seperator for more than 3 options
 - [x] Turn off icon hover effect
 - [x] Disable tag hover effect
-- [ ] Handle long select options
+- [x] Handle long select options
 - [ ] Date input type
 - [ ] Text overflow class
 - [ ] Move popover position
