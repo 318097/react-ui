@@ -345,6 +345,14 @@
     @extend .blur;
   }
 
+  .text-overflow {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block; // text-overflow does not work for flex
+    width: 100%;
+  }
+
   /* WIP */
   .default-css {
     font-size: $FONT_SIZE;

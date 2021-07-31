@@ -2,6 +2,7 @@
 
 - Update: Control tag hover from prop
 - Fix: Long options for Select
+- Add: 'text-overflow' class
 
 ### v3.0.14
 
