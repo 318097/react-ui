@@ -5,6 +5,7 @@
 - Add: 'text-overflow' class
 - Update: New dot-loader animation
 - Add: Input type 'date'
+- Update: ConfirmBox positions
 
 ### v3.0.14
 

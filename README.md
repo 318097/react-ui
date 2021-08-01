@@ -94,6 +94,6 @@
 - [x] Handle long select options
 - [x] Date input type
 - [x] Text overflow class
-- [ ] Move popover position
+- [x] Move popover position
 - [x] Change dot loader colors
 - [ ] Create item component/card or move NodeEditor from Octon

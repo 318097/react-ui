@@ -2,8 +2,9 @@
 
 .confirm-box-container {
   background: $strokeOne;
-  padding: 4px 12px;
+  padding: 2px 12px;
   position: absolute;
+  border: 1px solid $strokeOne;
   top: 50%;
   right: calc(100% + 4px);
   transform: translateY(-50%);

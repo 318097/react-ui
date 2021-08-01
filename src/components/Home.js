@@ -276,7 +276,7 @@ const UIComponent = ({ type }) => {
       );
     case "CONFIRMBOX":
       return (
-        <ConfirmBox>
+        <ConfirmBox position="right">
           <Button>Delete</Button>
         </ConfirmBox>
       );
