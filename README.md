@@ -92,7 +92,7 @@
 - [x] Turn off icon hover effect
 - [x] Disable tag hover effect
 - [x] Handle long select options
-- [ ] Date input type
+- [x] Date input type
 - [x] Text overflow class
 - [ ] Move popover position
 - [x] Change dot loader colors

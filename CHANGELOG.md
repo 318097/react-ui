@@ -4,6 +4,7 @@
 - Fix: Long options for Select
 - Add: 'text-overflow' class
 - Update: New dot-loader animation
+- Add: Input type 'date'
 
 ### v3.0.14
 

@@ -71,6 +71,7 @@ Input.defaultProps = {
   curved: false,
   className: null,
   skipDefaultClass: false,
+  type: "input",
 };
 
 Input.propTypes = {
@@ -81,6 +82,7 @@ Input.propTypes = {
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
   onChange: PropTypes.func,
+  type: PropTypes.oneOf(["input", "date"]),
 };
 
 export default memo(Input);

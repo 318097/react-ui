@@ -187,6 +187,7 @@ const UIComponent = ({ type }) => {
     case "INPUT":
       return (
         <Input
+          type="date"
           value={data.input}
           onChange={(e, value) => setInputField({ input: value })}
         />
@@ -223,7 +224,7 @@ const UIComponent = ({ type }) => {
             { label: "Option A", value: "a" },
             { label: "Option B", value: "b" },
             {
-              label: "Looooooooooooooooooooooooooooooooooooooooooog option",
+              label: "Loooooooooooooooog option",
               value: "c",
             },
             { label: "Option d", value: "d" },
