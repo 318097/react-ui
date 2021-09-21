@@ -72,7 +72,7 @@ Loading.propTypes = {
   type: PropTypes.oneOf(["default-loader", "dot-loader"]),
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
-  background: PropTypes.oneOf(["blur"]),
+  background: PropTypes.oneOf(["blur", "white"]),
   renderLoadingComponent: PropTypes.any,
 };
 

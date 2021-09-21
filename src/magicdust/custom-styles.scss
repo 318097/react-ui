@@ -337,13 +337,22 @@
     background: rgba(255, 255, 255, 0.1);
   }
 
-  .blur-bg {
+  .blur-bg-defaults {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+  }
+
+  .blur-bg {
+    @extend .blur-bg-defaults;
     @extend .blur;
+  }
+
+  .white-bg {
+    @extend .blur-bg-defaults;
+    background: rgba(255, 255, 255, 0.6);
   }
 
   .text-overflow {
