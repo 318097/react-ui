@@ -15,6 +15,7 @@ import Checkbox from "./atom/Checkbox";
 import TextArea from "./atom/TextArea";
 import StatusBar from "./atom/StatusBar";
 import Dropdown from "./atom/Dropdown";
+import Backdrop from "./atom/Backdrop";
 
 import EmptyState from "./molecules/EmptyState";
 import BlockerScreen from "./molecules/BlockerScreen";
@@ -43,6 +44,7 @@ export {
   Dropdown,
   ProfileDropdown,
   ProfileAvatar,
+  Backdrop,
 };
 
 export default color;

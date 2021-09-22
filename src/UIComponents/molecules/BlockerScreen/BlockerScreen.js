@@ -1,25 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import colors from "../../../magicdust/colors";
-
-const StyledContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.01);
-  backdrop-filter: blur(2px);
-  z-index: 10;
-  cursor: not-allowed;
-  text-align: center;
-  color: ${colors.strokeThree};
-`;
+import Backdrop from "../../atom/Backdrop";
 
 const BlockerScreen = ({
   message,
@@ -34,15 +16,21 @@ const BlockerScreen = ({
   });
 
   return hasAccess ? null : (
-    <StyledContainer {...others} className={classes}>
-      {message || ""}
-    </StyledContainer>
+    <Backdrop
+      {...others}
+      style={{ cursor: "not-allowed", textAlign: "center" }}
+      className={classes}
+    >
+      <div className={"blocker-screen-text"}>{message}</div>
+    </Backdrop>
   );
 };
 
 BlockerScreen.defaultProps = {
   className: null,
   skipDefaultClass: false,
+  message: "Locked",
+  type: "blur",
 };
 
 BlockerScreen.propTypes = {

@@ -1,3 +1,7 @@
+### v3.0.17
+
+- Add: Backdrop component
+
 ### v3.0.15
 
 - Update: Control tag hover from prop
