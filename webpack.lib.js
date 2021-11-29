@@ -1,5 +1,5 @@
 const path = require("path");
-const TerserPlugin = require("terser-webpack-plugin");
+// const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const commonConfig = require("./webpack.common");
 
@@ -23,17 +23,17 @@ module.exports = () => {
         patterns: [{ from: "./src/magicdust", to: "./styles/" }],
       }),
     ],
-    optimization: {
-      minimize: true,
-      minimizer: [
-        new TerserPlugin({
-          terserOptions: {
-            compress: {
-              pure_funcs: ["console.log"],
-            },
-          },
-        }),
-      ],
-    },
+    // optimization: {
+    //   minimize: true,
+    //   minimizer: [
+    //     new TerserPlugin({
+    //       terserOptions: {
+    //         compress: {
+    //           pure_funcs: ["console.log"],
+    //         },
+    //       },
+    //     }),
+    //   ],
+    // },
   };
 };
