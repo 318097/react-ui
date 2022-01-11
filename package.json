@@ -63,5 +63,10 @@
     "ghooks": {
       "commit-msg": "commit"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
