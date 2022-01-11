@@ -39,7 +39,7 @@
   "scripts": {
     "dev": "webpack server --config webpack.app.js",
     "build:app": "rimraf './build' && webpack --config webpack.app.js",
-    "build:lib": "rimraf './dist' && webpack --config webpack.lib.js",
+    "build:lib": "webpack --config webpack.lib.js",
     "build:cdn": "rimraf './dist' && webpack --config webpack.cdn.js",
     "predeploy": "npm run build:lib",
     "patch": "npm version patch",
