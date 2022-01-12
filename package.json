@@ -1,6 +1,6 @@
 {
   "name": "@codedrops/react-ui",
-  "version": "3.0.17",
+  "version": "0.0.0-development",
   "private": false,
   "description": "React UI library",
   "main": "dist/index.js",
@@ -35,7 +35,8 @@
     "uuid": "^8.3.2",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "semantic-release": "^18.0.1"
   },
   "scripts": {
     "dev": "webpack server --config webpack.app.js",
@@ -45,13 +46,13 @@
     "predeploy": "npm run build:lib",
     "patch": "npm version patch",
     "deploy": "npm run patch && npm run publish:npm",
-    "publish:npm": "semantic-release",
     "lint": "eslint --ext js,jsx src/UIComponents/",
-    "fix": "eslint --fix src/UIComponents/"
+    "fix": "eslint --fix src/UIComponents/",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/318097/react-ui.git"
+    "url": "https://github.com/318097/react-ui.git"
   },
   "author": "Mehul Lakhanpal",
   "license": "ISC",
