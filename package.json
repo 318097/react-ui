@@ -2,7 +2,7 @@
   "name": "@codedrops/react-ui",
   "version": "0.0.0-development",
   "private": false,
-  "description": "React UI library",
+  "description": "ReactUI library",
   "main": "dist/index.js",
   "devDependencies": {
     "@babel/core": "^7.14.6",
