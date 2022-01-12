@@ -29,6 +29,7 @@
     "react-router-dom": "^5.2.0",
     "rimraf": "^3.0.2",
     "sass-loader": "^12.1.0",
+    "semantic-release-cli": "^5.4.4",
     "style-loader": "^3.1.0",
     "styled-components": "5.3.0",
     "uuid": "^8.3.2",
@@ -44,7 +45,7 @@
     "predeploy": "npm run build:lib",
     "patch": "npm version patch",
     "deploy": "npm run patch && npm run publish:npm",
-    "publish:npm": "npm publish --access=public",
+    "publish:npm": "semantic-release",
     "lint": "eslint --ext js,jsx src/UIComponents/",
     "fix": "eslint --fix src/UIComponents/"
   },
