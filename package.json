@@ -44,8 +44,6 @@
     "build:lib": "webpack --config webpack.lib.js",
     "build:cdn": "rimraf './dist' && webpack --config webpack.cdn.js",
     "predeploy": "npm run build:lib",
-    "patch": "npm version patch",
-    "deploy": "npm run patch && npm run publish:npm",
     "lint": "eslint --ext js,jsx src/UIComponents/",
     "fix": "eslint --fix src/UIComponents/",
     "semantic-release": "semantic-release"
