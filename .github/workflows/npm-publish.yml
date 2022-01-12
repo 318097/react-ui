@@ -6,7 +6,7 @@ name: Publish Package
 on: push
 
 jobs:
-  build:
+  publish-package:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,15 +15,6 @@ jobs:
           node-version: 16
       - run: npm i
       - run: npm run build:lib
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16
-      - run: npm publish:npm
+      - run: npm run publish:npm
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
