@@ -46,7 +46,8 @@
     "predeploy": "npm run build:lib",
     "lint": "eslint --ext js,jsx src/UIComponents/",
     "fix": "eslint --fix src/UIComponents/",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "deploy": "npm run semantic-release"
   },
   "repository": {
     "type": "git",
