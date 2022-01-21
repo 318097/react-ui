@@ -3,7 +3,10 @@
 
 name: Publish Package
 
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   publish-package:
