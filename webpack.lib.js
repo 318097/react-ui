@@ -18,11 +18,7 @@ module.exports = () => {
       react: "react",
       "react-dom": "react-dom",
     },
-    plugins: [
-      new CopyPlugin({
-        patterns: [{ from: "./src/magicdust", to: "./styles/" }],
-      }),
-    ],
+    plugins: [new CopyPlugin([{ from: "./src/magicdust", to: "./styles/" }])],
     // optimization: {
     //   minimize: true,
     //   minimizer: [
