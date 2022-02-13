@@ -14,7 +14,6 @@
   @extend .reset;
 }
 
-#react-ui,
 .react-ui {
   .absolute {
     position: absolute;
@@ -255,8 +254,10 @@
     text-decoration: none;
     transition: 0.2s;
     cursor: pointer;
+    color: inherit;
     &:hover {
-      color: $blue;
+      text-decoration: underline;
+      text-decoration-color: $blue;
     }
   }
 
@@ -333,7 +334,7 @@
   }
 
   .blur {
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
     background: rgba(255, 255, 255, 0.1);
   }
 
@@ -343,6 +344,9 @@
     left: 0;
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .blur-bg {
@@ -353,6 +357,10 @@
   .white-bg {
     @extend .bg-defaults;
     background: rgba(255, 255, 255, 0.6);
+  }
+
+  .transparent-bg {
+    @extend .bg-defaults;
   }
 
   .black-bg {

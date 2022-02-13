@@ -3,7 +3,6 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 const Loading = ({
-  center,
   type,
   className,
   containerClassName,
@@ -28,20 +27,12 @@ const Loading = ({
     loading: !skipDefaultClass,
     [className]: !!className,
     [type]: !!type && !renderLoadingComponent,
-    "center-container": center || background,
   });
 
   const combinedLoaderStyles = {
     ...(customStyles.loader || {}),
     ...(style || {}),
   };
-
-  // temp hack
-  if (background && !renderLoadingComponent) {
-    if (type === "dot-loader") combinedLoaderStyles["margin"] = "-10px";
-    else if (type === "default-loader")
-      combinedLoaderStyles["margin"] = "-20px";
-  }
 
   const loader = (
     <div {...others} className={loaderClasses} style={combinedLoaderStyles}>
@@ -59,7 +50,6 @@ const Loading = ({
 };
 
 Loading.defaultProps = {
-  center: false,
   type: "default-loader",
   className: null,
   skipDefaultClass: false,
@@ -72,7 +62,7 @@ Loading.propTypes = {
   type: PropTypes.oneOf(["default-loader", "dot-loader"]),
   className: PropTypes.string,
   skipDefaultClass: PropTypes.bool,
-  background: PropTypes.oneOf(["blur", "white"]),
+  background: PropTypes.oneOf(["blur", "white", "transparent"]),
   renderLoadingComponent: PropTypes.any,
 };
 
