@@ -4,6 +4,9 @@
   "private": false,
   "description": "ReactUI library",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=14.17.0"
+  },
   "devDependencies": {
     "rimraf": "^3.0.2",
     "uuid": "^8.3.2",
