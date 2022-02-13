@@ -82,7 +82,7 @@ const Playground = () => {
       />
       {/* <Icon customIcon={Envelope} /> */}
       <StatusBar />
-      <div className="link">Hello world</div>
+      <a className="link">Hello world</a>
     </section>
   );
 };
