@@ -3,7 +3,6 @@ import React, { useState, Fragment } from "react";
 import colors, { Icon, Card, Button, Input, Select } from "../../index";
 import { useObject } from "@codedrops/lib";
 import "./NestedNodes.scss";
-import { v4 as uuidv4 } from "uuid";
 import classnames from "classnames";
 
 const NestedNodesContainer = ({ nodes = [], onChange }) => {
@@ -21,17 +20,20 @@ const NestedNodesContainer = ({ nodes = [], onChange }) => {
     if (!addData.label) return;
 
     if (editId) {
-      onChange(
-        addData,
-        "UPDATE",
-        nodes.map((node) =>
+      const others = {
+        action: "UPDATE",
+        arr: nodes.map((node) =>
           node._id === editId ? { ...node, ...addData } : node
-        )
-      );
+        ),
+      };
+      onChange(addData, others);
       setEditId(null);
     } else {
-      const newItem = { ...addData, _id: uuidv4() };
-      onChange(newItem, "CREATE", [...nodes, newItem]);
+      const others = {
+        action: "CREATE",
+        arr: [...nodes, addData],
+      };
+      onChange(addData, others);
     }
     reset();
   };
@@ -43,11 +45,11 @@ const NestedNodesContainer = ({ nodes = [], onChange }) => {
   };
 
   const deleteNode = (_id) => {
-    onChange(
-      { _id },
-      "DELETE",
-      nodes.filter((node) => node._id !== _id)
-    );
+    const others = {
+      action: "DELETE",
+      arr: nodes.filter((node) => node._id !== _id),
+    };
+    onChange({ _id }, others);
   };
 
   const hideParentSelect = editId && addData.default; // hide select parent dropdown when a field is `default` & in edit mode
@@ -118,7 +120,7 @@ const NestedNodes = (props) => {
       {showDivider && <div className="divider"></div>}
       <div className="wrapper">
         {filteredNodes.map((node, index) => {
-          const { _id, label, canDelete } = node;
+          const { _id, label, canDelete = true } = node;
           const hasChildNodes = nodes.filter(
             (node) => node.parentTagId === _id
           ).length;
