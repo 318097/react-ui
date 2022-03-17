@@ -62,7 +62,7 @@
     - [ ] JSONEditor
     - [ ] UploadButton
   - [ ] Atom:
-    - [ ] Nested Nodes
+    - [x] Nested Nodes
     - [ ] Item component - used in Flash - history
   - [x] Code Drops: Dropdown
   - [x] DOT:
@@ -96,4 +96,4 @@
 - [x] Text overflow class
 - [x] Move popover position
 - [x] Change dot loader colors
-- [ ] Create item component/card or move NodeEditor from Octon
+- [x] Create item component/card or move NodeEditor from Octon

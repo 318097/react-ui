@@ -22,6 +22,7 @@ import BlockerScreen from "./molecules/BlockerScreen";
 import CheckboxGroup from "./molecules/CheckboxGroup";
 import ProfileDropdown from "./molecules/ProfileDropdown";
 import ProfileAvatar from "./molecules/ProfileAvatar";
+import NestedNodes from "./molecules/NestedNodes";
 
 export {
   Card,
@@ -45,6 +46,7 @@ export {
   ProfileDropdown,
   ProfileAvatar,
   Backdrop,
+  NestedNodes,
 };
 
 export default color;

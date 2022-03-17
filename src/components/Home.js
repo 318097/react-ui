@@ -20,6 +20,7 @@ import {
   Dropdown,
   ProfileDropdown,
   ProfileAvatar,
+  NestedNodes,
 } from "../UIComponents";
 import "./Home.scss";
 import colors from "../magicdust/colors";
@@ -47,6 +48,7 @@ const uiList = [
   "EMPTYSTATE",
   "BLOCKERSCREEN",
   "ICON",
+  "NESTED_NODES",
 ];
 
 const icons = [
@@ -138,11 +140,14 @@ const UIComponent = ({ type }) => {
     radio: "a",
     select: "a",
     checkbox: true,
+    nodes: [],
   });
 
   const [id, setId] = useState();
 
   const setInputField = (update) => setData((prev) => ({ ...prev, ...update }));
+
+  console.log("data::-", data);
 
   switch (type) {
     case "PROFILE_AVATAR":
@@ -386,6 +391,13 @@ const UIComponent = ({ type }) => {
           </div>
           <BlockerScreen />
         </div>
+      );
+    case "NESTED_NODES":
+      return (
+        <NestedNodes
+          nodes={data.nodes}
+          onChange={(node) => setInputField({ nodes: [...data.nodes, node] })}
+        />
       );
     case "DROPDOWN":
       return (
