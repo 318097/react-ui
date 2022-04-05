@@ -2,7 +2,6 @@ const path = require("path");
 // const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const commonConfig = require("./webpack.common");
-// fake commit
 
 module.exports = () => {
   return {
@@ -14,6 +13,7 @@ module.exports = () => {
       path: path.resolve(__dirname, "dist"),
       filename: "index.js",
       libraryTarget: "commonjs2",
+      globalObject: "this",
     },
     externals: {
       react: "react",
