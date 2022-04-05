@@ -2,7 +2,7 @@ const path = require("path");
 // const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const commonConfig = require("./webpack.common");
-
+// test
 module.exports = () => {
   return {
     ...commonConfig,
