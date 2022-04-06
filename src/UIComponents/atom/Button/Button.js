@@ -48,7 +48,6 @@ Button.defaultProps = {
   type: "solid",
   className: null,
   skipDefaultClass: false,
-  testProp: "Delete later",
 };
 
 Button.propTypes = {

@@ -98,8 +98,9 @@ const StatusBar = ({
   }, [data]);
 
   useEffect(() => {
-    document.addEventListener("status-bar", handleCustomEvent);
-    return () => document.removeEventListener("status-bar", handleCustomEvent);
+    window.document.addEventListener("status-bar", handleCustomEvent);
+    return () =>
+      window.document.removeEventListener("status-bar", handleCustomEvent);
   }, []);
 
   const handleCustomEvent = (event) => {
@@ -154,7 +155,7 @@ const triggerEvent = (cmd, input = {}, cb) => {
   const detail = { input, cmd, cb };
 
   const event = new CustomEvent("status-bar", { detail });
-  document.dispatchEvent(event);
+  window.document.dispatchEvent(event);
 };
 
 const notify = (msg, options = {}) => {

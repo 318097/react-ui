@@ -98,7 +98,9 @@ const Select = ({
 
   useEffect(() => {
     if (dropdownVisibility)
-      document.addEventListener("click", handleOutsideClick, { capture: true });
+      window.document.addEventListener("click", handleOutsideClick, {
+        capture: true,
+      });
   }, [dropdownVisibility]);
 
   const handleOutsideClick = (e) => {
@@ -107,7 +109,7 @@ const Select = ({
 
     if (ref && !ref.contains(target)) {
       setDropdownVisibility(false);
-      document.removeEventListener("click", handleOutsideClick, {
+      window.document.removeEventListener("click", handleOutsideClick, {
         capture: true,
       });
     }

@@ -75,7 +75,9 @@ const Dropdown = ({
 
   useEffect(() => {
     if (dropdownVisibility)
-      document.addEventListener("click", handleOutsideClick, { capture: true });
+      window.document.addEventListener("click", handleOutsideClick, {
+        capture: true,
+      });
   }, [dropdownVisibility]);
 
   const toggleDropdown = () => setDropdownVisibility((prev) => !prev);
@@ -87,7 +89,7 @@ const Dropdown = ({
 
     if (outsideNode && dropdownVisibility) {
       setDropdownVisibility(false);
-      document.removeEventListener("click", handleOutsideClick, {
+      window.document.removeEventListener("click", handleOutsideClick, {
         capture: true,
       });
     }
